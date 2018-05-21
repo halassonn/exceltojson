@@ -57,7 +57,7 @@ function createWindow() {
   if (serve) {
     win.webContents.openDevTools();
   }
- //  win.webContents.openDevTools();
+  //  win.webContents.openDevTools();
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -122,11 +122,13 @@ autoUpdater.on('checking-for-update', () => {
 autoUpdater.on('update-available', (ev, info) => {
   sendStatusToWindow('update-available');
   setTimeout(function () {
+    // tslint:disable-next-line:max-line-length
+    const data = { message: 'A new version is Available...', updateaction: '<button type="button" class="btn btn-success btn-sm" (click)="installUpdate()">Install</button > <button class="btn btn-success btn-sm" (click)="laterupdate()">Later</button>' }
     win.webContents.send('update_info',
-      'A new version has been downloaded. Restart the application to apply the updates.' +
-      '<br> <button type="button" class="btn btn-success" (click)="click_update()">Success</button> <button>Later</button>');
+      data);
   }, 5000);
 });
+
 autoUpdater.on('update-not-available', (ev, info) => {
   sendStatusToWindow('Update not available.');
 });
@@ -140,14 +142,19 @@ autoUpdater.on('download-progress', (progressObj) => {
   sendStatusToWindow(log_message);
 });
 
-autoUpdater.on('update-downloaded', (ev, info) => {
-  sendStatusToWindow(info);
-  autoUpdater.quitAndInstall();
-});
+
 
 ipcMain.on('check-update-app', function () {
+  // tslint:disable-next-line:max-line-length
   autoUpdater.checkForUpdates();
 });
+
+ipcMain.on('install-update', () => {
+  autoUpdater.on('update-downloaded', (ev, info) => {
+    sendStatusToWindow(info);
+    autoUpdater.quitAndInstall();
+  });
+})
 
 // get app current version
 
@@ -248,7 +255,7 @@ function createCanvasPrint() {
     width: WINDOW_WIDTH,
     height: WINDOW_HEIGHT,
     show: false,
-     parent: win,
+    parent: win,
     modal: true,
     webPreferences: { plugins: true },
     frame: false,
@@ -266,7 +273,7 @@ function createCanvasPrint() {
     canvasPrint = null;
   })*/
 
- // canvasPrint.webContents.openDevTools();
+  // canvasPrint.webContents.openDevTools();
 
   console.log('do printing.....');
 }
@@ -350,13 +357,13 @@ ipcMain.on('print', () => {
   print_Preview.show();
 })
 
-ipcMain.on('direct_to_print', (e,data) => {
+ipcMain.on('direct_to_print', (e, data) => {
   win.webContents.print({
     silent: data.silent,
     printBackground: data.printBackground,
     deviceName: data.deviceName,
-    pageSize : 'A4',
-    landscape : true
+    pageSize: 'A4',
+    landscape: true
 
   });
 })

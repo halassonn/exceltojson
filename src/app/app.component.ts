@@ -63,6 +63,7 @@ export class AppComponent implements AfterViewInit, OnInit {
       console.log('Electron ipcRenderer', electronService.ipcRenderer);
       console.log('NodeJS childProcess', electronService.childProcess);
       this.getAppVersion();
+      this.electronService.ipcRenderer.send('check-update-app');
     } else {
       // console.log('Mode web');
     }
@@ -112,7 +113,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     if (this.target.files.length !== 1) {
       this.urlfile = true;
       throw new Error('Cannot use multiple files');
-     }
+    }
     this.reader = new FileReader();
     this.reader.onload = (e: any) => {
       /* read workbook */
@@ -150,6 +151,10 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
   ngAfterViewInit() {
     // console.log(this.stp.nativeElement);
+    this.electronService.ipcRenderer.on('update_info', (e, message) => {
+      document.getElementById('updatemessage').innerHTML = message.message + message.updateaction;
+      document.getElementById('updateinfo').removeAttribute('style');
+    });
 
 
     console.log(this.datakantormodel);
@@ -161,6 +166,13 @@ export class AppComponent implements AfterViewInit, OnInit {
       console.log(data);
       this.printerlist = data;
     })
+  }
+
+  installUpdate() {
+    this.electronService.ipcRenderer.send('install-update');
+  }
+  laterupdate() {
+    document.getElementById('updateinfo').setAttribute('style', 'display : none;');
   }
 
 
