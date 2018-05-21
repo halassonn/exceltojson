@@ -1,0 +1,140 @@
+body {}
+    
+table {
+  font-family: Verdana;
+  padding: 15px;
+  table-layout: auto;
+  text-align: left;
+  font-size: 8.5pt;
+  line-height: 1.5;
+}
+
+th {
+  border-top: 1px dashed !important;
+  border-bottom: 1px dashed !important;
+}
+tr{
+   border-bottom: 1px dashed !important;
+}
+
+
+#subtotal {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+tfoot {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+/* The Modal (background) */
+.el-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.el-modal-content {
+  background-color: rgba(0,0,0,0.4);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.el-modal-content > hr {
+  background: #aaaaaa;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.list-group-item {
+  background-color: transparent !important;
+  border: none !important;
+}
+.list-group-item:hover{
+  cursor: pointer;
+  color: aqua;
+  font-size: 18px;
+}
+
+/* The Close Button */
+.el-close {
+  color: cyan;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -23px;
+    margin-right: -10px;
+}
+.el-title{
+  margin-top: -10px;
+}
+
+.el-close:hover,
+.el-close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.containerfluid {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform-origin: center center;
+ 
+  box-shadow: 2px 2px 2px 2px grey;
+}
+
+.main {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transform-origin: center center;
+
+}
+
+.side {
+  width: 25%;
+  height: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+
+}
+
+.preview {
+  width: 75%;
+  height: 100%;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 10px;
+}
+
+#foo {
+  display: inline-flex;
+  width: 100% !important;
+  height: 100% !important;
+
+}

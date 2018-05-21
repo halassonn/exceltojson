@@ -1,0 +1,414 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./cssprint/style.css">
+
+
+  <style>
+    body,
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      color: whitesmoke;
+    }
+
+    button {
+      font-size: 12px;
+    }
+
+    .containerfluid {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+
+      transform-origin: center center;
+      padding: 10px;
+      box-shadow: 2px 2px 2px 2px grey;
+    }
+
+    .main {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      transform-origin: center center;
+
+
+
+    }
+
+    .side {
+      width: 25%;
+      height: 100%;
+      padding: 10px;
+      padding-left: 15px;
+
+    }
+
+    .preview {
+      width: 75%;
+      height: 100%;
+      padding-left: 1px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      padding-right: 2px;
+    }
+
+    #foo {
+      display: inline-flex;
+      width: 100% !important;
+      height: 100% !important;
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <div class="containerfluid fadeIn">
+    <div class="main">
+      <div class="side">
+        <div class="p-3">
+          <button class="btn btn-sm btn-info" onclick="doPrint()">Print</button>
+          <button class="btn btn-sm" onclick="closePreview()">Cancel</button>
+        </div>
+
+        <hr>
+
+        <div class="form-group row">
+          <label for="printer" class="col-sm-4 col-form-label">Printer</label>
+          <div class="col-sm-8">
+            <label class="form-label col-sm-12">
+              <i class="fa fa-print"></i> Epson</label>
+            <button class="btn btn-sm btn" id="printerlist_btn">change....</button>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="page" class="col-sm-4 col-form-label">Page</label>
+          <div class="col-sm-8" id="page">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="all" name="customRadio" class="custom-control-input" checked="">
+              <label class="custom-control-label" for="all">All</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2"></label>
+              <input type="text" class="form-control form-control-sm input-sm" disabled placeholder="eg: 1-2" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="layout" class="col-sm-4 col-form-label">Layout</label>
+          <div class="col-sm-8">
+            <select name="" id="layout" class="form-control form-control-sm" onchange="setPageConf()">
+              <option value="portrait">Portrait</option>
+              <option value="landscape">Landscape</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="colorprint" class="col-sm-4 col-form-label">Color</label>
+          <div class="col-sm-8">
+            <select name="" id="colorprint" class="form-control form-control-sm">
+              <option value="color">Color</option>
+              <option value="balckandwhite">Black and White</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group row">
+            <label for="paper" class="col-sm-4 col-form-label">Paper Size</label>
+            <div class="col-sm-8">
+              <select name="" id="paper" class="form-control form-control-sm " onchange="setPageConf()">
+                <option value="A4">A4</option>
+                <option value="A5">A5</option>
+                <option value="Legal">Legal</option>
+                <option value="Letter">Letter</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="margin" class="col-sm-4 col-form-label">Margin</label>
+            <div class="col-sm-8">
+              <select name="" id="margin" class="form-control form-control-sm">
+                <option value="default">Dafult</option>
+                <option value="node">None</option>
+                <option value="minimum">Minimum</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="datapro">
+
+        </div>
+
+      </div>
+      <div id="preview" class="preview">
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="el-modal">
+
+    <!-- Modal content -->
+    <div id="modal-content" class="el-modal-content">
+      <span class="el-close">&times;</span>
+      <h6 class="el-title">Select Printer</h6>
+      <hr>
+      <div id="printerlist"></div>
+
+    </div>
+
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn_printerlist = document.getElementById("printerlist_btn");
+
+    // Get the <span> element that closes the modal
+    var spanclosemodal = document.getElementsByClassName("el-close")[0];
+    let printerlist;
+
+    var printer = require("printer"),
+      imagemagick, // will be loaded later with proper error.
+      fs = require('fs'),
+      path = require('path'),
+      util = require('util'),
+      filename = "Document.pdf",
+      printername = process.argv[3],
+      filepdf,
+      printerName = 'Foxit Reader PDF Printer',
+      printerFormat = 'TEXT';
+
+
+    var options = {
+      "paper": "A4",
+      "layout": "landscape"
+    }
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // do something
+      console.info('Hola Printer', printer.getPrinters());
+      filepdf = 'C://Users/Halasson/AppData/Local/Temp/print.pdf';
+      printerlist = printer.getPrinters();
+      // console.log('file name', filename);
+      //data = fs.readFileSync(path)
+      // console.log('pdf', data)
+      console.info(process.platform);
+    });
+
+
+    const ipcRenderer = require("electron").ipcRenderer;
+    ipcRenderer.on('fillpath', (event, content) => {
+      console.info('url', content.file)
+
+      document.getElementById("preview").innerHTML = '<iframe id="foo"></iframe>';
+      document.getElementById('foo').src = content.file;
+
+      //  frame.src = content;
+      // document.getElementById('foo').src = content;
+      //ipcRenderer.send("open-print-preview");
+      // console.info(printerlist);
+    })
+
+    function print_direct() {
+      console.log('platform:', process.platform);
+      console.log('try to print file: ' + filepdf);
+
+      if (process.platform != 'win32') {
+        printer.printFile({
+          filename: filepdf,
+          printer: printerlist[0].name, // printer name, if missing then will print to default printer
+          success: function (jobID) {
+            console.log("sent to printer with ID: " + jobID);
+          },
+          error: function (err) {
+            console.log(err);
+          }
+        });
+      } else {
+        // not yet implemented, use printDirect and text
+        printer.printDirect({
+          data: fs.readFileSync(filepdf),
+          //  printer: printerlist[0].name, // printer name, if missing then will print to default printer
+          success: function (jobID) {
+            console.log("sent to printer with ID: " + jobID);
+          },
+          error: function (err) {
+            console.log(err);
+          }
+        });
+      }
+    }
+
+    function printZebra(barcode_text) {
+      printer.printDirect({
+        data: barcode_text,
+        type: "RAW",
+        success: function () {
+          console.log("printed: " + barcode_text);
+        },
+        error: function (err) {
+          console.log(err);
+        }
+      });
+    }
+
+    function print_direct2() {
+      printer.printDirect({
+        data: fs.readFileSync(), // or simple String: "some text"
+        printer: printerName, // printer name
+        type: printerFormat, // type: RAW, TEXT, PDF, JPEG, .. depends on platform
+        options: // supported page sizes may be retrieved using getPrinterDriverOptions, supports CUPS printing options
+        {
+          media: 'Letter',
+          'fit-to-page': true
+        },
+        success: function (jobID) {
+          console.log("sent to printer with ID: " + jobID);
+          var jobInfo = printer.getJob(printerName, jobID);
+          console.log("current job info:" + util.inspect(jobInfo, {
+            depth: 10,
+            colors: true
+          }));
+          if (jobInfo.status.indexOf('PRINTED') !== -1) {
+            console.log('too late, already printed');
+            return;
+          }
+          /* console.log('cancelling...');
+           var is_ok = printer.setJob(printerName, jobID, 'CANCEL');
+           console.log("cancelled: " + is_ok);
+           try {
+             console.log("current job info:" + util.inspect(printer.getJob(printerName, jobID), {
+               depth: 10,
+               colors: true
+             }));
+           } catch (err) {
+             console.log('job deleted. err:' + err);
+           } */
+        },
+        error: function (err) {
+          console.log(err);
+        }
+      });
+    }
+
+
+    function prinfPDFinBUFFER() {
+      if (!filename || filename == '-h') {
+        throw 'PDF file name is missing. Please use the following params: <filename> [printername]'
+      }
+
+      filename = path.resolve(process.cwd(), filename);
+      console.log('printing file name ' + filename);
+
+      fs.readFile(filename, function (err, data) {
+        if (err) {
+          console.error('err:' + err);
+          return;
+        }
+        console.log('data type is: ' + typeof (data) + ', is buffer: ' + Buffer.isBuffer(data));
+        printer.printDirect({
+          data: data,
+          type: 'TEXT',
+          success: function (id) {
+            console.log('printed with id ' + id);
+          },
+          error: function (err) {
+            console.error('error on printing: ' + err);
+          }
+        })
+      });
+    }
+
+
+    function doPrint(){
+      ipcRenderer.send('print');
+    }
+    function setPageConf() {
+      options.layout = document.getElementById('layout').value;
+      options.paper = document.getElementById('paper').value;
+      ipcRenderer.send('set-paper-conf', options);
+    }
+
+ 
+    function closePreview() {
+      var frame = document.getElementById("foo");
+      document.getElementById("preview").innerHTML = '';
+      ipcRenderer.send('on-close-preview');
+    }
+
+    // When the user clicks the button, open the modal 
+    btn_printerlist.onclick = function () {
+      var ul = document.createElement('ul');
+      ul.setAttribute("class", "list-group");
+      for (var i = 0; i < printerlist.length; i++) {
+        var li = document.createElement('li');
+        li.setAttribute("class", "list-group-item")
+        // li.innerHTML = printerlist[i];
+        // li.value = printerlist[i].name;
+        li.innerHTML = "<i class='fa fa-print fa-lg mr-2'></i>" + printerlist[i].name;
+        li.value = printerlist[i].name;
+        ul.appendChild(li);
+      }
+
+      document.getElementById("printerlist").appendChild(ul);
+      document.getElementById("modal-content").style.maxWidth = "450px";
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    spanclosemodal.onclick = function () {
+      document.getElementById("printerlist").removeChild(document.querySelector("ul"));
+      modal.style.display = "none";
+    }
+
+  </script>
+</body>
+
+</html>

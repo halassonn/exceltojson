@@ -1,0 +1,13 @@
+.cmodal {
+  margin:  auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: inherit;
+  transform-origin: center center;
+
+  }

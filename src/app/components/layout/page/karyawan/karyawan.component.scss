@@ -1,0 +1,96 @@
+.img-thumbnail{
+  max-height: 160px;
+  height: 160px;
+}
+.form-body-content-row {
+    display: flex;
+  flex-direction: row;
+  
+}
+.mat-card{
+    text-align: center;
+    .mat-card-header{
+      display: block !important;
+    }
+    .mat-card-title{
+      font-weight: bolder;
+    }
+}
+
+.form-body-content-column {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.editButton {
+  color: white !important;
+  background-color: rgba(255, 222, 121, 0.96);
+}
+
+.detailsButton {
+  color: white !important;
+  background-color: rgb(114, 168, 255)
+}
+
+.my-card {
+  min-width: 350x;
+  margin: auto;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: inherit;
+  transform-origin: center center;
+  z-index: 2000;
+}
+
+.box {
+  min-width: 275px;
+  padding: 5px;
+}
+.detail >div >label{
+  font-size: 8px;
+}
+
+@media only screen and (max-width: 450px) {
+  .my-card {
+    width: 100%;
+    flex-direction: column;
+   
+  }
+  .box {
+    min-width: 100%;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 762px) and (min-width:450px) {
+  .my-card {
+    width: 100%;
+    flex-direction: row;
+    .box {
+      min-width: 100px;
+      padding: 10px;
+      .img-thumbnail{
+        height: 96px;
+      }
+      .mat-card {
+        .mat-card-header-text{
+          text-align: center;
+        }
+        
+        text-align: center;
+        .mat-card-actions {
+          text-align: center;
+          margin-left: -20px !important;
+          margin-right: -20px !important;
+      }
+    }
+    
+    }
+   
+  }
+ 
+}

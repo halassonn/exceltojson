@@ -1,0 +1,1340 @@
+%PDF-1.1
+1 0 obj
+<<
+/CreationDate (D:20180224095247)
+/Producer (text2pdf v1.1 (\251 Phil Smith, 1996))
+/Title (JTT.24)
+>>
+endobj
+2 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Courier
+>>
+endobj
+5 0 obj
+<<
+  /Font << /F1 4 0 R >>
+  /ProcSet [ /PDF /Text ]
+>>
+endobj
+6 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 8 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   1)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(100000                          AKTIVA LANCAR                                        A       1      K      D)'
+(      110000                    KAS                                                  A       2      K      D)'
+(            111000              KAS BESAR                                            A       3      D      D)'
+(            112000              KAS TELLER                                           A       3      D      D)'
+(            114000              KAS KECIL                                            A       3      D      D)'
+(      120000                    KAS DALAM VALUTA ASING                               A       2      K      D)'
+(      130000                    SERTIFIKAT BANK INDONESIA \(SBI\)                      A       2      K      D)'
+(            131000              SBI - DIMILIKI HINGGA JATUH TEMPO                    A       3      K      D)'
+(                  131100        SBI - DIMILIKI HINGGA JT - NOMINAL                   A       4      D      D)'
+(                  131200        SBI - DIMILIKI HINGGA JT - BIAYA TRANSAKSI           A       4      D      D)'
+(                  131300        SBI - DIMILIKI HINGGA JT - DISKONTO                  A       4      D      K)'
+(            132000              SBI - TERSEDIA UNTUK DIJUAL                          A       3      K      D)'
+(                  132100        SBI - TERSEDIA UNTUK DIJUAL                          A       4      D      D)'
+(      140000                    PEND. BUNGA YG AKAN DITERIMA \(PBAD\)                  A       2      K      D)'
+(            141000              PBAD-ANTAR BANK                                      A       3      K      D)'
+(                  141100        PBAD-GIRO PADA BANK UMUM                             A       4      D      D)'
+(                  141200        PBAD-TABUNGAN PADA BANK UMUM                         A       4      D      D)'
+(                  141300        PBAD-TABUNGAN PADA BPR LAIN                          A       4      D      D)'
+(                  141400        PBAD-DEPOSITO PADA BANK UMUM                         A       4      D      D)'
+(                  141500        PBAD-DEPOSITO PADA BPR LAIN                          A       4      D      D)'
+(                  141600        PBAD-PINJAMAN KEPADA BPR LAIN                        A       4      D      D)'
+(                  141900        PBAD-ANTAR BANK LAINNYA                              A       4      D      D)'
+(            142000              PBAD-KREDIT DIBERIKAN KPD PIHAK KETIGA               A       3      K      D)'
+(                  142010        PBAD-KREDIT PERDAGANGAN                              A       4      D      D)'
+(                  142020        PBAD-KREDIT INDUSTRI                                 A       4      D      D)'
+(                  142030        PBAD-KREDIT PERIKANAN                                A       4      D      D)'
+(                  142040        PBAD-KREDIT JASA PERORANGAN                          A       4      D      D)'
+(                  142050        PBAD-KREDIT KONSUMSI                                 A       4      D      D)'
+(                  142060        PBAD-KREDIT PERTANIAN                                A       4      D      D)'
+(                  142070        PBAD-KREDIT LISTRIK,GAS & AIR                        A       4      D      D)'
+(                  142080        PBAD-KREDIT PENSIUNAN/KTA                            A       4      D      D)'
+(                  142090        PBAD-KREDIT AKOMODASI                                A       4      D      D)'
+(                  142100        PBAD-KREDIT TRANSKOM                                 A       4      D      D)'
+(                  142110        PBAD-KREDIT KONSUMTIF PEGAWAI                        A       4      D      D)'
+(                        142120  PBAD-KREDIT PETERNAKAN                               A       5      D      D)'
+(            149000              PBAD-LAINNYA                                         A       3      K      D)'
+(                  149990        PBAD-LAINNYA                                         A       4      D      D)'
+(      150000                    PENEMPATAN PADA BANK LAIN                            A       2      K      D)'
+(            151000              GIRO PADA BANK UMUM                                  A       3      K      D)'
+(                  151001        GIRO PADA BANK MANDIRI                               A       4      D      D)'
+(                  151002        GIRO PADA BANK BRI                                   A       4      D      D)'
+(                  151003        GIRO PADA BANK BNI                                   A       4      D      D)'
+(                  151004        GIRO PADA BANK BPD                                   A       4      D      D)'
+(                  151005        GIRO PADA BANK CIMB NIAGA                            A       4      D      D)'
+(            152000              TABUNGAN PADA BANK LAIN                              A       3      K      D)'
+(                  152100        TABUNGAN PADA BANK UMUM                              A       4      K      D)'
+(                        152101  TABUNGAN PADA BANK BRI SIMPANG EMPAT                 A       5      D      D)'
+(                        152102  TABUNGAN PADA BANK SUMUT                             A       5      D      D)'
+(                        152103  TABUNGAN PADA BANK MANDIRI                           A       5      D      D)'
+(                        152104  TABUNGAN PADA BANK BNI                               A       5      D      D)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 2  )'
+ET
+endstream
+endobj
+8 0 obj
+7114
+endobj
+9 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 11 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   2)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  152200        TABUNGAN PADA BPR LAIN                               A       4      K      D)'
+(            153000              SIMPANAN BERJANGKA PADA BANK LAIN                    A       3      K      D)'
+(                  153100        DEPOSITO BERJANGKA PADA BANK UMUM                    A       4      K      D)'
+(                  153200        DEPOSITO ON CALL PADA BANK UMUM                      A       4      K      D)'
+(                  153300        DEPOSITO BERJANGKA PADA BPR LAIN                     A       4      K      D)'
+(            154000              KREDIT DIBERIKAN KEPADA BPR LAIN                     A       3      K      D)'
+(                  154100        KYD KEPADA BPR LAIN - BAKI DEBET                     A       4      D      D)'
+(                  154200        KYD KEPADA BPR LAIN - PROVISI                        A       4      D      K)'
+(                  154300        KYD KEPADA BPR LAIN - BY TRANSAKSI                   A       4      D      D)'
+(            159000              PPAP PENEMPATAN PADA BANK LAIN                       A       3      K      K)'
+(                  159100        PPAP UMUM PENEMPATAN PADA BANK LAIN                  A       4      D      K)'
+(                  159200        PPAP KHUSUS PENEMPATAN PADA BANKLAIN                 A       4      D      K)'
+(                  159300        PPAP UMUM KREDIT DIBERIKAN KE BANK LAIN              A       4      D      K)'
+(                  159400        PPAP KHUSUS KREDIT DIBERIKAN KE BANK LAIN            A       4      D      K)'
+(      160000                    KREDIT YANG DIBERIKAN                                A       2      K      D)'
+(            161000              KREDIT YANG DIBERIKAN - BAKI DEBET                   A       3      K      D)'
+(                  161010        KREDIT PERDAGANGAN                                   A       4      D      D)'
+(                  161020        KREDIT INDUSTRI                                      A       4      D      D)'
+(                  161030        KREDIT PERIKANAN                                     A       4      D      D)'
+(                  161040        KREDIT JASA PERORANGAN                               A       4      D      D)'
+(                  161050        KREDIT KONSUMSI                                      A       4      D      D)'
+(                  161060        KREDIT PERTANIAN                                     A       4      D      D)'
+(                  161070        KREDIT LISTRIK,GAS & AIR                             A       4      D      D)'
+(                  161080        KREDIT PENSIUNAN/KTA                                 A       4      D      D)'
+(                  161090        KREDIT AKOMODASI                                     A       4      D      D)'
+(                  161100        KREDIT TRANSKOM                                      A       4      D      D)'
+(                  161110        KREDIT KONSUMTIF PEGAWAI                             A       4      D      D)'
+(                  161120        KREDIT PETERNAKAN                                    A       4      D      D)'
+(                  161130        KREDIT PERUMAHAN                                     A       4      D      D)'
+(                  161140        KREDIT LAIN-LAIN                                     A       4      D      D)'
+(            162000              KREDIT YANG DIBERIKAN - PROVISI                      A       3      K      K)'
+(                  162010        KYD-PROV KREDIT PERDAGANGAN                          A       4      D      K)'
+(                  162020        KYD-PROV INDUSTRI                                    A       4      D      K)'
+(                  162030        KYD-PROV PERIKANAN                                   A       4      D      K)'
+(                  162040        KYD-PROV JASA PERORANGAN                             A       4      D      K)'
+(                  162050        KYD-PROV KONSUMSI                                    A       4      D      K)'
+(                  162060        KYD-PROV PERTANIAN                                   A       4      D      K)'
+(                  162070        KYD-PROV LISTRIK,GAS & AIR                           A       4      D      K)'
+(                  162080        KYD-PROV PENSIUNAN/KTA                               A       4      D      K)'
+(                  162090        KYD-PROV AKOMODASI                                   A       4      D      K)'
+(                  162100        KYD-PROV TRANSKOM                                    A       4      D      K)'
+(                  162110        KYD-PROV KONSUMTIF PEGAWAI                           A       4      D      K)'
+(                        162120  KYD-PROV KREDIT PETERNAKAN                           A       5      D      K)'
+(            163000              KREDIT YANG DIBERIKAN - BIAYA TRANSAKSI              A       3      K      D)'
+(                  163010        KREDIT YANG DIBERIKAN - BIAYA TRANSAKSI              A       4      D      D)'
+(            168000              CAD KERUGIAN RESTRUKTURISASI                         A       3      K      D)'
+(                  168100        CAD KERUGIAN RESTRUKTURISASI                         A       4      D      D)'
+(            169000              PPAP KREDIT DIBERIKAN                                A       3      K      K)'
+(                  169100        PPAP UMUM KREDIT DIBERIKAN                           A       4      D      K)'
+(                  169200        PPAP KHUSUS KREDIT DIBERIKAN                         A       4      D      K)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 3  )'
+ET
+endstream
+endobj
+11 0 obj
+7114
+endobj
+12 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 13 0 R
+>>
+endobj
+13 0 obj
+<<
+/Length 14 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   3)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(200000                          AKTIVA NON LANCAR                                    A       1      K      D)'
+(      210000                    AGUNAN YANG DIAMBIL ALIH \(AYDA\)                      A       2      K      D)'
+(            211000              AYDA KURANG DARI 1 TAHUN                             A       3      K      D)'
+(                  211001        AGUNAN YANG DIAMBIL ALIH \(AYDA\)                      A       4      D      D)'
+(            212000              AYDA LEBIH DARI 1 TAHUN                              A       3      K      D)'
+(                  212001        AYDA                                                 A       4      D      D)'
+(      220000                    AKTIVA TETAP DAN INVENTARIS                          A       2      K      D)'
+(            221000              AKTIVA TETAP - TANAH & GEDUNG                        A       3      K      D)'
+(            221100              TANAH                                                A       3      K      D)'
+(            221200              TANAH DAN GEDUNG                                     A       3      K      D)'
+(                        221201  TANAH DAN GEDUNG                                     A       5      D      D)'
+(                  221800        AKUMULASI PENURUNAN NILAI GEDUNG                     A       4      K      K)'
+(                        221810  AKUMULASI PENURUNAN NILAI GEDUNG                     A       5      D      K)'
+(            221900              AKUMULASI PENYUSUTAN TANAH & GEDUNG                  A       3      K      K)'
+(                  221910        AKUMULASI PENY. TANAH & GEDUNG                       A       4      D      K)'
+(            222000              INVENTARIS KANTOR                                    A       3      K      D)'
+(                  222100        INVENTARIS KANTOR - HARGA PEROLEHAN                  A       4      K      D)'
+(                        222101  KENDARAAN                                            A       5      D      D)'
+(                        222102  PERALATAN                                            A       5      D      D)'
+(                  222800        AKM. PENURUNAN NILAI INVENTARIS KANTOR               A       4      K      K)'
+(                        222810  AKM PENURUNAN NILAI INVENTARIS                       A       5      D      K)'
+(                  222900        AKM. PENYUSUTAN INVENTARIS                           A       4      K      K)'
+(                        222901  AKM. PENYSTN KENDARAAN                               A       5      D      K)'
+(                        222902  AKM. PENYSTN PERALATAN                               A       5      D      K)'
+(      280000                    ASET TIDAK BERWUJUD                                  A       2      K      D)'
+(            281000              ASET TIDAK BERWUJUD                                  A       3      D      D)'
+(            282000              AKUM. PENY. ASET TIDAK BERWUJUD                      A       3      D      K)'
+(            283000              AKM.PENURUNAN NILAI AKT TIDAK BERWUJUD               A       3      D      K)'
+(      290000                    ASET LAIN-LAIN                                       A       2      K      D)'
+(            291000              PAJAK DIBAYAR DIMUKA                                 A       3      K      D)'
+(                  291001        PPH PAJAK PS 25                                      A       4      D      D)'
+(            292000              UANG/MUKA BIAYA DIBAYAR DIMUKA \(BDD\)                 A       3      K      D)'
+(                  292100        PROVISI/NOTARIS DIBAYAR DIMUKA                       A       4      K      D)'
+(                  292200        BDD SEWA GEDUNG                                      A       4      K      D)'
+(                        292201  SEWA GEDUNG KANTOR                                   A       5      D      D)'
+(                        292202  SEWA KANTOR KAS                                      A       5      D      D)'
+(                  292300        ASURANSI DIBAYAR DIMUKA                              A       4      K      D)'
+(                        292301  ASURANSI KENDARAAN MOBIL                             A       5      D      D)'
+(                        292302  ASURANSI GEDUNG                                      A       5      D      D)'
+(                        292303  ASURANSI CASH IN SAVE AND TRANSIT                    A       5      D      D)'
+(                  292400        BIAYA BUNGA TABUNGAN                                 A       4      K      D)'
+(                        292500  BDD LAINNYA                                          A       5      D      D)'
+(                        292501  BDD PREMI LPS                                        A       5      D      D)'
+(                        292601  ANTISIPASI SEWA IT                                   A       5      D      D)'
+(                        292602  ANTISIPASI SEWA DRC                                  A       5      D      D)'
+(            293000              MATA UANG YG DITARIK DARI PEREDARAN                  A       3      K      D)'
+(                  293100        MATA UANG RP DLM MASA PERTUKARAN                     A       4      D      D)'
+(            294000              PERSEDIAAN                                           A       3      K      D)'
+(                  294100        PERSEDIAAN FORMULIR                                  A       4      D      D)'
+(                  294200        PERSEDIAAN ALAT TULIS KANTOR                         A       4      D      D)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 4  )'
+ET
+endstream
+endobj
+14 0 obj
+7120
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 17 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   4)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  294300        PERSEDIAAN MATERAI                                   A       4      D      D)'
+(                  294400        PERSEDIAAN OLI SEPEDA MOTOR                          A       4      D      D)'
+(            295000              BIAYA DITANGGUHKAN \(BDT\)                             A       3      K      D)'
+(                  295010        BY DITANGGUHKAN PIHAK KETIGA                         A       4      D      D)'
+(            296000              RUPA RUPA TAGIHAN                                    A       3      K      D)'
+(                  296990        RUPA-RUPA TAGIHAN - LAINNYA                          A       4      D      D)'
+(            297000              ANTAR KANTOR AKTIVA                                  A       3      K      D)'
+(                  297100        REK. ANTAR KANTOR                                    A       4      D      D)'
+(                        297101  REK. ANTAR KANTOR - PUSAT                            A       5      D      D)'
+(                        297102  REK. ANTAR KANTOR - CAB. SEI SUKA                    A       5      D      D)'
+(                        297103  REK. ANTAR KANTOR - CAB. SINAKSAK                    A       5      D      D)'
+(                        297104  REK. ANTAR KANTOR - CAB. MANDOGE                     A       5      D      D)'
+(            299000              ASET LAIN-LAIN LAINNYA                               A       3      K      D)'
+(                  299001        PERSEKOT KEPERLUAN KANTOR                            A       4      D      D)'
+(                  299002        PERSEKOT GAJI                                        A       4      D      D)'
+(                  299003        PERSEKOT UANG MAKAN KARYAWAN                         A       4      D      D)'
+(300000                          KEWAJIBAN                                            L       1      K      K)'
+(      310000                    KEWAJIBAN SEGERA \(KS\)                                L       2      K      K)'
+(            311000              KS - PAJAK                                           L       3      K      K)'
+(                  311010        KS - PAJAK BUNGA TABUNGAN                            L       4      D      K)'
+(                  311020        KS - PAJAK BUNGA DEPOSITO                            L       4      D      K)'
+(                  311030        KS - PAJAK PENGH. KARYAWAN                           L       4      D      K)'
+(                  311040        KS - PAJAK DEVIDEN                                   L       4      D      K)'
+(                  311050        KS - PAJAK BADAN USAHA                               L       4      D      K)'
+(                  311060        KS - PAJAK PENGHASILAN KOMISARIS                     L       4      D      K)'
+(                  311070        KS - PAJAK SEWA MOBIL                                L       4      D      K)'
+(                  311080        KS - PAJAK SEWA GEDUNG KANTOR                        L       4      D      K)'
+(                  311990        KS - PAJAK LAINNYA                                   L       4      D      K)'
+(            312000              KS - SIMPANAN                                        L       3      K      K)'
+(                  312010        KS - DEPOSITO JATUH TEMPO/TUTUP                      L       4      D      K)'
+(                  312011        KS - DEPOSITO BANK LAIN JATUH TEMPO                  L       4      D      K)'
+(                  312020        KS - TABUNGAN TUTUP                                  L       4      D      K)'
+(                  312021        KS - TAB BERJANGKA JATUH TEMPO                       L       4      D      K)'
+(                  312030        KS - BY TRANSAKSI TABUNGAN                           L       4      D      K)'
+(                  312031        KS - BY TRANSAKSI DEPOSITO                           L       4      D      K)'
+(                  312032        KS - SIMPANAN BUNGA DEP. BERSIH                      L       4      D      K)'
+(                  312990        KS - LAINNYA SIMPANAN                                L       4      D      K)'
+(            313000              KS - TITIPAN DEBITUR                                 L       3      K      K)'
+(                  313010        KS - ANGSURAN DEBITUR                                L       4      D      K)'
+(                  313020        KS - KIRIMAN UANG KELUAR                             L       4      D      K)'
+(                  313030        KS - ASURANSI JAMINAN                                L       4      D      K)'
+(                  313040        KS - ASURANSI JIWA DEBITUR                           L       4      D      K)'
+(                  313070        KS - NOTARIS                                         L       4      D      K)'
+(            315000              KS - JASA PRODUKSI                                   L       3      K      K)'
+(            316000              KS - DEVIDEN                                         L       3      K      K)'
+(                  316001        KS - DEVIDEN                                         L       4      D      K)'
+(            317000              KS - DENDA                                           L       3      K      K)'
+(            318000              KS - IMBALAN KERJA                                   L       3      K      K)'
+(            319000              KS - LAINNYA                                         L       3      K      K)'
+(                  319001        KS - TITIPAN PREMI DPLK                              L       4      D      K)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 5  )'
+ET
+endstream
+endobj
+17 0 obj
+7118
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 19 0 R
+>>
+endobj
+19 0 obj
+<<
+/Length 20 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   5)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  319002        KS - BPJS                                            L       4      D      K)'
+(                  319990        KS - LAINNYA                                         L       4      D      K)'
+(      320000                    UTANG BUNGA                                          L       2      K      K)'
+(            321000              UTANG BUNGA AKRUAL                                   L       3      K      K)'
+(                  321100        UTANG BUNGA - TABUNGAN                               L       4      K      K)'
+(                        321101  UTANG BUNGA AKRUAL - TAB MASY. UMUM                  L       5      D      K)'
+(                        321102  UTANG BUNGA AKRUAL - TAB THT                         L       5      D      K)'
+(                        321103  UTANG BUNGA AKRUAL - TAB KELUARGA PRESKOM            L       5      D      K)'
+(                        321104  UTANG BUNGA AKRUAL - TAB PESAHAM                     L       5      D      K)'
+(                        321105  UTANG BUNGA AKRUAL - TABUNGANKU \(BI\)                 L       5      D      K)'
+(                        321151  UTANG BUNGA - TABUNGAN MILIK BPR LAIN                L       5      D      K)'
+(                  321200        UTANG BGA - DEPOSITO                                 L       4      K      K)'
+(                        321201  UTANG BGA - DEPOSITO NON BANK 1 BL                   L       5      D      K)'
+(                        321202  UTANG BGA - DEPOSITO NON BANK 3 BL                   L       5      D      K)'
+(                        321203  UTANG BGA - DEPOSITO NON BANK 6 BL                   L       5      D      K)'
+(                        321204  UTANG BGA - DEPOSITO NON BANK 12BL                   L       5      D      K)'
+(                        321205  UTANG BGA - DEPOSITO NON BANK 24BL                   L       5      D      K)'
+(                        321251  UTANG BGA - DEPOSITO MILIK BPR LAIN                  L       5      D      K)'
+(                  321300        UTANG BGA - PINJ. DIT. DR BANK LAIN                  L       4      K      K)'
+(                        321310  UTANG BGA - PINJ. DIT. DR BANK UMUM                  L       5      D      K)'
+(                        321320  UTANG BGA - PINJ. DIT. DR BPR LAIN                   L       5      D      K)'
+(                  321400        UTANG BGA - PINJ. DIT. LAINNYA                       L       4      K      K)'
+(                  321500        UTANG BUNGA-MODAL PINJAMAN                           L       4      K      K)'
+(                  321800        UTANG BGA AKRUAL - PINJ SUBORDINASI                  L       4      K      K)'
+(            328000              UTANG BUNGA JATUH TEMPO                              L       3      K      K)'
+(                  328100        UTANG BUNGA JT - DEP PHK KETIGA                      L       4      D      K)'
+(      330000                    UTANG PAJAK                                          L       2      K      K)'
+(            331000              UTANG PAJAK PPPH PASAL 25                            L       3      D      K)'
+(      340000                    SIMPANAN NON BANK                                    L       2      K      K)'
+(            341000              TABUNGAN                                             L       3      K      K)'
+(                  341100        TABUNGAN - SALDO REKENING                            L       4      K      K)'
+(                        341101  TABUNGAN MASY. UMUM                                  L       5      D      K)'
+(                        341102  TABUNGAN THT                                         L       5      D      K)'
+(                        341103  TABUNGAN KELUARGA PRESKOM                            L       5      D      K)'
+(                        341104  TABUNGAN PESAHAM                                     L       5      D      K)'
+(                        341105  TABUNGANKU \(BI\)                                      L       5      D      K)'
+(                  341900        TABUNGAN - BIAYA TRANSAKSI                           L       4      K      D)'
+(                        341910  TAB - BY TRANS TAB                                   L       5      D      D)'
+(            342000              DEPOSITO - SALDO REKENING                            L       3      K      K)'
+(                  342100        DEPOSITO BERJANGKA NON BANK                          L       4      K      K)'
+(                        342101  DEP BERJANGKA 1 BL                                   L       5      D      K)'
+(                        342102  DEP BERJANGKA 3 BL                                   L       5      D      K)'
+(                        342103  DEP BERJANGKA 6 BL                                   L       5      D      K)'
+(                        342104  DEP BERJANGKA 12BL                                   L       5      D      K)'
+(                        342105  DEP BERJANGKA 24BL                                   L       5      D      K)'
+(                  342900        DEPOSITO - BIAYA TRANSAKSI                           L       4      K      D)'
+(                        342910  DEPOSITO - BIAYA TRANSAKSI                           L       5      D      D)'
+(      350000                    SIMPANAN - BANK LAIN                                 L       2      K      K)'
+(            351000              TABUNGAN MILIK BPR LAIN                              L       3      K      K)'
+(                  351100        TABUNGAN MILIK BPR LAIN                              L       4      D      K)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 6  )'
+ET
+endstream
+endobj
+20 0 obj
+7118
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 22 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 23 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   6)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(            352000              DEPOSITO BPR LAIN - SALDO REKENING                   L       3      K      K)'
+(                  352100        DEPOSITO BERJANGKA BPR - LAIN                        L       4      D      K)'
+(            359000              TAB/DEP MILIK BANK LAIN - BYA TRANSAKSI              L       3      K      D)'
+(                  359100        TAB MILIK BANK LAIN - BYA TRANSAKSI                  L       4      D      D)'
+(                  359200        DEP MILIK BANK LAIN - BYA TRANSAKSI                  L       4      D      D)'
+(      360000                    PINJAMAN DITERIMA                                    L       2      K      K)'
+(            361000              PINJ. DIT. DARI PEMERINTAH/BI - POKOK                L       3      K      K)'
+(            362000              PINJ. DIT. DARI BANK UMUM - POKOK                    L       3      K      K)'
+(            363000              PINJ. DIT. DARI BPR LAIN - POKOK                     L       3      K      K)'
+(            364000              PINJ. DIT. LAINNYA - POKOK                           L       3      K      K)'
+(            368000              PINJ. DIT. - PROVISI                                 L       3      K      D)'
+(            369000              PINJ. DIT. - BIAYA TRANSAKSI                         L       3      K      D)'
+(                  369100        PINJ. DIT. DARI PEMERINTAH/BI - BIAYA TRANSAKSI      L       4      K      D)'
+(                  369200        PINJ. DIT. DARI BANK UMUM - BIAYA TRANSAKSI          L       4      K      D)'
+(                  369300        PINJ. DIT. DARI BPR LAIN - BIAYA TRANSAKSI           L       4      K      D)'
+(                  369400        PINJ. DIT. LAINNYA - BIAYA TRANSAKSI                 L       4      K      D)'
+(      370000                    KEWAJIBAN                                            L       2      K      K)'
+(            371000              DANA SETORAN MODAL - KEWAJIBAN                       L       3      K      K)'
+(                  371100        DANA SETORAN MODAL - KEWAJIBAN                       L       4      D      K)'
+(            375000              KEWAJIBAN IMBALAN KERJA \(KIK\)                        L       3      K      K)'
+(                  375100        KEWAJIBAN IMBALAN KERJA                              L       4      D      K)'
+(            379000              PINJAMAN SUBORDINASI                                 L       3      K      K)'
+(                  379100        PINJAMAN SUBORDINASI - SALDO                         L       4      K      K)'
+(                        379101  PINJAMAN SUBORDINASI                                 L       5      D      K)'
+(                  379200        PINJAMAN SUBORDINASI - PROVISI                       L       4      K      D)'
+(                        379201  PINJAMAN SUBORDINASI                                 L       5      D      D)'
+(                  379900        PINJAMAN SUBORDINASI - BIAYA TRANSAKSI               L       4      K      D)'
+(                        379910  PINJAMAN SUBORDINASI                                 L       5      D      D)'
+(      380000                    MODAL PINJAMAN                                       L       2      K      K)'
+(            381000              MODAL PINJAMAN                                       L       3      D      K)'
+(      390000                    KEWAJIBAN LAIN-LAIN                                  L       2      K      K)'
+(            391000              PENDAPATAN DITERIMA DIMUKA                           L       3      K      K)'
+(                  391990        PENDAPATAN DITERIMA DIMUKA LAINNYA                   L       4      D      K)'
+(            392000              PENDAPATAN BG KREDIT DITANGGUHKAN                    L       3      K      K)'
+(                  392010        PEND.BGA DITANGGUHKAN KREDIT PERDAGANGAN             L       4      D      K)'
+(                  392020        PEND.BGA DITANGGUHKAN KRD INDUSTRI                   L       4      D      K)'
+(                  392030        PEND.BGA DITANGGUHKAN KREDIT PERIKANAN               L       4      D      K)'
+(                  392040        PEND.BGA DITANGGUHKAN KREDIT JASA PERORANGAN         L       4      D      K)'
+(                  392050        PEND.BGA DITANGGUHKAN KRD KONSUMSI                   L       4      D      K)'
+(                  392060        PEND.BGA DITANGGUHKAN KRD PERTANIAN                  L       4      D      K)'
+(                  392070        PEND.BGA DITANGGUHKAN KRD LISTRIK, GAS & AIR         L       4      D      K)'
+(                  392080        PEND.BGA DITANGGUHKAN KRD PENSIUNAN/KTA              L       4      D      K)'
+(                  392090        PEND.BGA DITANGGUHKAN KRD AKOMODASI                  L       4      D      K)'
+(                  392100        PEND.BGA DITANGGUHKAN KRD TRANSKOM                   L       4      D      K)'
+(                  392110        PEND.BGA DIATNGGUHKAN KRD KONSUMTIF PEGAWAI          L       4      D      K)'
+(                        392120  PEND.BGA DITANGGUHKAN KREDIT PETERNAKAN              L       5      D      K)'
+(            396000              TAKSIRAN PAJAK PENGHASILAN                           L       3      K      K)'
+(                  396100        TAKSIRAN PPH TAHUN LALU                              L       4      D      K)'
+(                  396200        TAKSIRAN PPH TAHUN BERJALAN                          L       4      D      K)'
+(            397000              ANTAR KANTOR PASIVA                                  L       3      K      K)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 7  )'
+ET
+endstream
+endobj
+23 0 obj
+7116
+endobj
+24 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 25 0 R
+>>
+endobj
+25 0 obj
+<<
+/Length 26 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   7)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  397100        RAK KANTOR PASIVA                                    L       4      D      K)'
+(                  397200        RAK KANTOR SEISUKA                                   L       4      D      K)'
+(                  397300        RAK KANTOR SINAKSAK                                  L       4      D      K)'
+(                  397400        RAK KANTOR MANDOGE                                   L       4      D      K)'
+(            398000              REKENING SELISIH/PERANTARA/SEMENTARA                 L       3      K      K)'
+(                  398100        REKENING SELISIH                                     L       4      K      K)'
+(                        398110  REKENING SELISIH KAS                                 L       5      D      K)'
+(                        398120  REKENING SELISIH NON KAS                             L       5      D      K)'
+(                  398800        REKENING PERANTARA/PENAMPUNGAN                       L       4      K      K)'
+(                        398810  REK. PERANTARA KAS                                   L       5      D      K)'
+(                        398820  REK. PERANTARA NON KAS                               L       5      D      K)'
+(                        398830  REK. PENAMPUNGAN ANGSURAN POKOK                      L       5      D      K)'
+(                        398840  REK. PENAMPUNGAN ANGSURAN BUNGA                      L       5      D      K)'
+(                  398900        REKENING SEMENTARA SISTEM                            L       4      K       )'
+(                        398990  REKENING SEMENTARA SISTEM                            L       5      D       )'
+(            399000              KEWAJIBAN LAIN-LAIN - LAINNYA                        L       3      K      K)'
+(                  399001        CADANGAN THR                                         L       4      D      K)'
+(                  399002        CADANGAN BY PENDIDIKAN                               L       4      D      K)'
+(                  399990        KEW. LAIN-LAIN - LAINNYA                             L       4      D      K)'
+(400000                          EKUITAS                                              L       1      K      K)'
+(      410000                    MODAL                                                L       2      K      K)'
+(            411000              MODAL DISETOR                                        L       3      K      K)'
+(                  411100        MODAL DASAR                                          L       4      D      K)'
+(                  411200        MODAL BELUM DISETOR                                  L       4      D      D)'
+(            412000              TAMBAHAN MODAL DISETOR                               L       3      K      K)'
+(                  412100        TAMBAHAN MODAL DISETOR \(AGIO\)                        L       4      D      K)'
+(                  412200        DISAGIO                                              L       4      D      D)'
+(            413000              MODAL SUMBANGAN                                      L       3      K      K)'
+(                  413100        MODAL SUMBANGAN                                      L       4      D      K)'
+(      420000                    DANA SETORAN MODAL - EKUITAS                         L       2      K      K)'
+(            421000              DANA SETORAN MODAL - EKUITAS                         L       3      D      K)'
+(      430000                    L/R YG YANG BELUM DIREALISASIKAN                     L       2      K      K)'
+(            431000              SELISIH NILAI SBI - TERSEDIA U/ DIJUAL               L       3      D      K)'
+(      440000                    SURPLUS REVALUASI ASET TETAP                         L       2      K      K)'
+(            441000              SURPLUS REVALUASI ASET TETAP                         L       3      D      K)'
+(      450000                    SALDO LABA                                           L       2      K      K)'
+(            451000              CADANGAN                                             L       3      K      K)'
+(                  451010        CADANGAN UMUM                                        L       4      D      K)'
+(                  451020        CADANGAN TUJUAN                                      L       4      D      K)'
+(                  451030        LABA DITAHAN                                         L       4      D      K)'
+(                  451040        CADANGAN IMBALAN KERJA                               L       4      D      K)'
+(            452000              LABA/RUGI TAHUN LALU                                 L       3      K      K)'
+(                  452010        LABA/RUGI TAHUN LALU                                 L       4      D      K)'
+(500000                          PENDAPATAN                                           I       1      K      K)'
+(      510000                    PENDAPATAN BUNGA - KONTRAKTUAL                       I       2      K      K)'
+(            511000              PEND. BUNGA DARI BANK INDONESIA                      I       3      K      K)'
+(                  511010        PEND. BUNGA SERTIFIKAT BANK INDONESIA                I       4      D      K)'
+(            512000              PEND. BUNGA DARI BANK LAIN                           I       3      K      K)'
+(                  512100        PEND. JASA GIRO                                      I       4      D      K)'
+(                  512200        PEND. BUNGA TAB PADA BANK LAIN                       I       4      D      K)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 8  )'
+ET
+endstream
+endobj
+26 0 obj
+7116
+endobj
+27 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 28 0 R
+>>
+endobj
+28 0 obj
+<<
+/Length 29 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   8)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  512300        PEND. DEPO BJK PADA BANK LAIN                        I       4      D      K)'
+(                  512600        PEND. PINJ. DIB. KPD BPR LAIN                        I       4      K      K)'
+(            513000              PENDAPATAN BUNGA KRD DIBERIKAN                       I       3      K      K)'
+(                  513010        PEND.BG KYD PERDAGANGAN                              I       4      D      K)'
+(                  513020        PEND.BG KYD INDUSTRI                                 I       4      D      K)'
+(                  513030        PEND.BG KYD PERIKANAN                                I       4      D      K)'
+(                  513040        PEND.BG KYD JS.PERORANGAN                            I       4      D      K)'
+(                  513050        PEND.BG KYD KONSUMSI                                 I       4      D      K)'
+(                  513060        PEND.BG KYD PERTANIAN                                I       4      D      K)'
+(                  513070        PEND.BG KYD LISTRIK, GAS & AIR                       I       4      D      K)'
+(                  513080        PEND.BG KYD PENSIUNAN/KTA                            I       4      D      K)'
+(                  513090        PEND.BG KYD AKOMODASI                                I       4      D      K)'
+(                  513100        PEND.BG KYD TRANSKOM                                 I       4      D      K)'
+(                  513110        PEND.BG KYD KONSUMTIF PEGAWAI                        I       4      D      K)'
+(                        513120  PEND.BG KYD PETERNAKAN                               I       5      D      K)'
+(                  513990        PEND.BG KE DEPAN SEBELUM JATUH TEMPO                 I       4      D      K)'
+(      520000                    PENDAPATAN BUNGA - PROVISI \(PBP\)                     I       2      K      K)'
+(            521000              PEND. BUNGA - PROVISI KYD PIHAK 3                    I       3      K      K)'
+(                  521010        PEND.BG PROV KREDIT PERDAGANGAN                      I       4      D      K)'
+(                  521020        PEND. BG PROV KREDIT                                 I       4      D      K)'
+(                  521040        PEND. PROV KRD JASA PERORANGAN                       I       4      D      K)'
+(                  521050        PEND PROV KRD KONSUMSI                               I       4      D      K)'
+(                  521060        PEND PROV KRD PERTANIAN                              I       4      D      K)'
+(                  521110        PEND PROV KRD PEGAWAI                                I       4      D      K)'
+(            522000              PEND. BUNGA - ADM KYD PIHAK 3                        I       3      K      K)'
+(                  522010        PEND.BG ADM KREDIT                                   I       4      D      K)'
+(            523000              PEND. BUNGA - PROVISI KYD KPD BANK LAIN              I       3      K      K)'
+(                  523010        PBP. KYD KPD BANK                                    I       4      D      K)'
+(            524000              PEND. - LAINNYA                                      I       3      K      K)'
+(                  524010        LAINNYA                                              I       4      D      K)'
+(      530000                    PENDAPATAN BUNGA - BIAYA TRANSAKSI                   I       2      K      D)'
+(            531000              PEND.BGA-BY TRANS PHK KE 3                           I       3      K      D)'
+(                  531010        PEND.BGA-BY TRANS DISC ONTIME                        I       4      D      D)'
+(                  531020        PEND.BGA-BY TRANS FEE REFERAL                        I       4      D      D)'
+(                  531030        PEND.BGA-BY TRANS MATERAI&BLOKIR                     I       4      D      D)'
+(                  531040        PEND.BGA-BY TRANS FEE MARKETING                      I       4      D      D)'
+(                  531050        PEND.BGA-BY ASS JAMINAN&DEBITUR                      I       4      D      D)'
+(                  531060        PEND.BGA-BY TRANS CASH BACK                          I       4      D      D)'
+(                  531070        PEND.BGA-BY LELANG                                   I       4      D      D)'
+(                  531080        PEND.BGA-BY TRANSAKSI KREDIT                         I       4      D      D)'
+(            532000              PEND.BGA-BY TRANS KPD BANK LAIN                      I       3      K      D)'
+(      580000                    PENDAPATAN OPERASIONAL LAINNYA                       I       2      K      K)'
+(            581000              POL-TABUNGAN/DEPOSITO                                I       3      K      K)'
+(                  581001        POL-ADM & PENUTUPAN TABUNGAN                         I       4      D      K)'
+(                  581002        POL-ADM GANTI BUKU                                   I       4      D      K)'
+(                  581003        POL-PINALTI DEPOSITO                                 I       4      D      K)'
+(            582000              POL-KREDIT                                           I       3      K      K)'
+(                  582001        POL-DENDA KREDIT                                     I       4      D      K)'
+(                  582002        POL-PEMULIHAN PPAP KREDIT                            I       4      D      K)'
+(                  582003        POL-PENERIMAAN KEMBALI AP HAPUS BUKU/TAGIH           I       4      D      K)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 9  )'
+ET
+endstream
+endobj
+29 0 obj
+7116
+endobj
+30 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 31 0 R
+>>
+endobj
+31 0 obj
+<<
+/Length 32 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :   9)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  582004        POL-FEE ASURANSI                                     I       4      D      K)'
+(                  582005        POL-KELEBIHAN PPAP                                   I       4      D      K)'
+(                  582006        POL-BUNGA PELUNASAN KEDEPAN                          I       4      D      K)'
+(            583000              POL-JASA TRANSAKSI                                   I       3      K      K)'
+(            584000              POL-PENDAPATAN PENJUALAN VALUTA ASING                I       3      K      K)'
+(            585000              POL-PENDAPATAN PENJUALAN SURAT BERHARGA              I       3      K      K)'
+(            589000              POL-LAIN-LAIN                                        I       3      K      K)'
+(                  589001        POL-SELISIH KAS LEBIH                                I       4      D      K)'
+(                  589002        POL-PEMULIHAN PPAP ABA                               I       4      D      K)'
+(                  589990        POL.LAINNYA                                          I       4      D      K)'
+(      590000                    PENDAPATAN NON OPERASIONAL                           I       2      K      K)'
+(            591000              PENDAPATAN NON OPERASI                               I       3      K      K)'
+(                  591010        PNO - PENJUALAN ATI                                  I       4      D      K)'
+(                  591011        PNO - KOMISI ASURANSI KEBAKARAN                      I       4      D      K)'
+(                  591012        PNO - KOMISI ASURANSI KENDARAAN                      I       4      D      K)'
+(                  591013        PNO - KOMISI ASURANSI JIWA                           I       4      D      K)'
+(                  591014        PNO - ADMINISTRASI BLOKIR&SERTIFIKAT                 I       4      D      K)'
+(                  591015        PNO - FEE DR PIHAK LAINNYA                           I       4      D      K)'
+(                  591990        PENDAPATAN NON OPERASIONAL LAINNYA                   I       4      D      K)'
+(            592000              PENDAPATAN NON OPERASI - BUNGA RAK                   I       3      K      K)'
+(                  592010        PNO - PEND BUNGA RAK SEISUKA                         I       4      D      K)'
+(                  592020        PNO-PEND BUNGA RAK SINAKSAK                          I       4      D      K)'
+(                  592030        PNO-PEND BUNGA RAK MANDOGE                           I       4      D      K)'
+(600000                          BEBAN                                                E       1      K      D)'
+(      610000                    BEBAN BUNGA - KONTRAKTUAL                            E       2      K      D)'
+(            611000              BEBAN BUNGA KEPADA BANK INDONESIA                    E       3      K      D)'
+(            612000              BEBAN BUNGA KEPADA BANK LAIN                         E       3      K      D)'
+(                  612100        BBB TABUNGAN BANK LAIN                               E       4      D      D)'
+(                  612200        BBB DEPOSITO BANK LAIN                               E       4      D      D)'
+(                  612300        BBB PINJ. DIT. DARI BANK UMUM                        E       4      K      D)'
+(                  612400        BBB PINJ. DIT. DARI BPR                              E       4      K      D)'
+(            613000              BEBAN BUNGA KPD PHK KETIGA                           E       3      K      D)'
+(                  613100        BEBAN BUNGA KPD PHK KETIGA - TAB                     E       4      K      D)'
+(                        613101  BEBAN BG TAB MASY. UMUM                              E       5      D      D)'
+(                        613102  BEBAN BG TAB THT                                     E       5      D      D)'
+(                        613103  BEBAN BG TAB KELUARGA PRESKOM                        E       5      D      D)'
+(                        613104  BEBAN BG TAB PESAHAM                                 E       5      D      D)'
+(                        613105  BEBAN BG TABUNGANKU \(BI\)                             E       5      D      D)'
+(                  613200        BEBAN BUNGA KPD PHK KETIGA - DEPOSITO                E       4      K      D)'
+(                        613210  BEBAN BG  DEPOSITO BERJANGKA                         E       5      D      D)'
+(                  613300        BEBAN BUNGA PINJ DIT. DARI PIHAK KETIGA              E       4      K      D)'
+(                  613900        BEBAN BUNGA KPD PHK KETIGA  - LAINNYA                E       4      K      D)'
+(                        613910  BIAYA PREMI LPS                                      E       5      D      D)'
+(            614000              KOREKSI ATAS PENDAPATAN BUNGA                        E       3      K      D)'
+(      620000                    BEBAN BUNGA - PROVISI                                E       2      K      D)'
+(            621000              BEBAN BGA PINJ DIT. BANK LAIN-PROVISI                E       3      K      D)'
+(            622000              BEBAN BGA PINJ DIT. BANK LAIN-ADMINISTRASI           E       3      K      D)'
+(                  622001        ADMINISTRASI                                         E       4      D      D)'
+(            629000              BEBAN BGA PINJ DIT. LAINNYA - PROVISI                E       3      D      D)'
+(      630000                    BEBAN BUNGA - BIAYA TRANSAKSI                        E       2      K      D)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 10 )'
+ET
+endstream
+endobj
+32 0 obj
+7116
+endobj
+33 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 34 0 R
+>>
+endobj
+34 0 obj
+<<
+/Length 35 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :  10)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(            631000              BEBAN BUNGA KPD BANK LAIN - BYA TRANS                E       3      K      D)'
+(                  631100        BEBAN BGA TAB MILIK BANK LAIN - BYA TRANS            E       4      D      D)'
+(                  631200        BEBAN BGA DEP MILIK BANK LAIN - BYA TRANS            E       4      D      D)'
+(                  631300        BEBAN BGA PINJ DIT. DR BANK LAIN-BYA TRANS           E       4      D      D)'
+(            632000              BEBAN BGA KPD PHK KETIGA-BYA TRANS                   E       3      K      D)'
+(                  632100        BEBAN BGA TAB - BIAYA TRANS                          E       4      D      D)'
+(                  632200        BEBAN BGA DEP - BIAYA TRANS                          E       4      D      D)'
+(                  632300        BEBAN BGA PINJ DIT. - BIAYA TRANS                    E       4      D      D)'
+(                  632900        BEBAN BGA LAINNYA - BIAYA TRANS                      E       4      D      D)'
+(      640000                    BEBAN PENYISIHAN KERUGIAN/PENYUSUTAN                 E       2      K      D)'
+(            641000              BEBAN PENYISIHAN KERUGIAN TAB/DEP                    E       3      K      D)'
+(                  641100        BEBAN PENYISIHAN ABA                                 E       4      D      D)'
+(            642000              BEBAN PENYISIHAN KERUGIAN KREDIT                     E       3      K      D)'
+(                  642100        BEBAN PPAP KYD                                       E       4      D      D)'
+(            643000              BEBAN KERUGIAN RESTRUKTURISASI KREDIT                E       3      K      D)'
+(                  643100        BEBAN RESTRUKTURISASI KYD PIHAK KETIGA               E       4      D      D)'
+(            644000              AMORTISASI BEBAN YG DITANGGUHKAN                     E       3      K      D)'
+(                  644010        AMORTISASI BEBAN YG DITANGGUHKAN                     E       4      D      D)'
+(      650000                    BIAYA PROMOSI & EDUKASI                              E       2      K      D)'
+(            650001              BY PROMOSI, IKLAN DAN BROSUR                         E       3      D      D)'
+(      660000                    BIAYA UMUM DAN ADMINISTRASI                          E       2      K      D)'
+(            661000              BIAYA TENAGA KERJA                                   E       3      K      D)'
+(                        661010  BTKL LEMBUR                                          E       5      D      D)'
+(                  661100        BIAYA TENAGA KERJA                                   E       4      K      D)'
+(                        661101  BTK GAJI KARYAWAN TETAP                              E       5      D      D)'
+(                        661102  PAJAK PS 21 DIBAYAR PERUSAHAAN                       E       5      D      D)'
+(                        661103  BTK GAJI OUTSOURCING                                 E       5      D      D)'
+(                  661200        BEBAN HONORARIUM PENGURUS                            E       4      K      D)'
+(                        661201  BY HONORARIUM KOMISARIS                              E       5      D      D)'
+(                        661202  BY PERJALANAN DINAS KOMISARIS                        E       5      D      D)'
+(                  661900        BEBAN TENAGA KERJA LAINNYA                           E       4      K      D)'
+(                        661901  BTKL TUNJANGAN HARI RAYA                             E       5      D      D)'
+(                        661902  BTKL TUNJANGAN KESEHATAN                             E       5      D      D)'
+(                        661903  BTKL TUNJANGAN PERUMAHAN                             E       5      D      D)'
+(                        661904  BTKL TRANSPORT DAN UANG SAKU KARYAWAN MAGANG         E       5      D      D)'
+(                        661905  BTKL TUNJANGAN JABATAN                               E       5      D      D)'
+(                        661906  BTKL TUNJANGAN PULSA                                 E       5      D      D)'
+(                        661907  BTKL INSENTIF AO                                     E       5      D      D)'
+(                        661908  BTKL UANG PESANGON KARYAWAN/TI                       E       5      D      D)'
+(                        661910  BTKL LEMBUR                                          E       5      D      D)'
+(                        661911  BTKL UANG JASA                                       E       5      D      D)'
+(                        661912  BTKL BPJS DANA PENSIUN                               E       5      D      D)'
+(                        661913  BTKL BPJS TENAGA KERJA                               E       5      D      D)'
+(                        661914  BTKL BPJS KESEHATAN                                  E       5      D      D)'
+(                        661915  BTKL IMBALAN KERJA                                   E       5      D      D)'
+(                        661990  BEBAN TENAGA KERJA LAINNYA                           E       5      D      D)'
+(            662000              BEBAN PENDIDIKAN & PELATIHAN                         E       3      K      D)'
+(                  662001        BPDP BY DIKLAT INTERN                                E       4      D      D)'
+(                  662002        BPDP BY DIKLAT LEMBAGA LAIN                          E       4      D      D)'
+(                  662003        BPDP BY PENDIDIKAN DAN PELATIHAN                     E       4      D      D)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 11 )'
+ET
+endstream
+endobj
+35 0 obj
+7114
+endobj
+36 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 37 0 R
+>>
+endobj
+37 0 obj
+<<
+/Length 38 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :  11)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(            663000              BEBAN SEWA                                           E       3      K      D)'
+(                  663001        BY.SEWA GEDUNG KANTOR                                E       4      D      D)'
+(                  663002        BY.SEWA KENDARAAN KANTOR                             E       4      D      D)'
+(                  663004        BY.SEWA RUMAH DINAS                                  E       4      D      D)'
+(                  663005        BIAYA SEWA IT                                        E       4      D      D)'
+(                  663006        BIAYA SEWA DRC                                       E       4      D      D)'
+(                  663990        BEBAN SEWA LAINNYA                                   E       4      D      D)'
+(            664000              BEBAN PENYUSUTAN                                     E       3      K      D)'
+(                  664100        BEBAN PENY. GEDUNG                                   E       4      K      D)'
+(                        664101  BEBAN PENY. GEDUNG                                   E       5      D      D)'
+(                  664200        BEBAN PENY. INVENTARIS                               E       4      K      D)'
+(                        664201  BEBAN PENY. KENDARAAN                                E       5      D      D)'
+(                        664202  BEBAN PENY. PERALATAN                                E       5      D      D)'
+(                  664300        BEBAN PENY. AKTIVA TDK BERWUJUD                      E       4      K      D)'
+(                        664301  BEBAN PENY. AKTIVA TIDAK BERWUJUD                    E       5      D      D)'
+(                  664400        BEBAN PENYUSUTAN LAINNYA                             E       4      K      D)'
+(                        664401  BEBAN PENGHAPUSAN PIUTANG                            E       5      D      D)'
+(            665000              PREMI ASURANSI                                       E       3      K      D)'
+(                  665001        BPA - ASURANSI KAS, KANTOR DAN MOBIL                 E       4      D      D)'
+(                  665002        BPA - ASURANSI GEDUNG                                E       4      D      D)'
+(                  665003        PREMI JAMSOSTEK                                      E       4      D      D)'
+(                  665004        BEBAN PREMI ASURANSI CASH IN SAVE AND TRANSIT        E       4      D      D)'
+(            666000              BEBAN BARANG/JASA                                    E       3      K      D)'
+(                  666001        BY ALAT TULIS MENULIS                                E       4      D      D)'
+(                  666002        BY FORMULIR                                          E       4      D      D)'
+(                  666003        BY FOTOCOPY DAN JILID                                E       4      D      D)'
+(                  666004        BY MATERAI                                           E       4      D      D)'
+(                  666005        BY LISTRIK, AIR DAN GAS                              E       4      D      D)'
+(                  666006        BY TELEPON / FAXMILE                                 E       4      D      D)'
+(                  666007        BY PENGIRIMAN UANG & JASA POS                        E       4      D      D)'
+(                  666008        BY PERLENGKAPAN KANTOR                               E       4      D      D)'
+(                  666009        BY RETRIBUSI SAMPAH DAN KEBERSIHAN                   E       4      D      D)'
+(                  666010        BY PERLENGKAPAN LAIN-LAIN                            E       4      D      D)'
+(                  666011        BY BBM/PARKIR/TOL MOBIL                              E       4      D      D)'
+(                  666012        BY BENDAHARA DINAS / INSTANSI                        E       4      D      D)'
+(                  666013        BY PERJALANAN DINAS                                  E       4      D      D)'
+(                  666014        BY IURAN OJK                                         E       4      D      D)'
+(                  666015        BY PERBAIKAN PERABOT KANTOR                          E       4      D      D)'
+(                  666016        BY SURAT KABAR/MAJALAH                               E       4      D      D)'
+(                  666017        BY RAPAT                                             E       4      D      D)'
+(                  666018        BY PERBIKAN KANTOR                                   E       4      D      D)'
+(                  666019        BY AKUNTAN PUBLIK                                    E       4      D      D)'
+(                  666020        BY JAMUAN TAMU                                       E       4      D      D)'
+(                  666021        BY OPERASIONAL KREDIT                                E       4      D      D)'
+(                  666022        BY KANTOR LAINNYA                                    E       4      D      D)'
+(                  666023        BY PENGINAPAN                                        E       4      D      D)'
+(                  666024        BY TRANSPORT/ANGKUTAN                                E       4      D      D)'
+(                  666025        BY PENGURUSAN SURAT KANTOR                           E       4      D      D)'
+(                  666026        BY ADM SIMPANAN PADA BANK LAIN                       E       4      D      D)'
+(                  666027        BIAYA JASA-JASA                                      E       4      D      D)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 12 )'
+ET
+endstream
+endobj
+38 0 obj
+7114
+endobj
+39 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 40 0 R
+>>
+endobj
+40 0 obj
+<<
+/Length 41 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :  12)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  666990        BIAYA ADMINISTASI UMUM LAINNYA                       E       4      D      D)'
+(            667000              BIAYA PAJAK-PAJAK \(DI LUAR PAJAK PENGHASILAN\)        E       3      K      D)'
+(                  667001        B.PAJAK KENDARAAN                                    E       4      D      D)'
+(                  667002        B.PAJAK REKLAME                                      E       4      D      D)'
+(                  667003        B.PAJAK BUMI DAN BANGUNAN                            E       4      D      D)'
+(                  667090        B.PAJAK LAINNYA                                      E       4      D      D)'
+(            668000              BIAYA PEMELIHARAAN DAN PERBAIKAN                     E       3      K      D)'
+(                  668001        BY.BENSIN MOBIL                                      E       4      D      D)'
+(                  668002        BY.BENSIN MOTOR                                      E       4      D      D)'
+(                  668003        BY.SERVICE MOBIL                                     E       4      D      D)'
+(                  668004        BY.SERVICE MOTOR                                     E       4      D      D)'
+(                  668005        BY.PEMELIHARAAN SISTEM                               E       4      D      D)'
+(                  668006        BY.PERBAIKAN & SPARE PARTS MOBIL                     E       4      D      D)'
+(                  668007        BY.PERBAIKAN & SPARE PARTS MOTOR                     E       4      D      D)'
+(                  668008        BY.AKSESORIS / PERLENGKAPAN MOBIL                    E       4      D      D)'
+(                  668009        BY.PERBAIKAN PERABOT RUMAH MILIK BANK                E       4      D      D)'
+(                  668010        BY.PERBAIKAN GEDUNG KANTOR                           E       4      D      D)'
+(                  668011        BY.PERBAIKAN INVENTARIS KANTOR                       E       4      D      D)'
+(                  668012        BY.OLI MOBIL DAN MOTOR                               E       4      D      D)'
+(                  668013        BY.BENSIN GENSET                                     E       4      D      D)'
+(                  668990        B PEMELIHARAAN LAINNYA                               E       4      D      D)'
+(      670000                    BEBAN PENELITIAN & PENGEMBANGAN                      E       2      K      D)'
+(            670001              BPP BY LITBANG                                       E       3      D      D)'
+(      680000                    BEBAN OPERASIONAL LAINNYA                            E       2      K      D)'
+(            680001              BOL ADMINISTRASI BANK                                E       3      D      D)'
+(            680002              BOL ADM TABUNGAN                                     E       3      D      D)'
+(            680003              BOL SELISIH KAS KURANG                               E       3      D      D)'
+(            680004              BOL DENDA BANK INDONESIA & OJK                       E       3      D      D)'
+(            680005              BOL DENDA PAJAK                                      E       3      D      D)'
+(            680006              BOL PREMI LPS                                        E       3      D      D)'
+(            680007              BY UTANG PAJAK HASIL PEMERIKSAAN                     E       3      D      D)'
+(      690000                    BEBAN NON OPERASIONAL \(BNO\)                          E       2      K      D)'
+(            691000              BEBAN NON OPERASIONAL \(BNO\)                          E       3      K      D)'
+(                  691001        BNO SUMBANGAN & BINGKISAN                            E       4      D      D)'
+(                  691002        BNO KEAMANAN DAN KEBERSIHAN                          E       4      D      D)'
+(                  691003        BNO IURAN PERBARINDO                                 E       4      D      D)'
+(                  691004        BNO JASA NOTARIS                                     E       4      D      D)'
+(                  691005        BNO RETRIBUSI DAERAH                                 E       4      D      D)'
+(                  691010        BNO KERUGIAN PENJUALAN/PENGHAPUSAN ATI               E       4      D      D)'
+(                  691011        BNO KERUGIAN PENJUALAN AYDA                          E       4      D      D)'
+(                  691012        RUGI PENURUNAN NILAI ATI                             E       4      D      D)'
+(                  691013        RUGI PENURUNAN NILAI AYDA                            E       4      D      D)'
+(                  691990        BEBAN NON OPERASIONAL \(BNO\) LAINNYA                  E       4      D      D)'
+(            692000              BEBAN NON OPERASIONAL - REK ANTAR KANTOR             E       3      K      D)'
+(                  692010        BEBAN BUNGA ANTAR KANTOR CAB SEISUKA                 E       4      D      D)'
+(                  692020        BEBAN BUNGA ANTAR KANTOR CAB. SINAKSAK               E       4      D      D)'
+(                  692030        BEBAN BUNGA ANTAR KANTOR CAB. MANDOGE                E       4      D      D)'
+(      699000                    TAKSIRAN PAJAK PENGHASILAN                           E       2      K      D)'
+(            699100              TAKSIRAN PAJAK PENGHASILAN                           E       3      D      D)'
+(800000                          REKENING ADMINISTRATIF                               C       1      K      D)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 13 )'
+ET
+endstream
+endobj
+41 0 obj
+7122
+endobj
+42 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 43 0 R
+>>
+endobj
+43 0 obj
+<<
+/Length 44 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :  13)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(      810000                    FASILITAS PINJAMAN DIT. BLM DITARIK                  C       2      K      D)'
+(            810100              PINJ. DIT. ANTAR BANK BLM DITARIK                    C       3      K      D)'
+(                  810101        PINJ. DIT. DR BANK BLM DITARIK                       C       4      D      D)'
+(            810200              PINJ. DITERIMA NON BANK BELUM DITARIK                C       3      K      D)'
+(      820000                    ADM BUNGA DALAM PENYELESAIAN                         C       2      K      D)'
+(            821000              ADM. BUNGA DLM PENYELESAIAN - KYD AKTIF              C       3      K      D)'
+(                  821010        BGA DLM PENYELS - KREDIT PERDAGANGAN                 C       4      D      D)'
+(                  821020        BGA DLM PENYELS - KREDIT INDUSTRI                    C       4      D      D)'
+(                  821030        BGA DLM PENYELS - KREDIT PERIKANAN                   C       4      D      D)'
+(                  821040        BGA DLM PENYELS - JASA PERORANGAN                    C       4      D      D)'
+(                  821050        BGA DLM PENYELS - KREDIT KONSUMSI                    C       4      D      D)'
+(                  821060        BGA DLM PENYELS - KREDIT PERTANIAN                   C       4      D      D)'
+(                  821070        BGA DLM PENYELS - KREDIT LISTRIK, GAS & AIR          C       4      D      D)'
+(                  821080        BGS DLM PENYELS - KREDIT PENSIUNAN/KTA               C       4      D      D)'
+(                  821090        BGA DLM PENYELS - KREDIT AKOMODASI                   C       4      D      D)'
+(                  821100        BGS DLM PENYLS - KREDIT TRANSKOM                     C       4      D      D)'
+(                  821110        BGA DLM PENYELS - KREDIT KONSUMTIF PEGAWAI           C       4      D      D)'
+(                        821120  BGA DLM PENYELS - KRD PETERNAKAN                     C       5      D      D)'
+(            822000              BGA DLM PENYLS KYD HAPUS BUKU                        C       3      K      D)'
+(                  822010        BGA DLM PENY KYD HPS BK - KRD PERDAGANGAN            C       4      D      D)'
+(                  822020        BGA DLM PENY KYD HPS BK - KRD INDUSTRI               C       4      D      D)'
+(                  822030        BGA DLM PENY KYD HPS BK - KRD PERIKANAN              C       4      D      D)'
+(                  822040        BGA DLM PENY KYD HPS BK - KRD JASA PERORANGAN        C       4      D      D)'
+(                  822050        BGA DLM PENY KYD HPS BK - KRD KONSUMSI               C       4      D      D)'
+(                  822060        BGS DLM PENY KYD HPS BK - KRD PETANIAN               C       4      D      D)'
+(                  822070        BGS DLM PENY KYD HPS BK - KRD LISTRIK, GAS & LISTR   C       4      D      D)'
+(                  822080        BGA DLM PENY KYD HPS BK - KRD PENSIUNAN/KTA          C       4      D      D)'
+(                  822090        BGS DLM PENY KYD HPS BK - KRD AKOMODASI              C       4      D      D)'
+(                  822100        BGA DLM PENY KYD HPS BK - KRD TRANSKOM               C       4      D      D)'
+(                  822110        BGA DLM PENY KYD HPS BK - KRD KONSUMTIF PEGAWAI      C       4      D      D)'
+(                        822120  BGA DLM PENY KYD HPS BK - KRD PETERNAKAN             C       5      D      D)'
+(            823000              ADM. BUNGA DLM PENYELESAIAN - KYD KE BPR AKTIF       C       3      K      D)'
+(            824000              ADM.BUNGA DLM PENYELESAIAN - KYD RESTRUKTURISASI     C       3      K      D)'
+(                  824010        BGA DLM PENY KYD RESTRU - KRD PEDAGANGAN             C       4      D      D)'
+(                  824020        BGA DLM PENY KYD RESTRU - KRD INDUSTRI               C       4      D      D)'
+(                  824030        BGA DLM PENY KYD RESTRU - KRD PERIKANAN              C       4      D      D)'
+(                  824040        BGA DLM PENY KYD RESTRU - JASA PERORANGAN            C       4      D      D)'
+(                  824050        BGA DLM PENY KYD RESTU - KRD KONSUMSI                C       4      D      D)'
+(                  824060        BGA DLM PENY KYD RESTU - KRD PERTANIAN               C       4      D      D)'
+(                  824070        BGA DLM PENY KYD RESTU - KRD LISTRIK, GAS & AIR      C       4      D      D)'
+(                  824080        BGA DLM PENY KYD RESTU - KRD PENSIUNAN/KTA           C       4      D      D)'
+(                  824090        BGA DLM PENY KYD RESTU - KRD AKOMODASI               C       4      D      D)'
+(                  824100        BGA DLM PENY KYD RESTU - KRD TRANSKOM                C       4      D      D)'
+(                  824110        BGA DLM PENY KYD RESTU - KRD KONSUMTIF PEGAWAI       C       4      D      D)'
+(                        824120  BGA DLM PENY KYD RESTRU - KRD PETERNAKAN             C       5      D      D)'
+(            829000              ADM. BUNGA DLM PENYELESAIAN - LAINNYA                C       3      K      D)'
+(                  829100        BGA DLM PENYELS - KREDIT KPD BANK LAIN               C       4      D      D)'
+(                  829999        BGA DLM PENYELS - LAINNYA                            C       4      D      D)'
+(      830000                    FASILITAS KYD BLM DIGUNAKAN                          C       2      K      K)'
+(            831000              FASILITAS KYD BLM DIGUNAKAN KPD PIHAK KETIGA         C       3      K      K)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 14 )'
+ET
+endstream
+endobj
+44 0 obj
+7114
+endobj
+45 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 46 0 R
+>>
+endobj
+46 0 obj
+<<
+/Length 47 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :  14)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  831010        FKYDBD PERDAGANGAN                                   C       4      D      K)'
+(                  831020        FKYDBD INDUSTRI                                      C       4      D      K)'
+(                  831030        FKYDBD PERIKANAN                                     C       4      D      K)'
+(                  831040        FKYDBD KREDIT JASA PERORANGAN                        C       4      D      K)'
+(                  831050        FKYDBD KONSUMSI                                      C       4      D      K)'
+(                  831060        FKYDBD PERTANIAN                                     C       4      D      K)'
+(                  831070        FKYDBD LISTRIK,GAS & AIR                             C       4      D      K)'
+(                  831080        FKYDBD PENSIUNAN/KTA                                 C       4      D      K)'
+(                  831090        FKYDBD AKOMODASI                                     C       4      D      K)'
+(                  831100        FKYDBD TRANSKOM                                      C       4      D      K)'
+(                  831110        FKYDBD KONSUMTIF PEGAWAI                             C       4      D      K)'
+(                        831120  FKYDBD PETERNAKAN                                    C       5      D      K)'
+(            832000              FASILITAS KYD BLM DIGUNAKAN KPD BANK LAIN            C       3      K      K)'
+(      840000                    PENERUSAN KREDIT \(CHANNELING\)                        C       2      K      D)'
+(            841001              PENERUSAN KREDIT                                     C       3      D      D)'
+(      850000                    AKTIVA PRODUKTIF HAPUS BUKU                          C       2      K      D)'
+(            851000              AKT PROD. HPS BUKU - KYD PIHAK KETIGA                C       3      K      D)'
+(                  851010        APHB - KREDIT PERDAGANGAN                            C       4      D      D)'
+(                  851020        APHB - KREDIT INDUSTRI                               C       4      D      D)'
+(                  851030        APHB - KREDIT PERIKANAN                              C       4      D      D)'
+(                  851040        APHB - KRDIT JASA PERORANGAN                         C       4      D      D)'
+(                  851050        APHB - KREDIT KONSUMSI                               C       4      D      D)'
+(                  851060        APHB - KREDIT PERTANIAN                              C       4      D      D)'
+(                  851070        APHB -  KREDIT LISTRIK, GAS & AIR                    C       4      D      D)'
+(                  851080        APHB - KREDIT PENSIUNAN/KTA                          C       4      D      D)'
+(                  851090        APHB - KREDIT AKOMODASI                              C       4      D      D)'
+(                  851100        APHB - KREDIT TRANSKOM                               C       4      D      D)'
+(                  851110        APHB - KREDIT KONSUMTIF PEGAWAI                      C       4      D      D)'
+(                        851120  APHB - KREDIT PETERNAKAN                             C       5      D      D)'
+(            852000              AKT PROD. HPS BUKU - KYD KE BANK LAIN                C       3      K      D)'
+(      860000                    LAIN-LAIN BERSIFAT ADMINISTRATIF                     C       2      K      D)'
+(            861000              REK. ADMINISTRATIF DENDA TUNGGAKAN KYD               C       3      K      D)'
+(                  861010        ADM. DENDA TGK - KRD PERDAGANGAN                     C       4      D      D)'
+(                  861020        ADM. DENDA TGK - KRD INDUSTRI                        C       4      D      D)'
+(                  861030        ADM. DENDA TGK - KRD PERIKANAN                       C       4      D      D)'
+(                  861040        ADM. DENDA TGK - JASA PERORANGAN                     C       4      D      D)'
+(                  861050        ADM.BENDA TGK - KRD KONSUMSI                         C       4      D      D)'
+(                  861060        ADM.DENDA TGK -KRD PERTANIAN                         C       4      D      D)'
+(                  861070        ADM.DENDA TGK - KRD LISTRIK, GAS & AIR               C       4      D      D)'
+(                  861080        ADM.DENDA TGK - KRD PENSIUNAN/KTA                    C       4      D      D)'
+(                  861090        ADM.DENDA TGK - KRD AKOMODASI                        C       4      D      D)'
+(                  861100        ADM.DENDA TGK - KRD TRANSKOM                         C       4      D      D)'
+(                  861110        ADM.DENDA TGK - KRD KONSUMTIF PEGAWAI                C       4      D      D)'
+(                        861120  ADM. DENDA TGK - KRD PETERNAKAN                      C       5      D      D)'
+(            862000              ADM DENDA KYD HAPUS BUKU                             C       3      K      D)'
+(                  862010        ADM DENDA KYD HPS BK - PERDAGANGAN                   C       4      D      D)'
+(                  862020        ADM DENDA KYD HPS BK - KRD INDUSTRI                  C       4      D      D)'
+(                  862030        ADM DENDA KYD HPS BUKU - PERIKANAN                   C       4      D      D)'
+(                  862040        ADM DENDA KYD HPS BK - KRD JASA PERORANGAN           C       4      D      D)'
+(                  862050        ADM DENDA KYD HPS BK - KRD KONSUMSI                  C       4      D      D)'
+( )'
+(                                          BERSAMBUNG KE HALAMAN 15 )'
+ET
+endstream
+endobj
+47 0 obj
+7116
+endobj
+48 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 49 0 R
+>>
+endobj
+49 0 obj
+<<
+/Length 50 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015PT. BPR DIORI GANDA Kantor Pusat                                                HALAMAN :  15)'
+(AKTR0016 : Daftar Nomor GL                                                TGL/JAM CETAK : 24/02/2018/09:52:47)'
+(            )'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+(NOMOR DASAR G/L                 KETERANGAN                                          TYPE   LEVEL  TYPE    D/K)'
+(                                                                                    G/L    G/L    ENTRY)'
+(\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304\304)'
+()'
+(                  862060        ADM DENDA KYD HPS BK - KRD PERTANIAN                 C       4      D      D)'
+(                  862070        ADM DENDA KYD HPS BK - KRD LISTRIK,GAS & AIR         C       4      D      D)'
+(                  862080        ADM DENDA KYD HPS BK - KRD PENSIUNAN/KTA             C       4      D      D)'
+(                  862090        ADM DENDA KYD HPS BK - AKOMODASI                     C       4      D      D)'
+(                  862100        ADM DENDA KYD HPS BK - TRANSKOM                      C       4      D      D)'
+(                  862110        ADM DENDA KYD HPS BK - KONSUMTIF PEGAWAI             C       4      D      D)'
+(                        862120  ADM DENDA KYD HPS BK - PETERNAKAN                    C       5      D      D)'
+(      870000                    ADM AGUNAN DALAM PENYELESAIAN KREDIT                 C       2      K      D)'
+(            871000              ADM AGUNAN DALAM PENYELESAIAN KREDIT                 C       3      K      D)'
+(                  871001        ADM AGUNAN DALAM PENYELESAIAN KREDIT                 C       4      D      D)'
+(      890000                    REKENING ADMINISTRATIF LAINNYA                       C       2      K       )'
+(            891000              REK ADMINISTRATIF TITIPAN WARKAT                     C       3      K      K)'
+(                  891100        MEMO. WKT DLM PENITIPAN                              C       4      D      K)'
+(                  891200        MEMO. WKT YG DIINKASOKAN                             C       4      D      K)'
+(                  891300        MEMO. WKT DLM PENYELESAIAN                           C       4      D      K)'
+(                  891400        MEMO. INKASO WKT DLM PENYELESAIAN                    C       4      D      K)'
+(            892000              REK BERSIFAT ADMINISTRATIF                           C       3      K      D)'
+(                  892001        LAIN-LAIN BERSIFAT ADMINISTRATIF                     C       4      D      D)'
+(            899000              REK ADMINISTRATIF LAINNYA                            C       3      K       )'
+(                  899990        REKENING ADMINISTRATIF LAINNYA                       C       4      D       )'
+(900000                          REKENING MEMORANDUM                                  C       1      K      D)'
+(      910000                    REK. MEMO. AKT. PRODUKTIF NPL                        C       2      K      D)'
+(            911000              MEMO ADM TGK POKOK KYD AKTIF                         C       3      K      D)'
+(                  911010        MEMO ADM TGK POKOK KYD PERDAGANGAN                   C       4      D      D)'
+(                  911020        MEMO ADM TGK POKOK KYD INDUSTRI                      C       4      D      D)'
+(                  911030        MEMO ADM TGK POKOK KYD PERIKANAN                     C       4      D      D)'
+(                  911040        MEMO ADM TGK POKOK KYD JASA PERORANGAN               C       4      D      D)'
+(                  911050        MEMO ADM TGK POKOK KYD KONSUMSI                      C       4      D      D)'
+(                  911060        MEMO ADM TGK POKOK PERTANIAN                         C       4      D      D)'
+(                  911070        MEMO ADM TGK POKOK KYD LISTRIK, GAS & AIR            C       4      D      D)'
+(                  911080        MEMO ADM TGK POKOK KYD PENSIUNAN/KTA                 C       4      D      D)'
+(                  911090        MEMO ADM TGK POKOK KYD AKOMODASI                     C       4      D      D)'
+(                  911100        MEMO ADM TGK POKOK KYD TRANSKOM                      C       4      D      D)'
+(                  911110        MEMO ADM TGK POKOK KYD KONSUMTIF PEGAWAI             C       4      D      D)'
+(                        911120  MEMO ADM TGK POKOK KYD PETERNAKAN                    C       5      D      D)'
+(      990000                    REK. MEMORANDUM LAINNYA                              C       2      K      D)'
+(            990900              REK. SEMENTARA ADMIN./MEMORANDUM                     C       3      D       )'
+(            999999              REK. KONTRA ADMIN./MEMORANDUM                        C       3      D       )'
+()'
+()'
+()'
+()'
+()'
+()'
+()'
+()'
+()'
+()'
+()'
+()'
+( )'
+(                                            *** AKHIR LAPORAN ***  )'
+ET
+endstream
+endobj
+50 0 obj
+5818
+endobj
+51 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 52 0 R
+>>
+endobj
+52 0 obj
+<<
+/Length 53 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015)'
+ET
+endstream
+endobj
+53 0 obj
+53
+endobj
+54 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 55 0 R
+>>
+endobj
+55 0 obj
+<<
+/Length 56 0 R
+>>
+stream
+BT
+/F1 6 Tf
+1 0 0 1 50 802 Tm
+12 TL
+(\015)'
+ET
+endstream
+endobj
+56 0 obj
+53
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Count 17
+/MediaBox [ 0 0 595 842 ]
+/Kids [ 6 0 R 9 0 R 12 0 R 15 0 R 18 0 R 21 0 R 24 0 R 27 0 R 30 0 R 33 0 R 36 0 R 39 0 R 42 0 R 45 0 R 48 0 R 51 0 R 54 0 R ]
+>>
+endobj
+xref
+0 57
+0000000000 65535 f 0000000010 00000 n 0000000137 00000 n 0000108872 00000 n 0000000192 00000 n 0000000278 00000 n 0000000355 00000 n 0000000443 00000 n 0000007616 00000 n 0000007639 00000 n 0000007728 00000 n 0000014903 00000 n 0000014927 00000 n 0000015017 00000 n 0000022198 00000 n 0000022222 00000 n 0000022312 00000 n 0000029491 00000 n 0000029515 00000 n 0000029605 00000 n 0000036784 00000 n 0000036808 00000 n 0000036898 00000 n 0000044075 00000 n 0000044099 00000 n 0000044189 00000 n 0000051366 00000 n 0000051390 00000 n 0000051480 00000 n 0000058657 00000 n 0000058681 00000 n 0000058771 00000 n 0000065948 00000 n 0000065972 00000 n 0000066062 00000 n 0000073237 00000 n 0000073261 00000 n 0000073351 00000 n 0000080526 00000 n 0000080550 00000 n 0000080640 00000 n 0000087823 00000 n 0000087847 00000 n 0000087937 00000 n 0000095112 00000 n 0000095136 00000 n 0000095226 00000 n 0000102403 00000 n 0000102427 00000 n 0000102517 00000 n 0000108396 00000 n 0000108420 00000 n 0000108510 00000 n 0000108624 00000 n 0000108646 00000 n 0000108736 00000 n 0000108850 00000 n trailer
+<<
+/Size 57
+/Root 2 0 R
+/Info 1 0 R
+>>
+startxref
+109077
+%%EOF

@@ -1,0 +1,19 @@
+#toolbar-menu {
+  min-height: 54px;
+}
+
+.panel-gaji {
+  z-index: 2000;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mat-card {
+  min-width: 100%;
+  .mat-card-content {
+    min-width: 100%;
+  }
+}
+
+.form-control:disabled,
+.form-control[readonly] {}

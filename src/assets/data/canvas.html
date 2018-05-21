@@ -1,0 +1,956 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./cssprint/screen.css">
+  <style>
+    table {
+      border-spacing: 1px !important;
+      font-size: 10pt !important;
+      word-spacing: 1.5pt;
+      line-height: 1.7em;
+    }
+
+    .table-bordered th {
+      padding: 1px;
+      vertical-align: center !important;
+      border-top: 1px dashed !important;
+      border-bottom: 1px dashed !important;
+    }
+
+    .table td {
+      padding: unset !important;
+      vertical-align: middle !important;
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+
+    .table th {
+      padding: unset !important;
+      vertical-align: middle !important;
+      border-top: 1px dashed !important;
+      border-bottom: 1px dashed !important;
+    }
+
+    #subtotal td {
+      padding-top: 1.5em !important;
+    }
+
+    .incrementClass:before {
+      counter-increment: page;
+    }
+
+    @page {
+
+      counter-increment: page;
+
+      @bottom-right {
+        padding-right: 20px;
+        content: "Page " counter(page);
+      }
+
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+  <div id="htmlout" style="display: none"></div>
+  <table id="tcontoh" style="display: none">
+    <tbody>
+      <tr>
+        <td style="font-weight: bold">Nik</td>
+        <td>Nama</td>
+        <td>Nik</td>
+        <td>Nama</td>
+        <td>Nik</td>
+        <td>Nama</td>
+        <td>Nik</td>
+        <td>Nama</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson gultom</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>121313213</td>
+        <td>Halasson</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+      <tr>
+        <td>456546</td>
+        <td>gultom</td>
+      </tr>
+    </tbody>
+
+
+
+  </table>
+
+
+
+  <button onclick="makepdf()">pdf</button>
+  <button id="createPDF" onclick="autotablefunc()">autotable from html</button>
+  <button id="createPDF" onclick="tabelwithspan()">autotable spans</button>
+  <button id="createPDF" onclick=" autotablefuncspan()">autotable from html tabel</button>
+
+  <div id="customers">
+    <table id="tab_customers" class="table table-striped">
+      <colgroup>
+        <col width="20%">
+        <col width="20%">
+        <col width="20%">
+        <col width="20%">
+      </colgroup>
+      <thead>
+        <tr class='warning'>
+          <th>Country</th>
+          <th>Population</th>
+          <th>Date</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Chinna</td>
+          <td>1,363,480,000</td>
+          <td>March 24, 2014</td>
+          <td>19.1</td>
+        </tr>
+        <tr>
+          <td>India</td>
+          <td>1,241,900,000</td>
+          <td>March 24, 2014</td>
+          <td>17.4</td>
+        </tr>
+        <tr>
+          <td>United States</td>
+          <td>317,746,000</td>
+          <td>March 24, 2014</td>
+          <td>4.44</td>
+        </tr>
+        <tr>
+          <td>Indonesia</td>
+          <td>249,866,000</td>
+          <td>July 1, 2013</td>
+          <td>3.49</td>
+        </tr>
+        <tr>
+          <td>Brazil</td>
+          <td>201,032,714</td>
+          <td>July 1, 2013</td>
+          <td>2.81</td>
+        </tr>
+      </tbody>
+    </table>
+    <input id="Text1" type="text" value="JSPDF is an open-source library for generating ." />
+  </div>
+  <button onclick="javascript:demoFromHTML();">PDF</button>
+
+  <div id="vwr">
+
+  </div>
+
+
+
+
+
+  <!--
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  
+    <script src="./libs/html2pdf.js"></script>-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.2/jspdf.plugin.autotable.js"></script>
+  <script src="./js/jspdf.min.js"></script>
+  <script src="./js/jspdf.debug.js"></script> -->
+  <script src="./js/faker.min.js"></script>
+
+
+  <script>
+    const ipcRenderer = require("electron").ipcRenderer;
+    // const jsPDF = require("jsPDF");
+    var jsPDF = require('jspdf');
+    require('jspdf-autotable');
+    const path = require('path');
+    const os = require('os');
+    const pdfPath = path.join(os.tmpdir(), 'print.pdf');
+
+    var options = {
+      "paper": "",
+      "layout": ""
+    }
+    var tab;
+    var datatotable;
+
+    ipcRenderer.on('fill-direct-toPrint', (event, content) => {
+      document.getElementById('htmlout').innerHTML = content;
+      ipcRenderer.send("open-print-preview");
+    })
+    ipcRenderer.on('fill-PrintTo-PDF', (event, content) => {
+      options.paper = content.options.paper;
+      options.size = content.options.size;
+      document.getElementById('htmlout').innerHTML = content.content;
+      //var tcontoh =  tabletojson($('#tcontoh').get(0));
+      // console.info(tcontoh);
+
+      // cssPagedMedia.size(options);
+      // ipcRenderer.send("createPDF");
+      // createpdf(content.content);
+      // createpdf();
+      // generate(document.body);
+    });
+    ipcRenderer.on('get_json_data', (e, data) => {
+      datatotable = data;
+
+      // console.info(datatotable);
+      // console.info(getcolumnsfromjsondata(datatotable[0]));
+
+    })
+    getcolumnsfromjsondata = function (data) {
+      var value = [];
+
+      for (const key in data) {
+        value.push({
+          title: key,
+          datakey: key
+        });
+      }
+
+      return value;
+    }
+
+    // change margin
+    document.addEventListener('DOMContentLoaded', function () {
+      // tabletojson()
+    });
+    margins = {
+      top: 70,
+      bottom: 40,
+      left: 30,
+      width: 550
+    };
+
+    generate = function (e) {
+      console.info(e);
+      var pdf = new jsPDF('p', 'pt', 'a4');
+      pdf.setFontSize(18);
+      pdf.fromHTML(e,
+
+        function (dispose) {
+          //headerFooterFormatting(pdf, pdf.internal.getNumberOfPages());
+        },
+        margins);
+
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('style',
+        'position:absolute;right:0; top:0; bottom:0; height:100%; width:650px; padding:20px;');
+      document.body.appendChild(iframe);
+
+      iframe.src = pdf.output('datauristring');
+    };
+
+
+
+    ipcRenderer.on('change-page-conf', (event, data) => {
+      console.info(data);
+      options.layout = data.layout;
+      options.paper = data.paper;
+      cssPagedMedia.size(options);
+      ipcRenderer.send("createPDF");
+    })
+
+
+    var cssPagedMedia = (function () {
+      var style = document.createElement('style');
+      document.head.appendChild(style);
+      return function (rule) {
+        style.innerHTML = rule;
+      };
+    }());
+
+    cssPagedMedia.size = function (size) {
+      cssPagedMedia('@page {size: ' + size.paper + ' ' + size.layout +
+        '; margin-top: 1.5cm; margin-left: 1.5cm; margin-bottom: 1.5cm; counter-increment: page; @bottom-right { padding-right:20px; content: "Page " counter(page); } }'
+      );
+    };
+
+    // function table to json
+
+    function tabletojson(table) {
+
+      var data = [];
+      var headers = [];
+      //first row to be need headers
+      for (var i = 0; i < table.rows[0].cells.length; i++) {
+        headers[i] = table.rows[0].cells[i].innerHTML.toLowerCase().replace(/ /gi, '');
+      }
+      margins = {
+        top: 80,
+        bottom: 60,
+        left: 40,
+        width: 522
+      };
+      data.push(headers);
+      // go through cells
+      for (var i = 1; i < table.rows.length; i++) {
+        var tableRow = table.rows[i];
+        var rowData = {};
+        for (var j = 0; j < tableRow.cells.length; j++) {
+          rowData[headers[j]] = tableRow.cells[j].innerHTML;
+        }
+        data.push(rowData);
+      }
+      return data;
+    }
+
+    function makepdf() {
+      var table = tabletojson($('#tcontoh').get(0), {
+        left: 80,
+        right: 10,
+        top: 500,
+        bottom: 50,
+        width: 60,
+        autoSize: false,
+        printHeaders: true
+      });
+      console.info(table);
+      var doc = new jsPDF('l', 'pt', 'legal');
+
+      //doc.setLineWidth(0.5);
+      doc.setFontSize(10);
+      doc.cellInitialize();
+
+      $.each(table, function (i, row) {
+        doc.setDrawColor(50, 50, 150);
+        $.each(row, function (j, cell) {
+
+
+          if (j === "nama" | j === 1) {
+            doc.cell(30, 30, 150, 20, cell, i);
+
+          } else {
+            doc.cell(30, 30, 90, 20, cell, i);
+          }
+        });
+
+      });
+      var x = doc.output('datauristring');
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('id', 'ifr');
+      iframe.setAttribute('style', 'position:absolute;right:0; top:50; bottom:0; height:100%; width:80%');
+      if (document.getElementById('ifr') !== null) {
+        document.getElementById('vwr').removeChild(document.getElementById('ifr'));
+      }
+      document.getElementById('vwr').appendChild(iframe);
+
+      //console.info(pdf.output('datauristring'));
+      iframe.src = doc.output('datauristring');
+    }
+
+    //cssPagedMedia.size('landscape');
+    function createpdf() {
+      var pdf = new jsPDF('p', 'pt', 'letter');
+      pdf.canvas.height = 72 * 11;
+      pdf.canvas.width = 72 * 8.5;
+      //pdf.addPage('a6','l');
+      //html2pdf(document.documentElement.innerHTML, pdf, function(pdf){
+      html2pdf(document.getElementById('htmlout'), pdf, function (pdf) {
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('style', 'position:absolute;right:0; top:0; bottom:0; height:100%; width:500px');
+        document.body.appendChild(iframe);
+        //console.info(pdf.output('datauristring'));
+        iframe.src = pdf.output('datauristring');
+        // iframe.setAttribute('src',pdf.output('datauristring'))
+      });
+    }
+
+    function alignCol(cell, data) {
+      var col = data.column.index;
+      if (col == 3 || col == 5 || col == 6 || col == 7 || col == 8 || col == 9 || col == 10) {
+        cell.styles.halign = 'right';
+
+        console.log('2 data.column.index', data.column.index);
+        console.log('cell', cell);
+        console.log('data', data);
+      }
+    }
+
+    function addTable(doc, y, elem) {
+
+      doc.setFontSize(6);
+
+      var res = doc.autoTableHtmlToJson(elem);
+
+      doc.autoTable(res.columns, res.data, {
+        startY: y,
+        margin: {
+          right: 20,
+          left: 20
+        },
+        //tableLineColor: [189, 195, 199],
+        tableLineWidth: 0,
+        headerStyles: {
+          fontSize: 7,
+          fontStyle: 'normal',
+          textColor: [0, 0, 0],
+          fillColor: [192, 207, 229]
+        },
+        bodyStyles: {
+          fontSize: 6
+        },
+        createdHeaderCell: function (cell, data) {
+          alignCol(cell, data);
+        },
+        createdCell: function (cell, data) {
+          alignCol(cell, data);
+        }
+      });
+    }
+    $('#createPDF').click(function () {
+      var pdf = new jsPDF('portrait', 'pt', 'a4');
+      addTable(pdf, 40, $("#basictable")[0]);
+      pdf.save();
+    });
+
+    /*  function demoFromHTML() {
+      var pdf = new jsPDF('p', 'pt', 'letter');
+      var text = document.getElementById("Text1").value;
+      pdf.text(100, 225, text);
+      // source can be HTML-formatted string, or a reference
+      // to an actual DOM element from which the text will be scraped.
+      source = $('#customers')[0];
+
+      // we support special element handlers. Register them with jQuery-style 
+      // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+      // There is no support for any other type of selectors 
+      // (class, of compound) at this time.
+      specialElementHandlers = {
+        // element with id of "bypass" - jQuery style selector
+        '#bypassme': function (element, renderer) {
+          // true = "handled elsewhere, bypass text extraction"
+          return true
+        }
+      };
+      margins = {
+        top: 80,
+        bottom: 60,
+        left: 40,
+        width: 522
+      };
+      // all coords and widths are in jsPDF instance's declared units
+      // 'inches' in this case
+      pdf.fromHTML(
+        source, // HTML string or DOM elem ref.
+        margins.left, // x coord
+        margins.top, { // y coord
+          'width': margins.width, // max width of content on PDF
+          'elementHandlers': specialElementHandlers
+        },
+
+        function (dispose) {
+          // dispose: object with X, Y of the last line add to the PDF 
+          //          this allow the insertion of new lines after html
+          //  pdf.save('Test.pdf');
+          document.getElementById("foo").setAttribute('src', pdf.output('datauristring'));
+        }, margins);
+    }
+*/
+    autotablefunc = function () {
+      var doc = new jsPDF('l', 'pt','a4');
+      var elem ="";
+      var res = "";
+      //doc.autoTable(res.columns, res.data, {margin: {top: 80} });
+
+      //var datat = res.data;
+      //var rows =datat.rows;
+      // console.info(res);
+      //    console.info('total row', rows.length);
+      //    console.info('row - 1',rows.length-1);
+      //   console.info('row = 250',data.row.index = 250);
+
+      elem = document.getElementById("tabledata");
+      res = doc.autoTableHtmlToJson(elem);
+
+      const totalPagesExp = '{total_pages_count_string}';
+      var pagecontent = function (data) {
+        //header
+        doc.setFontSize(8.5);
+        doc.setTextColor(40);
+        doc.setFontStyle('normal');
+        doc.setFillColor(true);
+        doc.text("PT BPR DIORI GANDA Cab. SINAKSAK", data.settings.margin.left, 50);
+        doc.text("LAPORAN NOMINATIF TUNGGAKAN", data.settings.margin.left, 62);
+
+
+        //footer
+
+        let str = 'Halaman ' + data.pageCount;
+        // Total page number plugin only available in jspdf v1.0+
+        // console.info(typeof doc.putTotalPages);
+
+        if (typeof doc.putTotalPages === 'function') {
+          str = str + ' of ' + totalPagesExp;
+          //console.log('test');
+        }
+        doc.text(str, data.settings.margin.left, doc.internal.pageSize.height - 30);
+      };
+
+
+      var drcell = function (cell, data) {
+        var rows = data.table.rows.length;
+        //  console.info('rows lenght',data.table.rows.length);
+        //for( var x= 0; x < rows; x++){
+        if (data.row.cells[3].text[0] === "SUB TOTAL :" || data.row.cells[3].text[0] === "TOTAL :") {
+          //console.info('row',data.row.cells[3].text[0]);
+          doc.setFontStyle('bold');
+        }
+
+        // }
+        // console.info(data.row.index = 379);
+        /* if (data.row.index === 378) {
+            //console.info('row',data.row.cells[3].text[0]);
+            //console.info('row',data.row.cells[3].text[0]);
+           //console.info(data.row.cells[3].styles);
+          // data.row.cells[3].setFillColor(123);
+           //doc.setFillColor(25,25,125);
+           doc.setFontStyle('bold');
+          
+         }*/
+        /*if (data.row.index === (data.table.rows.length - 1)) {
+          //doc.setTextColor(200, 0, 0);
+          doc.rect(data.settings.margin.left, data.row.y + 150, data.table.width, 20, 'S');
+          doc.autoTableText("Di Ketahui Oleh :", data.settings.margin.left + data.table.width / 2, data.row.y +
+            data.row.height /
+            2, {
+              halign: 'right',
+              valign: 'middle'
+            });
+        }*/
+
+      }
+
+
+      var options = {
+        theme: 'plain', // 'striped', 'grid' or 'plain'
+        margin: {
+          top: 70
+        },
+        headerStyles: {
+          theme: 'striped',
+          fontSize: 9,
+        },
+        bodyStyles: {
+          fontSize: 8.5,
+          font: "helvetica", // helvetica, times, courier
+        },
+        alternateRowStyles: {
+          fillColor: 255,
+          rowHeight: 15,
+          valign: 'middle'
+        },
+        addPageContent: pagecontent,
+      //  startY: doc.autoTableEndPosY() + 70,
+        startY:  70,
+        drawCell: drcell,
+        drawRow: function (row, data) {
+          // Colspan
+          doc.setFontStyle('bold');
+          doc.setFontSize(10);
+          if (row.index === (data.table.rows.length - 1)) {
+           // doc.rect(data.settings.margin.left, row.y+150, data.table.width, 20, 'S');
+            doc.autoTableText("Diketahui Oleh : ", (data.settings.margin.left + data.table.width)-150, (row.y+100) + row.height /
+              2, {
+                halign: 'right',
+                valign: 'middle'
+              });
+              doc.autoTableText("Halasson Gultom ", (data.settings.margin.left + data.table.width)-150, (row.y+175) + row.height /
+              2, {
+                halign: 'right',
+                valign: 'middle'
+              });
+           // data.cursor.y += 20;
+          }
+        }
+      };
+
+      doc.autoTable(res.columns, res.data, options);
+      // Total page number plugin only available in jspdf v1.0+
+      if (typeof doc.putTotalPages === 'function') {
+        doc.putTotalPages(totalPagesExp);
+        console.info(doc.getTotalPages, totalPagesExp);
+      }
+
+
+      var x = doc.output('datauristring');
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('id', 'ifr');
+      iframe.setAttribute('style', 'position:absolute;right:0; top:50; bottom:0; height:100%; width:80%');
+      if (document.getElementById('ifr') !== null) {
+        document.getElementById('vwr').removeChild(document.getElementById('ifr'));
+      }
+      document.getElementById('vwr').appendChild(iframe);
+
+      //console.info(pdf.output('datauristring'));
+      iframe.src = doc.output('datauristring');
+    }
+
+
+
+
+
+    autotablefuncspan = function () {
+      var table1 =
+        tabletojson($('#tabledata').get(0)),
+        cellWidth = 35,
+        rowCount = 0,
+        cellContents,
+        leftMargin = 2,
+        topMargin = 12,
+        topMarginTable = 55,
+        headerRowHeight = 13,
+        rowHeight = 9,
+
+        l = {
+          orientation: 'l',
+          unit: 'mm',
+          format: 'a3',
+          compress: true,
+          fontSize: 8,
+          lineHeight: 1,
+          autoSize: false,
+          printHeaders: true
+        };
+
+      var doc = new jsPDF('l', 'pt', 'legal');
+
+      doc.setProperties({
+        title: 'Test PDF Document',
+        subject: 'This is the subject',
+        author: 'author',
+        keywords: 'generated, javascript, web 2.0, ajax',
+        creator: 'author'
+      });
+      doc.cellInitialize();
+
+      $.each(table1, function (i, row) {
+
+        rowCount++;
+        $.each(row, function (j, cellContent) {
+
+          if (rowCount == 1) {
+            doc.margins = 1;
+            doc.setFont("helvetica");
+            doc.setFontType("bold");
+            doc.setFontSize(9);
+
+            doc.cell(leftMargin, topMargin, cellWidth, headerRowHeight, cellContent, i)
+          } else if (rowCount == 2) {
+            doc.margins = 1;
+            doc.setFont("times ");
+            doc.setFontType("italic"); // or for normal font type use ------ doc.setFontType("normal");
+            doc.setFontSize(8);
+
+            doc.cell(leftMargin, topMargin, cellWidth, rowHeight, cellContent, i);
+          } else {
+
+            doc.margins = 1;
+            doc.setFont("courier ");
+            doc.setFontType("bolditalic ");
+            doc.setFontSize(6.5);
+
+
+            doc.cell(leftMargin, topMargin, cellWidth, rowHeight, cellContent, i); // 1st=left margin    2nd parameter=top margin,     3rd=row cell width      4th=Row height
+          }
+        })
+
+
+      });
+
+      var x = doc.output('datauristring');
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('id', 'ifr');
+      iframe.setAttribute('style', 'position:absolute;right:0; top:50; bottom:0; height:100%; width:80%');
+      if (document.getElementById('ifr') !== null) {
+        document.getElementById('vwr').removeChild(document.getElementById('ifr'));
+      }
+      document.getElementById('vwr').appendChild(iframe);
+
+      //console.info(pdf.output('datauristring'));
+      iframe.src = doc.output('datauristring');
+
+    }
+
+
+    tabelwithspan = function () {
+      var doc = new jsPDF('l', 'pt', 'legal');
+      doc.setFontSize(1);
+      doc.setTextColor(0);
+      doc.setFontStyle('bold');
+      doc.text('Col and row span', 40, 50);
+      //var data = getData(180);
+      /* data.sort(function (a, b) {
+          return parseFloat(b.expenses) - parseFloat(a.expenses);
+        }); */
+      // var data =datatotable;
+      var searchString = ['1', '2', '3', '4'];
+      var wilayahAO = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+      var data = getData();
+      for (const i in wilayahAO) {
+        // tslint:disable-next-line:forin
+        for (const kolek in searchString) {
+          // console.log(this.data2.filter((x) => x.MKTOFFR === this.wilayahAO[i] && x.KOLEK === this.searchString[kolek]));
+          //data.push(datatotable.filter((x) => x.MKTOFFR === wilayahAO[i] && x.KOLEK === searchString[kolek]));
+          // console.info(datatotable.filter((x) => x.MKTOFFR === wilayahAO[i] && x.KOLEK === searchString[kolek]));
+
+        }
+      }
+      data.sort((x) => x.MKTOFFR);
+
+
+      // var data= datatotable.filter((x) => x.MKTOFFR === wilayahAO[i] && x.KOLEK === searchString[kolek])
+
+      // doc.autoTable(getColumns(), datatotable);
+
+
+      doc.autoTable(getColumns(), data, {
+
+        theme: 'plain',
+        startY: 60,
+        drawRow: function (row, data) {
+          // Colspan
+          doc.setFontStyle('bold');
+          //doc.setFontSize(10);
+
+          if (row.index === (data.table.rows.length - 1)) {
+            doc.setTextColor(200, 0, 0);
+           // doc.rect(data.settings.margin.left, row.y+150, data.table.width, 20, 'S');
+           console.info('row y + row height : ', row.y , row.height/2, row.y + row.height/2);
+            doc.autoTableText("Diketahui Oleh : ", (data.settings.margin.left + data.table.width)-150, (row.y+75) + row.height /
+              2, {
+                halign: 'right',
+                valign: 'middle'
+              });
+              doc.autoTableText("Halasson Gultom ", (data.settings.margin.left + data.table.width)-150, (row.y+125) + row.height /
+              2, {
+                halign: 'right',
+                valign: 'middle'
+              });
+           // data.cursor.y += 20;
+          }
+          /* else if (row.index === 25) {
+                       doc.rect(data.settings.margin.left, row.y, data.table.width, 20, 'S');
+                       doc.autoTableText("Other Groups", data.settings.margin.left + data.table.width / 2, row.y + row.height /
+                         2, {
+                           halign: 'center',
+                           valign: 'middle'
+                         });
+                       data.cursor.y += 20;
+                     }
+
+                     if (row.index % 5 === 0) {
+                       var posY = row.y + row.height * 6 + data.settings.margin.bottom;
+                       if (posY > doc.internal.pageSize.height) {
+                         data.addPage();
+                       }
+                     }*/
+        },
+        /* drawCell: function (cell, data) {
+           // Rowspan
+          if (data.column.dataKey === 'id') {
+             if (data.row.index % 5 === 0) {
+               doc.rect(cell.x, cell.y, data.table.width, cell.height * 5, 'S');
+               doc.autoTableText(data.row.index / 5 + 1 + '', cell.x + cell.width / 2, cell.y + cell.height * 5 /
+                 2, {
+                   halign: 'center',
+                   valign: 'middle'
+                 });
+             }
+             return false;
+           }
+         }*/
+      });
+      var x = doc.output('datauristring');
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('id', 'ifr');
+      iframe.setAttribute('style', 'position:absolute;right:0; top:50; bottom:0; height:100%; width:80%');
+      if (document.getElementById('ifr') !== null) {
+        document.getElementById('vwr').removeChild(document.getElementById('ifr'));
+      }
+      document.getElementById('vwr').appendChild(iframe);
+
+      //console.info(pdf.output('datauristring'));
+      iframe.src = doc.output('datauristring');
+    }
+
+
+    // Returns a new array each time to avoid pointer issues
+    var getColumns = function () {
+      return [{
+          title: "WIL",
+          dataKey: "MKTOFFR"
+        },
+        {
+          title: "KODEPRODUK",
+          dataKey: "KODEPRODUK"
+        },
+        {
+          title: "ALAMAT",
+          dataKey: "ALAMAT"
+        },
+        {
+          title: "NAMA",
+          dataKey: "NAMA"
+        },
+        {
+          title: "PLAFOND",
+          dataKey: "PLAFOND"
+        },
+        {
+          title: "BAKIDEBET",
+          dataKey: "BAKIDEBET"
+        },
+
+
+      ];
+      // console.info(getcolumnsfromjsondata(datatotable[0]));
+      // return getcolumnsfromjsondata(datatotable[0]);
+    };
+
+    // Uses the faker.js library to get random data.
+    function getData(rowCount) {
+      // rowCount = rowCount || 4;
+      //var sentence = "Minima quis totam nobis nihil et molestiae architecto accusantium qui necessitatibus sit ducimus cupiditate qui ullam et aspernatur esse et dolores ut voluptatem odit quasi ea sit ad sint voluptatem est dignissimos voluptatem vel adipisci facere consequuntur et reprehenderit cum unde debitis ab cumque sint quo ut officiis rerum aut quia quia expedita ut consectetur animiqui voluptas suscipit Monsequatur";
+      /*  var sentence = faker.lorem.words(20);
+        var data = [];
+        for (var j = 1; j <= rowCount; j++) {
+            data.push({
+                id: j,
+                name: faker.name.findName(),
+                email: faker.internet.email(),
+                country: faker.address.country(),
+                city: faker.address.city(),
+                expenses: faker.finance.amount(),
+                text: shuffleSentence(sentence),
+                text2: faker.lorem.words(1)
+            });
+        }
+        console.info(sentence);
+        console.info(data); */
+      data = datatotable;
+      return data;
+    }
+
+    function shuffleSentence(words) {
+      if (typeof words === 'string') return words;
+      words = words || faker.lorem.words(8);
+      var str = faker.helpers.shuffle(words).join(' ').trim();
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+  </script>
+</body>
+
+</html>

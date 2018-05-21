@@ -1,0 +1,789 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .main {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      transform-origin: center center;
+    }
+
+    .sidebar {
+      max-width: 20%;
+      min-width: 20%;
+      height: 100%;
+      width: 20%;
+      background-color: transparent;
+      padding: 10px;
+      color: whitesmoke;
+      font-size: 12;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .content {
+      width: 80%;
+      height: 100%;
+      padding-left: 1px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      padding-right: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .close-loading {
+      display: none;
+    }
+
+    .open-loading {
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform-origin: center center;
+      z-index: 3000;
+    }
+
+    .loadingback {
+      background-color: rgba(255, 255, 255, 0.1);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 80%;
+      height: 100%;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform-origin: center center;
+    }
+
+    .loadingpane {
+      background-color: #ffffffe5;
+      color: black;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform-origin: center center;
+    }
+
+    #btnclose {
+      margin-top: -10px;
+      margin-left: -10px;
+    }
+
+
+    .panel {
+      margin-top: 15px;
+
+    }
+
+    .paneaction {
+      width: 100%;
+      display: inline-flex;
+      /* align-items: stretch; */
+      align-content: flex-end;
+      position: relative;
+      flex-direction: row;
+      margin: auto;
+    }
+
+    #setmargin {}
+
+    #setmargin,
+    #setmargin>.form-control {
+      font-size: 10px;
+      align-items: center;
+    }
+
+    #mtop,
+    #mright,
+    #mbottom,
+    #mleft {
+      width: 48px;
+      font-size: 10px;
+    }
+
+    #setmargin>.row {
+      margin: 15px 0;
+    }
+
+    #setmargin>label {
+      margin-bottom: 0;
+      margin-left: 1px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="canvas_print" style="display: none; z-index: 9999;  top: 0; left: 0; width: 100%; height: 100%;position: fixed;">
+  </div>
+  <div class="main">
+    <div class="sidebar">
+      <div>
+        <button id="btnclose" class="btn btn-sm btn-danger" title="close" onclick="closepreview()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="panel">
+        <div id="layoutsetting">
+          <div class="form-group row">
+            <label for="layout" class="col-sm-6 col-form-label">Layout</label>
+            <div class="col-sm-6">
+              <select name="" id="layout" class="form-control form-control-sm" onchange="changeLayout()">
+                <option value="p">Portrait</option>
+                <option value="l">Landscape</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="papersetting">
+          <div class="form-group row">
+            <label for="paper" class="col-sm-6 col-form-label">Paper Size</label>
+            <div class="col-sm-6">
+              <select name="" id="paper" class="form-control form-control-sm " onchange="changepaper()">
+                <option value="a4">A4</option>
+                <option value="legal">Legal</option>
+                <option value="letter">Letter</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form-group row">
+            <label for="paper" class="col-sm-6 col-form-label">pt/px</label>
+            <div class="col-sm-6">
+              <select name="" id="satuan" class="form-control form-control-sm " onchange="changesatuan()">
+                <option value='pt'>pt</option>
+                <option value='px'>px</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="settingfont">
+          <div class="form-group row">
+            <label for="fontsize" class="col-sm-6 col-form-label">Font Size</label>
+            <div class="col-sm-6">
+              <input type="number" id="fontsize" onkeypress="changefontsize()" onchange="changefontsize()" class="form-control form-control-sm">
+            </div>
+          </div>
+        </div>
+        <div id="settingheader">
+          <div class="form-group row">
+            <label for="headertop" class="col-sm-6 col-form-label">Header top</label>
+            <div class="col-sm-6">
+              <input type="number" id="headertop" onchange="changeHeaderTop()" class="form-control form-control-sm">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="headerright" class="col-sm-6 col-form-label">Header right</label>
+            <div class="col-sm-6">
+              <input type="number" id="headerright" onchange="changeHeaderRight()" class="form-control form-control-sm">
+            </div>
+          </div>
+        </div>
+
+        <div id="marginsetting">
+          <div class="form-group row">
+            <label for="margin" class="col-sm-6 col-form-label">Margin</label>
+            <div class="col-sm-6">
+              <select name="" id="margin" class="form-control form-control-sm " onchange="changemargin()">
+                <option value="0">default</option>
+                <option value="1">none</option>
+                <option value="2">custom</option>
+              </select>
+            </div>
+          </div>
+          <div id="setmargin" style="display: none;">
+            <div class="row pull-right">
+              <div class="form-group">
+                <label for="mtop">Top</label>
+                <br>
+                <input type="number" class="form-control form-control-sm" id="mtop" placeholder="0.0" onchange="changemargintop()">
+              </div>
+              <div class="form-group">
+                <label for="mleft">Left</label>
+                <br>
+                <input type="number" class="form-control form-control-sm" id="mleft" placeholder="0.0" onchange="changemarginleft()">
+              </div>
+              <div class="form-group">
+                <label for="mbottom">Bottom</label>
+                <br>
+                <input type="number" class="form-control form-control-sm" id="mbottom" placeholder="0.0" onchange="changemarginbottom()">
+              </div>
+              <div class="form-group">
+                <label for="mright">Right</label>
+                <br>
+                <input type="number" class="form-control form-control-sm" id="mright" placeholder="0.0" onchange="changemarginright()">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="paneaction">
+        <button id="actionbutton" class="btn btn-sm btn-outline-info pull-right" title="save to pdf" onclick="savetopdf()">
+          <i class="fa fa-file-pdf-o"></i>
+        </button>
+      </div>
+
+    </div>
+    <div id="content" class="content">
+      <iframe id="iframe" frameborder="0" hidden style=" display: none; width: 100%; height: 100%;"></iframe>
+      <webview plugins id="pdfDocument" style="  width: 100%; height: 100%;"></webview>
+    </div>
+  </div>
+
+
+  <div id="loading" class="open-loading">
+    <div id="loadingback" class="loadingback">
+      <div id="mainloading" class="loadingpane">
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+
+  <script>
+    const ipcRenderer = require("electron").ipcRenderer;
+
+    var jsPDF = require('jspdf');
+    require('jspdf-autotable');
+    const path = require('path');
+    const os = require('os');
+    const pdfPath = path.join(os.tmpdir(), 'print.pdf');
+    var elem, res, table, uristring, iframe, datakantor;
+    var doc = new jsPDF();
+    var date = new Date();
+
+
+    settingcanvas = {
+      paper: 'a4',
+      layout: 'l',
+      satuan: 'pt',
+      fontsize: 9.5,
+      fontsizetable: 7.5,
+      font: 'times',
+      margin: {
+        top: 45,
+        left: 30,
+        bottom: 35,
+        right: 30
+      },
+      headertop: 18,
+      headeright: 80
+
+    };
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('keyup', doc_keyUp, false);
+
+      document.getElementById('layout').value = settingcanvas.layout;
+      document.getElementById('paper').value = settingcanvas.paper;
+      document.getElementById('fontsize').value = settingcanvas.fontsize;
+      document.getElementById('satuan').value = settingcanvas.satuan;
+      //document.getElementById('loading').setAttribute('class', 'open-loading');
+      if (document.getElementById('iframe') !== null) {
+        document.getElementById('content').removeChild(document.getElementById('iframe'));
+      }
+
+      document.getElementById('headertop').value = settingcanvas.headertop;
+      document.getElementById('headerright').value = settingcanvas.headeright;
+
+      document.getElementById('mtop').value = settingcanvas.margin.top;
+      document.getElementById('mbottom').value = settingcanvas.margin.bottom;
+      document.getElementById('mright').value = settingcanvas.margin.right;
+      document.getElementById('mleft').value = settingcanvas.margin.left;
+
+      datakantor = JSON.parse(localStorage.getItem('datakantor'));
+
+
+    });
+
+
+
+    //retrive data from main view
+    ipcRenderer.on('fill-PrintTo-PDF', (event, content) => {
+      document.getElementById('loading').setAttribute('class', 'open-loading');
+      document.getElementById('canvas_print').innerHTML = content;
+      console.info('data from main: ', content);
+
+      var oInput = document.getElementById('canvas_print'),
+        oChild;
+      for (i = 0; i < oInput.childNodes.length; i++) {
+        oChild = oInput.childNodes[i];
+        if (oChild.nodeName == 'TABLE') {
+          table = oChild.id;
+        }
+      }
+
+
+
+      doc = createpdf(settingcanvas, res);
+      uristring = doc.output('datauristring');
+      previewdata('');
+    });
+
+    function savetopdf() {
+      doc.save();
+
+    }
+
+    function print() {
+      document.getElementById('loading').setAttribute('class', 'open-loading');
+      doc.autoPrint();
+      uristring = doc.output('datauristring');
+      previewdata('');
+
+
+    }
+
+    // create pdf and preview
+
+    createpdf = function (settingcanvas, elem) {
+      doc = new jsPDF(settingcanvas.layout, settingcanvas.satuan, settingcanvas.paper);
+
+      elem = document.getElementById(table);
+      res = doc.autoTableHtmlToJson(elem);
+      const totalPagesExp = '{total_pages_count_string}';
+
+
+      var pagecontent = function (data) {
+        //header
+        doc.setFontSize(settingcanvas.fontsize - 1.5);
+        doc.setTextColor(40);
+        doc.setFontStyle('normal');
+        doc.setFillColor(true);
+        doc.text(datakantor.namabpr, data.settings.margin.left, settingcanvas.headertop);
+        doc.text("LAPORAN NOMINATIF TUNGGAKAN", data.settings.margin.left, settingcanvas.headertop + 9);
+
+
+
+        doc.text("Tgl cetak : " + formatDate(date), doc.internal.pageSize.width - (data.settings.margin.right +
+            settingcanvas.headeright),
+          settingcanvas.headertop);
+        doc.text("Pukul : " + formatTime(date), doc.internal.pageSize.width - (data.settings.margin.right +
+          settingcanvas.headeright), settingcanvas.headertop + 9);
+
+        console.info(doc.internal.getCurrentPageInfo().pageNumber);
+
+        //footer
+        let str = 'Halaman ' + data.pageCount;
+        if (typeof doc.putTotalPages === 'function') {
+          str = str + ' of ' + totalPagesExp;
+          //console.log('test');
+        }
+        doc.text(str, data.settings.margin.left, doc.internal.pageSize.height - 15);
+      };
+
+
+      var drcell = function (cell, data) {
+        var rows = data.table.rows.length;
+        if (data.row.cells[3].text[0] === "SUB TOTAL :" || data.row.cells[3].text[0] === "TOTAL :") {
+          doc.setFontStyle('bold');
+          //data.row.cells[4].styles.cellPadding = 5;
+          //console.info(data.row.cells[4].styles.cellPadding);
+        }
+
+
+
+
+        /* if (res.columns[4].textContent === 'PLAFOND') {
+           //
+          // data.row.cells[4].styles.fillColor= tr[0].textContent="HORAS"
+           //console.log(cell.styles);
+           data.row.cells[4].styles.halign= 'right';
+          
+         }*/
+        data.row.cells[4].styles.halign = 'right';
+        data.row.cells[5].styles.halign = 'right';
+        data.row.cells[6].styles.halign = 'right';
+        data.row.cells[7].styles.halign = 'right';
+        data.row.cells[8].styles.halign = 'right';
+        data.row.cells[9].styles.halign = 'right';
+        data.row.cells[10].styles.halign = 'right';
+        data.row.cells[11].styles.halign = 'right';
+        data.row.cells[12].styles.halign = 'center';
+
+        data.row.cells[10].styles.columnWidth = 75;
+        data.row.cells[11].styles.columnWidth = 'auto';
+      }
+      //createdCell: function(cell, data) { {if (data.column.dataKey === "id") { {if (data.row.index == 1) {cell.styles.fillColor = [r,g,b]}}}}}
+
+
+
+      var options = {
+        theme: 'plain', // 'striped', 'grid' or 'plain'
+        // font: settingcanvas.font, // helvetica, times, courier
+        font: "courier", // helvetica, times, courier
+        margin: {
+          top: settingcanvas.margin.top,
+          right: settingcanvas.margin.right,
+          left: settingcanvas.margin.left,
+          bottom: settingcanvas.margin.bottom
+        },
+
+        styles: {
+          columnWidth: 'wrap', // 'auto', 'wrap' or a number
+          tableWidth: 'auto',
+          overflow: 'linebreak',
+          fontSize: settingcanvas.fontsize - 2,
+          valign: 'middle',
+        },
+        headerStyles: {
+          cellPadding: 1.5,
+          // tableWidth: 'auto',
+          lineColor: 20,
+          lineWidth: 0.1,
+          overflow: 'linebreak',
+
+        },
+        bodyStyles: {
+          // overflow: 'linebreak',
+          cellPadding: 1,
+        },
+        /* alternateRowStyles: {
+           fillColor: 255,
+           rowHeight: 15,
+           valign: 'middle'
+         },*/
+        drawHeaderRow: function (row, data) {
+          if (row.index === 0) {
+            /* doc.autoTableText("Diketahui Oleh : ", (data.settings.margin.left + data.table.width) - 150, (row.y +
+                 10) + row.height /
+               2, {
+                 halign: 'right',
+                 valign: 'middle'
+               }); */
+          }
+        },
+        startY: false,
+        addPageContent: pagecontent,
+        drawCell: drcell,
+        drawRow: function (row, data) {
+          // Colspan
+          doc.setFontStyle('bold');
+          doc.setFontSize(settingcanvas.fontsize);
+          if (row.index === (data.table.rows.length - 1)) {
+            // doc.rect(data.settings.margin.left, row.y+150, data.table.width, 20, 'S');
+            doc.autoTableText(formatDate(date), (data.settings.margin.left + data.table.width) - 150, (row.y +
+                40) + row.height /
+              2, {
+                setFontStyle: 'normal',
+                halign: 'center',
+                valign: 'middle'
+              });
+
+            doc.autoTableText(datakantor.namabpr, (data.settings.margin.left + data.table.width) - 150, (row.y +
+                50) + row.height /
+              2, {
+                setFontStyle: 'bold',
+                halign: 'center',
+                valign: 'middle'
+              });
+
+
+            doc.autoTableText('(' + datakantor.namapimpinan + ')', (data.settings.margin.left + data.table.width) -
+              450, (row.y +
+                100) + row.height /
+              2, {
+                halign: 'center',
+                valign: 'middle'
+              });
+
+            doc.autoTableText('Pimpinan Cabang', (data.settings.margin.left + data.table.width) -
+              450, (row.y +
+                110) + row.height /
+              2, {
+                halign: 'center',
+                valign: 'middle'
+              });
+
+
+            doc.autoTableText('(' + datakantor.namakasubag + ')', (data.settings.margin.left + data.table.width) -
+              250, (row.y +
+                100) + row.height /
+              2, {
+                halign: 'center',
+                valign: 'middle'
+              });
+
+
+            doc.autoTableText("Kasubag Kredit", (data.settings.margin.left + data.table.width) - 250, (row.y +
+                110) + row.height /
+              2, {
+                halign: 'center',
+                valign: 'middle'
+              });
+
+
+
+            doc.autoTableText('(' + datakantor.namapetugas + ')', (data.settings.margin.left + data.table.width) -
+              150, (row.y +
+                100) + row.height /
+              2, {
+                halign: 'center',
+                valign: 'middle'
+              });
+
+            doc.autoTableText("Adm Kredit", (data.settings.margin.left + data.table.width) - 150, (row.y +
+                110) + row.height /
+              2, {
+                halign: 'center',
+                valign: 'middle'
+              });
+
+          }
+        },
+
+      };
+
+      doc.autoTable(res.columns, res.data, options);
+      // Total page number plugin only available in jspdf v1.0+
+      if (typeof doc.putTotalPages === 'function') {
+        doc.putTotalPages(totalPagesExp);
+        //console.info(doc.getTotalPages, totalPagesExp);
+      }
+      // doc.autoPrint();
+      return doc;
+      // return doc.output('datauristring');
+      //window.open(doc.output('bloburl'), '_blank');
+    }
+
+    previewdata = function (action) {
+      setTimeout(() => {
+        iframe = document.createElement('webview');
+        iframe.setAttribute('id', 'pdfDocument');
+        iframe.setAttribute('style', 'height:100%; width:100%');
+        iframe.setAttribute('plugins', '');
+        if (document.getElementById('pdfDocument') !== null) {
+          document.getElementById('content').removeChild(document.getElementById('pdfDocument'));
+        }
+        document.getElementById('content').appendChild(iframe);
+
+        //console.info(pdf.output('datauristring'));
+
+        //src="./pdfjs/web/viewer.html?file=c:/users/halasson/appdata/local/temp/print.pdf"
+        //iframe.src = './pdfjs/web/viewer.html?file=c:/users/halasson/appdata/local/temp/print.pdf';
+        iframe.src = './pdfjs/web/viewer.html?file=' + uristring;
+
+        document.getElementById('loading').setAttribute('class', 'close-loading');
+      }, 3000);
+
+    }
+
+
+    // function convert table to json
+    rebuildfile = function (doc) {
+      document.getElementById('loading').setAttribute('class', 'open-loading');
+      uristring = doc.output('datauristring');
+      previewdata('');
+    }
+
+    closepreview = function () {
+      if (document.getElementById('iframe') !== null) {
+        document.getElementById('content').removeChild(document.getElementById('iframe'));
+      }
+      document.getElementById('content').removeChild(document.getElementById('pdfDocument'));
+      setTimeout(() => {
+        ipcRenderer.send('on-close-preview');
+      }, 100);
+
+    }
+
+    changeLayout = function () {
+      settingcanvas.layout = document.getElementById('layout').value;
+      doc = createpdf(settingcanvas, elem);
+      rebuildfile(doc);
+
+    }
+
+    changepaper = function () {
+
+      settingcanvas.paper = document.getElementById('paper').value;
+      doc = createpdf(settingcanvas, elem);
+      rebuildfile(doc);
+
+    }
+
+    changesatuan = function () {
+      settingcanvas.satuan = document.getElementById('satuan').value;
+      doc = createpdf(settingcanvas, elem);
+      rebuildfile(doc);
+    }
+    changefontsize = function () {
+      setTimeout(() => {
+        settingcanvas.fontsize = document.getElementById('fontsize').value;
+        if (settingcanvas.fontsize < 6.5) {
+          return false
+        } else {
+          settingcanvas.fontsizetable = settingcanvas.fontsize - 1.5;
+          doc = createpdf(settingcanvas, elem);
+          rebuildfile(doc);
+        }
+
+      }, 500);
+    }
+    changemargin = function () {
+
+      document.getElementById('setmargin').setAttribute('style', 'display:none;');
+
+      if (document.getElementById('margin').value === '0') {
+        // margin none
+        settingcanvas.margin.top = 45;
+        settingcanvas.margin.left = 30;
+        settingcanvas.margin.bottom = 35;
+        settingcanvas.margin.right = 30;
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+
+      } else if (document.getElementById('margin').value === '1') {
+        // margin none
+        settingcanvas.margin.top = 30;
+        settingcanvas.margin.left = 0;
+        settingcanvas.margin.bottom = 30;
+        settingcanvas.margin.right = 5;
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+      } else {
+        document.getElementById('setmargin').removeAttribute('style');
+        console.info('show margin custom ');
+      }
+    }
+
+    changemargintop = function () {
+      if (document.getElementById('mtop').value < 0) {
+        return false;
+      } else {
+        settingcanvas.margin.top = Number(document.getElementById('mtop').value);
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+        console.info(settingcanvas.margin);
+      }
+
+    }
+    changemarginleft = function () {
+      if (document.getElementById('mleft').value < 0) {
+        return false;
+      } else {
+        settingcanvas.margin.left = Number(document.getElementById('mleft').value);
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+      }
+    }
+    changemarginbottom = function () {
+      if (document.getElementById('mbottom').value < 0) {
+        return false;
+      } else {
+        settingcanvas.margin.bottom = Number(document.getElementById('mbottom').value);
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+      }
+    }
+    changemarginright = function () {
+      if (document.getElementById('mright').value < 0) {
+        return false;
+      } else {
+        settingcanvas.margin.right = Number(document.getElementById('mright').value);
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+      }
+    }
+
+    changeHeaderTop = function () {
+      if (document.getElementById('headertop').value < 0) {
+        return false;
+      } else {
+        settingcanvas.headertop = Number(document.getElementById('headertop').value);
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+      }
+    }
+    changeHeaderRight = function () {
+      if (document.getElementById('headerright').value < 0) {
+        return false;
+      } else {
+        settingcanvas.headeright = Number(document.getElementById('headerright').value);
+        doc = createpdf(settingcanvas, elem);
+        rebuildfile(doc);
+      }
+    }
+
+    formatDate = function (date) {
+      var monthNames = [
+        "January", "February", "March",
+        "April", "May", "June", "July",
+        "August", "September", "October",
+        "November", "December"
+      ];
+
+      var day = date.getDate();
+      var monthIndex = date.getMonth();
+      var year = date.getFullYear();
+
+      return day + ' ' + monthNames[monthIndex] + ' ' + year;
+    }
+    formatTime = function (date) {
+      return date.toLocaleTimeString('en-US');
+    }
+
+
+    //keyboard shorcut
+    function doc_keyUp(e) {
+      if (e.ctrlKey && e.keyCode == 88) {
+        // call your function to do the thing
+        closepreview();
+      } else if (e.ctrlKey && e.keyCode == 68) {
+        // call your function to do the thing
+        savetopdf();
+      } else if (e.ctrlKey && e.keyCode == 80) {
+        // call your function to do the thing
+        print();
+      } else if (e.keyCode == 27) {
+        // call your function to do the thing
+        closepreview();
+      }
+    }
+
+  </script>
+</body>
+
+</html>

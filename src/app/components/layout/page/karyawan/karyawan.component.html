@@ -1,0 +1,421 @@
+<app-loader></app-loader>
+
+<app-modal [(showModal)]="page">
+
+  <div class="pane_page" *ngIf="view ==='box'">
+    <div class="panel_content">
+      <div class="my-card">
+        <div class="box" *ngFor="let datakaryawan of datakaryawans">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{datakaryawan.nama}}</mat-card-title>
+            </mat-card-header>
+
+            <img src="{{rebuildImgsrc(datakaryawan.foto)}}" width="180px" height="150px" class="img-thumbnail">
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+            <mat-card-actions>
+              <a mat-icon-button="" matTooltip="Detail" (click)=" showDetail(datakaryawan) ">
+                <i class="fa fa-eye text-info"></i>
+              </a>
+             
+              <a mat-icon-button="" matTooltip="print card" (click)="showDetail(datakaryawan)">
+                <i class="fa fa-print text-info"></i>
+              </a>
+              <a mat-icon-button="" matTooltip="Hapus" (click)="hapusDataKaryawan(datakaryawan)">
+                <i class="fa fa-trash text-danger"></i>
+              </a>
+
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+<div class="pane_page" >
+   
+  <div class="panel_content"  >
+  
+      <mat-table  [dataSource]="dataSource" matSort >
+          <ng-container matColumnDef="nik">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Nik </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.nik}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="foto">
+            <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <img src="{{rebuildImgsrc(element.foto)}}" alt="" width="50px" height="50px">
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="nama">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Nama </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.nama}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="jenkel">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> JK </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.jenkel}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="tempatlahir">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> T/Lahir </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.tempatlahir}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="jabatan">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Jabatan </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.jabatan}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="statuskaryawan">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Status/K </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.statuskaryawan}} </mat-cell>
+          </ng-container>
+          
+          <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <a mat-icon-button="" matTooltip="Detail" (click)="showDetail(row)">
+                <i class="fa fa-eye text-info"></i>
+              </a>
+              <a mat-icon-button="" matTooltip="Hapus" (click)="hapusDataKaryawan(row)">
+                <i class="fa fa-trash text-danger"></i>
+              </a>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns" class="bg-light custom-mat-header-row text-white"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row-hover custom-mat-row text-white"></mat-row>
+        </mat-table>
+      
+  </div>
+  <div class="panel_foot" >
+    <mat-paginator #paginator [length]="datakaryawanDB.data.length" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+        class="bg-transparent">
+      </mat-paginator>
+  </div>
+</div> -->
+</app-modal>
+
+
+<!-- modal add-->
+<app-modal [(showModal)]="showformadd" [(mclass)]="classmodal">
+
+  <div class="formadd" [formGroup]="formaddkaryawan">
+    <mat-toolbar color="primary">
+      <div class="title">
+        <h6 class="small">Data Karyawan</h6>
+      </div>
+
+      <span class="toolbar-spacer"></span>
+      <button mat-button (click)="showformadd = !showformadd; getAllProfiles(null,null);">
+        <i class="fa fa-lg fa-close"></i>
+      </button>
+    </mat-toolbar>
+    <div class="form-body form-body-content-row">
+      <div class="form-body-content-column">
+        <img [(src)]="file_srcs" width="150px" height="160px" alt="" class="img-thumbnail img-thumbnail-upload">
+        <div style="z-index: 30000; margin-top: -160px;">
+
+          <app-imguploader [max]="1" [buttonCaption]="'Add Photo'" [dropBoxMessage]="''" [extensions]="['png','jpeg','jpg']" [preview]="false"
+            (uploadFinished)="imageUploaded($event)" (removed)="imageRemove($event)" [disabled]="disable" required>
+          </app-imguploader>
+
+        </div>
+      </div>
+
+      <div class="form-body-content-column">
+        <mat-form-field>
+          <input matInput placeholder="NIK" [(value)]="nik" formControlName="nik" readonly="true">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Nama" formControlName="nama" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Tempat Lahir" formControlName="tempatlahir" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" [min]="mindate" [max]="maxdate" placeholder="Tanggal Lahir" formControlName="tgllahir"
+            [disabled]="disable" required (dateChange)="doSomething($event)">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker touchUi="true" #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Jenis Kelamin" formControlName="jenkel" [disabled]="disable" required>
+            <mat-option value="L">Laki-laki</mat-option>
+            <mat-option value="P">Perempuan</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Agama" formControlName="agama" [disabled]="disable" required>
+            <mat-option *ngFor="let dataagama of agamas" [value]="dataagama.agama">{{dataagama.agama}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <textarea matInput placeholder="Alamat" formControlName="alamat" required></textarea>
+        </mat-form-field>
+      </div>
+      <div class="form-body-content-column">
+        <mat-form-field>
+          <mat-select placeholder="Pendidikan" formControlName="pendidikan" [disabled]="disable" (change)="pendidikan = this.formaddkaryawan.value.pendidikan"
+            required>
+            <mat-option *ngFor="let datap of pendidikans" [value]="datap.title">{{datap.title}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Status" formControlName="status" [disabled]="disable" required>
+            <mat-option value="K0">K0-Kawin</mat-option>
+            <mat-option value="K1">K1-Kawin Anak Satu</mat-option>
+            <mat-option value="K2">K2-Kawin Anak Dua</mat-option>
+            <mat-option value="K3">K3-Kawin Anak Tiga</mat-option>
+            <mat-option value="TK">TK-Tidak Kawin</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="tglmasuk" [min]="mindate" placeholder="Tanggal Masuk" [disabled]="disable" formControlName="tglmasuk"
+            required (dateChange)="getmasakerja($event)">
+          <mat-datepicker-toggle matSuffix [for]="tglmasuk"></mat-datepicker-toggle>
+          <mat-datepicker touchUi="true" #tglmasuk></mat-datepicker>
+        </mat-form-field>
+
+
+
+        <mat-form-field>
+
+          <mat-select placeholder="Jabatan" formControlName="jabatan" [disabled]="disable" required>
+            <mat-option *ngFor="let jabatan of jabatans" [value]="jabatan.namajabatan">{{jabatan.namajabatan}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Status Karyawan" formControlName="statuskaryawan" [disabled]="disable" required>
+            <mat-option value="Honor">Honor</mat-option>
+            <mat-option value="Magang">Magang</mat-option>
+            <mat-option value="Karyawan Tetap">Karyawan Tetap</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+
+        <mat-form-field>
+          <mat-select placeholder="Golongan Karyawan" formControlName="gol" [disabled]="disable" (change)="check_gol_by_pendidikan(formaddkaryawan.value)"
+            required>
+            <mat-option value="1a">Gol Ia</mat-option>
+            <mat-option value="1b">Gol Ib</mat-option>
+            <mat-option value="1c">Gol Ic</mat-option>
+            <mat-option value="2a">Gol IIa</mat-option>
+            <mat-option value="2b">Gol IIb</mat-option>
+            <mat-option value="2c">Gol IIc</mat-option>
+            <mat-option value="3a">Gol IIIa</mat-option>
+            <mat-option value="3b">Gol IIIb</mat-option>
+            <mat-option value="3c">Gol IIIc</mat-option>
+
+            <mat-option value="4a">Gol Iva</mat-option>
+            <mat-option value="4b">Gol IVb</mat-option>
+            <mat-option value="4c">Gol IVc</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email" />
+        </mat-form-field>
+        <mat-form-field>
+          <span matPrefix>+62 &nbsp;</span>
+          <input matInput placeholder="No Telp" formControlName="notelp" />
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="panel_foot">
+      <mat-toolbar style="height: 45px">
+        <button mat-raised-button class="mr-2" (click)="edit_data()" *ngIf="updateData">edit</button>
+        <span class="toolbar-spacer"></span>
+        <button mat-raised-button="" (click)="savedata(formaddkaryawan.value)" color="primary" class="mr-2 inverse" *ngIf="!updateData">Simpan</button>
+        <button mat-raised-button="" (click)="batal()">Batal</button>
+      </mat-toolbar>
+    </div>
+
+  </div>
+</app-modal>
+
+<!-- modal cari-->
+<app-modal [(showModal)]="showcari" [(mclass)]="classmodal">
+  <div class="formcari">
+    <input class="ml-2" placeholder="Cari data ......." [(ngModel)]="cari" (keyup)="applyFilter2($event.target.value)">
+    <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="cari='';getAllProfiles(null, null);" matTooltip="clear"
+      matTooltipPosition="above">
+      <i class="fa fa-lg fa-trash"></i>
+    </button>
+    <div class=" btn-close">
+      <button mat-icon-button>
+        <i class="fa fa-lg fa-close" (click)="showcari=!showcari"></i>
+      </button>
+    </div>
+
+
+  </div>
+</app-modal>
+
+
+<!--modal detail-->
+<app-modal [(showModal)]="showdetail" [(mclass)]="classmodal">
+  <div class="formadd" style="max-width: 550px; min-width: 450px;">
+    <mat-toolbar color="primary">
+      <div class="title">
+        <h6 class="small">Data Karyawan</h6>
+      </div>
+
+      <span class="toolbar-spacer"></span>
+      <button mat-button (click)="showdetail = !showdetail">
+        <i class="fa fa-lg fa-close"></i>
+      </button>
+    </mat-toolbar>
+
+    <mat-card>
+        <mat-card-content>
+            <mat-grid-list cols="4" rowHeight="170px">
+                <mat-grid-tile>
+                  <img [src]="file_srcs" height="160px" width="160px" alt="" class="img-thumbnail img-thumbnail-upload">
+                </mat-grid-tile>
+                <mat-grid-tile colspan="3" rowspan="2" >
+          
+                  <div class="col-12" >
+                    <div class="row">
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Nik :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.nik}}</label>
+                      </div>
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Nama :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.nama}}</label>
+                      </div>
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Tgl Lahir :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.tgllahir | date:'dd/MM/yyyy'}}</label>
+                      </div>
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Jenkel :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7" *ngIf="datakaryawan.jenkel ==='L'">
+                        <label>Laki-laki</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7" *ngIf="datakaryawan.jenkel ==='P'">
+                        <label>Perempuan</label>
+                      </div>
+          
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Agama :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.agama}}</label>
+                      </div>
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Pendidikan :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.pendidikan}}</label>
+                      </div>
+          
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Status :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.status}}</label>
+                      </div>
+          
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Email :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.email}}</label>
+                      </div>
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>No Hp :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.notelp}}</label>
+                      </div>
+          
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Alamat :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.alamat}}</label>
+                      </div>
+          
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Tgl Masuk :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.tglmasuk | date:'dd/MM/yyyy'}}</label>
+                      </div>
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                          <label>Masakerja :</label>
+                        </div>
+                        <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                          <label>{{masakerja}}</label>
+                        </div>
+
+                        <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                            <label>Golongan :</label>
+                          </div>
+                          <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                            <label>{{datakaryawan.gol}}</label>
+                          </div>
+          
+                      <div class="col-4 col-md-5 col-xs-5 col-sm-5">
+                        <label>Jabatan :</label>
+                      </div>
+                      <div class="col-8 col-md-7 col-xs-7 col-sm-7">
+                        <label>{{datakaryawan.jabatan}}</label>
+                      </div>
+          
+          
+                    </div>
+                  </div>
+                </mat-grid-tile>
+              </mat-grid-list>
+                </mat-card-content>
+                <mat-card-actions>
+               
+                  <a mat-icon-button="" matTooltip="Edit" (click)="showEdit(datakaryawan); showdetail = !showdetail">
+                    <i class="fa fa-pencil text-info"></i>
+                  </a>
+                  <a mat-icon-button="" matTooltip="print card" (click)="showDetail(datakaryawan)">
+                    <i class="fa fa-print text-info"></i>
+                  </a>
+                  <a mat-icon-button="" matTooltip="Hapus" (click)="hapusDataKaryawan(datakaryawan)">
+                    <i class="fa fa-trash text-danger"></i>
+                  </a>
+    
+                </mat-card-actions>
+    </mat-card>
+   
+   
+
+
+
+  </div>
+
+
+
+</app-modal>
+
+
+<div class="pane-button">
+
+  <button mat-icon-button="">
+    <i class="fa fa-lg fa-search" (click)="opencari(); " matTooltip="Cari" [matTooltipPosition]="position_tooltip"></i>
+  </button>
+  <button mat-icon-button="">
+    <i class="fa fa-lg fa-refresh" (click)="getAllProfiles(null,null)" matTooltip="Refresh" [matTooltipPosition]="position_tooltip"></i>
+  </button>
+  <button mat-icon-button="" (click)="openformkaryawan()" matTooltip="Baru" [matTooltipPosition]="position_tooltip">
+    <i class="fa fa-lg fa-plus"></i>
+  </button>
+</div>

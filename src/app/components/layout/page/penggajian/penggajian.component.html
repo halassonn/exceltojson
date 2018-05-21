@@ -1,0 +1,298 @@
+<app-loader></app-loader>
+
+<app-modal [(showModal)]="page">
+  <div class="pane_page">
+    <div class="panel_content p-2">
+        <mat-form-field class="ml-3">
+            <input matInput [matDatepicker]="tglpenggajian" 
+            [min]="mindate" placeholder="Tanggal Penggajian" 
+              required>
+            <mat-datepicker-toggle matSuffix [for]="tglpenggajian"></mat-datepicker-toggle>
+            <mat-datepicker touchUi="true" #tglpenggajian></mat-datepicker>
+          </mat-form-field>
+      <button class="ml-2 btn btn-outline-primary">Proses Gaji</button>
+    </div>
+    <div class="panel_foot">
+
+    </div>
+  </div>
+</app-modal>
+
+<!-- modal add-->
+<app-modal [(showModal)]="showformadd" [(mclass)]="classmodal">
+
+  <div class="formadd">
+    <mat-toolbar color="primary">
+      <div class="title">
+        <h6 class="small">Data Penggajian {{title}}</h6>
+      </div>
+
+      <span class="toolbar-spacer"></span>
+      <button mat-button (click)="close()">
+        <i class="fa fa-lg fa-close"></i>
+      </button>
+    </mat-toolbar>
+    <div style="border-bottom: solid 2px black;">
+      <mat-toolbar class=" mt-1 mb-2 p-3" id="toolbar-menu">
+        <button mat-raised-button [disabled]="disable_btn_KT" (click)="disable_btn_KT = !disable_btn_KT; disable_btn_HR = !disable_btn_HR; select_menu='KT'; title='Karyawan Tetap'">Karyawan Tetap</button>
+        <button mat-raised-button [disabled]="disable_btn_HR" (click)="disable_btn_KT = !disable_btn_KT; disable_btn_HR = !disable_btn_HR; ; select_menu='HR'; title='Honor'">Honor</button>
+        <span class="toolbar-spacer"></span>
+        <div class="input-group col-xl-3 col-md-5 col-sm-6 ">
+          <input type="number" class="form-control form-control-sm" placeholder="Cari data by nik" [(ngModel)]="carinik" style="text-align: left">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-outline-secondary" (click)="caridatakaryawan(carinik)">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </mat-toolbar>
+    </div>
+
+
+    <div class="form-body form-body-content-row">
+      <div style="max-height: 650px">       
+        <div>
+          <div class="m-3">
+
+            <form [formGroup]="formgajitetap">
+              <div class="form-row">
+                <div class="col-md-4">
+                    <div style="border-bottom: solid 2px black;" class="mt-3 mb-1">
+                        <small>
+                          <h4>Data Karyawan</h4>
+                        </small>
+                      </div>
+                  <label for="nik">Nik</label>
+                  <input type="text" class="form-control form-control-sm  mb-1" id="nik" formControlName="nik" style="text-align: left"
+                    readonly required>
+                  <label for="nama">Nama</label>
+                  <input type="text" class="form-control form-control-sm  mb-1" id="nama" formControlName="nama" style="text-align: left"
+                    readonly required>
+                  <label for="jabatan">Jabatan</label>
+                  <input type="text" class="form-control form-control-sm  mb-1" id="jabatan" formControlName="jabatan" style="text-align: left"
+                    readonly required>
+                  <div class="form-row">
+                    <div class="col-md-3 col-xs-3 col-xl-3">
+                      <label for="sts">Status</label>
+                      <input type="text" class="form-control form-control-sm mb-1" id="sts" formControlName="sts" readonly required>
+                    </div>
+                    <div class="col-md-3 col-xs-3 col-xl-3">
+                      <label for="pendidikan">Pendi</label>
+                      <input type="text" class="form-control form-control-sm mb-1" id="pendidikan" formControlName="pendidikan" readonly required>
+                    </div>
+                    <div class="col-md-3 col-xs-3 col-xl-3" *ngIf="select_menu ==='KT'">
+                      <label for="gol">Gol</label>
+                      <input type="text" class="form-control form-control-sm mb-1" id="gol" formControlName="gol" readonly required>
+                    </div>
+                    <div class="col-md-5 col-xs-4 col-xl-3">
+                      <label for="masakerja">Masa Kerja</label>
+                      <input type="text" class="form-control form-control-sm  mb-1" aria-label="Small" id="masakerja" formControlName="masakerja"
+                        readonly required>
+                    </div>
+
+                  </div>
+
+                  <div >
+
+                 
+                  <div *ngIf="select_menu ==='KT'">
+                    <label for="gapok">Gaji Pokok</label>
+                    <input [readOnly]="!nik" #gapok type="text" class="form-control form-control-sm mb-1" id="gapok" 
+                    placeholder="0" myCurrencyFormatter formControlName="gapok"
+                      (input)="hitgaji(formgajitetap.value.gapok)" required>
+                  </div>
+                  <div class="selectContainer">
+                    <select [disabled]="!nik" class="form-control form-control-sm" name="status"  formControlName="kolom" (change)="select_kol($event.target.value)">
+                      <option [disabled]="!nik" value="">--Kolom--</option>
+                      <option [disabled]="!nik" value="I">{{kol.I}}</option>
+                      <option [disabled]="!nik" value="III">{{kol.III}}</option>
+                      <option [disabled]="!nik" value="IV">{{kol.IV}}</option>
+                      <option [disabled]="!nik" value="V">{{kol.V}}</option>
+                      <option [disabled]="!nik" value="Vp"> {{kol.Vp}}</option>
+                      <option [disabled]="!nik" value="Vc">{{kol.Vc}}</option>
+                      <option [disabled]="!nik" value="VI">{{kol.VI}}</option>
+                      <option [disabled]="!nik" value="VII">{{kol.VII}}</option>
+                      <option [disabled]="!nik" value="VIII">{{kol.VIII}}</option>
+                    </select>
+                  </div>
+                  <div class="mt-1 ">
+                    <button class="btn btn-block btn-outline-info" [disabled]="!nik " (click)="proses_gaji()">Proses Gaji</button>
+                  </div>
+                </div>
+
+
+                </div>
+                <div class="col-md-5" *ngIf="nik">
+                  <div class="form-row" *ngIf="select_menu ==='HR'">
+                    <div class="col-md-12">
+                      <label for="gaji">Gaji</label>
+                      <input type="text" class="form-control form-control-sm mb-1" id="gaji" placeholder="Gaji" myCurrencyFormatter formControlName="gajihonor"
+                        (input)="hitgaji(formgajitetap.value.gajihonor)" required>
+                    </div>
+                  </div>
+                  <div class="form-row" *ngIf="select_menu ==='KT'">
+                    <div class="col-md-6">
+                      <div style="border-bottom: solid 2px black;" class="mt-3 mb-1">
+                        <small>
+                          <h4>Tunjangan</h4>
+                        </small>
+                      </div>
+                      <label for="tjistri">Tunjangan Istri</label>
+                      <input type="text" class="form-control form-control-sm mb-1" id="tjistri" placeholder="Tunjangan Istri" [value]="tjistri"
+                        formControlName="tjistri" myCurrencyFormatter readonly required>
+                      <label for="tjanak">Tunjangan Anak</label>
+                      <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter [value]="tjanak" formControlName="tjanak"
+                        placeholder="Tunjangan Anak" id="tjanak" readonly>
+                      <label for="tjjabatan">Tunjangan Jabatan</label>
+                      <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter formControlName="tjjabatan" placeholder="Tunjangan Jabatan"
+                        id="tjjabatan" readonly>
+                      <label for="tjkesehatan">Tunjangan Kesehatan</label>
+                      <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter [value]="tjkesehatan" formControlName="tjkesehatan"
+                        placeholder="Tunjangan Kesehatan" id="tjkesehatan" readonly>
+                      <label for="tjkhusus">Tunjangan Khusus</label>
+                      <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter formControlName="tjkhusus" placeholder="Tunjangan Khusus"
+                        id="tjkhusus" readonly>
+                      <label for="tjtrans">Tunjangan Transport</label>
+                      <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter formControlName="tjtrans" placeholder="Tunjangan Transport"
+                        id="tjtrans" readonly>
+                      <label for="tjpangan">Tunjangan Pangan</label>
+                      <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter formControlName="tjpangan" placeholder="Tunjangan Pangan"
+                        id="tjpangan" readonly>
+
+                    </div>
+                   
+                    <div class="col-md-6 mt-1">
+                        <div style="border-bottom: solid 2px ;" class="mt-5 mb-1">
+                           
+                          </div>
+                      <label for="tjprlihan">Tunjangan Peralihan</label>
+                      <input type="text" class="form-control form-control-sm mb-1" (keyup)="act_tjperalihan($event.target.value)" myCurrencyFormatter
+                        formControlName="tjprlihan" placeholder="Tunjangan Peralihan" id="tjprlihan">
+
+                      <label for="tjpengab">Tunjangan Pengabdian</label>
+                      <input type="text" class="form-control form-control-sm mb-1" (keyup)="act_tjpengabidan($event.target.value)" myCurrencyFormatter
+                        formControlName="tjpengab" placeholder="Tunjangan Pengabdian" id="tjpengab">
+
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-3" *ngIf="nik">
+                  <div style="border-bottom: solid 2px black;" class="mt-3 mb-1">
+                    <small>
+                      <h4>Potongan</h4>
+                    </small>
+                  </div>
+                  <label for="tht">Tunjangan Hari Tua</label>
+                  <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter [value]="tjtht" formControlName="tht" placeholder="Tunjangan Hari Tua"
+                    id="tht" readonly>
+                    <small class="form-text text-muted">10 % * GP</small>
+                  <div class="form-group">
+                    <label for="tht">Jamsostek Pensiun</label>
+                    <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter [value]="jp" formControlName="jp" placeholder="Jaminan Pensiun"
+                      id="tht" readonly>
+                    <small class="form-text text-muted">perusahaan : {{persenjpp}}% , karyawan : {{persenjpk}}% * Gaji Kotor</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="tht">Jamsostek Ketenagakerjaan</label>
+                    <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter [value]="jketenagakerjaan" formControlName="jketenagakerjaan" placeholder="Ketenagakerjaan"
+                      id="tht" readonly>
+                    <small class="form-text text-muted">perusahaan : {{persenjketenagakerjaanp}}% , karyawan : {{persenjketenagakerjaank}}% * Gaji Kotor</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="tht">BPJS Kesehatan</label>
+                    <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter [value]="bpjskesehatan" formControlName="bpjskesehatan" placeholder="Bpjs Kesehatan"
+                      id="tht" readonly>
+                    <small class="form-text text-muted">perusahaan : {{persenbpjskesehatanp}}% , karyawan : {{persenbpjskesehatank}}% * Gaji Kotor</small>
+                  </div>
+
+                  <label for="tht">PPh. Pasal 21</label>
+                  <input type="text" class="form-control form-control-sm mb-1" myCurrencyFormatter [value]="pph21" formControlName="pph21" placeholder="PPH21"
+                    id="tht" readonly>
+                </div>
+
+              </div>
+              <div class="form-row mt-2 " style="border: dashed deepskyblue 1px">
+                  <div class="col-md-4">
+                      <small class="  text-muted">
+                         <h5>Gaji Kotor : {{gator}}</h5> 
+                        </small>
+                  </div>
+                  <div class="col-md-4">
+                      <small class=" text-muted">
+                          <h5>Potongan : {{potongan}}</h5>
+                        </small>
+                  </div>
+                  <div class="col-md-4">
+                      <small class="text-muted">
+                        <h5>
+                            Gaji Bersih : {{gaber}}
+                        </h5>
+                          
+                        </small>
+                    </div>
+        
+                </div>
+
+            </form>
+          </div>
+
+        </div>
+      
+
+      </div>
+
+    </div>
+
+    <div class="panel_foot" *ngIf=select_menu>
+      <mat-toolbar style="height: 45px">
+        
+       
+       
+        <span class="toolbar-spacer"></span>
+        <button mat-raised-button="" class="mr-2" *ngIf="btn_batal === true" (click)="batal()">Batal</button>
+        <button mat-raised-button="" class="mr-2" (click)="edit_data()" *ngIf="updateData">edit</button>
+        <button mat-raised-button="" (click)="savedata(formaddkaryawan.value)" color="primary" class="mr-2 inverse" *ngIf="!updateData">Simpan</button>
+
+      </mat-toolbar>
+    </div>
+
+  </div>
+
+
+</app-modal>
+
+<!-- modal cari-->
+<app-modal [(showModal)]="showcari" [(mclass)]="classmodal">
+  <div class="formcari">
+    <input class="ml-2" placeholder="Cari data ......." [(ngModel)]="cari">
+    <button mat-button matSuffix mat-icon-button aria-label="Clear" matTooltip="clear" matTooltipPosition="above">
+      <i class="fa fa-lg fa-trash"></i>
+    </button>
+    <div class=" btn-close">
+      <button mat-icon-button>
+        <i class="fa fa-lg fa-close" (click)="showcari=!showcari"></i>
+      </button>
+    </div>
+
+
+  </div>
+
+</app-modal>
+
+
+<div class="pane-button">
+  <button mat-icon-button="">
+    <i class="fa fa-lg fa-search" (click)="opencari()" matTooltip="Cari" [matTooltipPosition]="position_tooltip"></i>
+  </button>
+  <button mat-icon-button="">
+    <i class="fa fa-lg fa-refresh" matTooltip="Refresh" [matTooltipPosition]="position_tooltip"></i>
+  </button>
+  <button mat-icon-button="" (click)="openFormGaji()" matTooltip="Baru" [matTooltipPosition]="position_tooltip">
+    <i class="fa fa-lg fa-plus"></i>
+  </button>
+</div>

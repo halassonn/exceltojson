@@ -1,0 +1,504 @@
+<app-loader></app-loader>
+
+
+
+<app-modal [(showModal)]="page" [(mclass)]="classmodal">
+  <div class="formadd">
+    <mat-toolbar color="primary">
+      <div class="title">
+        <h6 class="small">Setting App</h6>
+      </div>
+
+      <span class="toolbar-spacer"></span>
+      <button mat-button (click)="closeMainPage()">
+        <i class="fa fa-lg fa-close"></i>
+      </button>
+    </mat-toolbar>
+    <div class="form-body">
+      <div class="mt-3">
+        <small>
+          <h4 class="ml-3">Umum</h4>
+        </small>
+        <div>
+          <button mat-button class="m-3" matTooltip="Profil Kantor" (click)="open_form_umum('Profil Kantor','building')">
+            <fa [name]="'building'" [size]=4></fa>
+          </button>
+          <button mat-button class=" m-3 " matTooltip="Kode Kantor" (click)="open_form_umum('Kode Kantor','code')">
+            <fa [name]="'code'" [size]=4></fa>
+          </button>
+        </div>
+      </div>
+      <div>
+        <small>
+          <h4 class="ml-3">Penggajian</h4>
+        </small>
+        <div>
+          <button mat-button class=" m-3 " matTooltip="Tunjangan Karywan" (click)="open_form_umum('Daftar Tunjangan Karyawan','diamond')">
+            <fa [name]="'diamond'" [size]=4></fa>
+          </button>
+          <button mat-button class=" m-3 " matTooltip="BPJS" (click)="open_form_umum('BPJS Kesehatan/Ketenagakerjaan/Pensiun','user-md')">
+            <fa [name]="'user-md'" [size]=4></fa>
+          </button>
+          <button mat-button class=" m-3 " matTooltip="Pph21" (click)="open_form_umum('PPh 21','ticket')">
+            <fa [name]="'ticket'" [size]=4></fa>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</app-modal>
+
+
+<!-- modal form umum-->
+<app-modal [(showModal)]="showformumum" [(mclass)]="classmodal">
+
+  <div class="formadd ">
+    <mat-toolbar color="primary">
+      <div class="ml-2 mr-1">
+        <fa [name]="iconform"> </fa>
+      </div>
+      <div class="title">
+        <h6 class="small">{{title}}</h6>
+      </div>
+
+      <span class="toolbar-spacer"></span>
+      <button mat-button (click)="close('form_umum')">
+        <i class="fa fa-lg fa-close"></i>
+      </button>
+    </mat-toolbar>
+
+    <!-- form Data kantor-->
+    <div class="form-body" *ngIf="formname==='Profil Kantor'">
+      <form class="m-2">
+        <div class="form-group">
+          <label for="kodekantor">Kode Kantor</label>
+          <input type="text" class="form-control" id="kodekantor" placeholder="Kode Kantor">
+        </div>
+        <div class="form-group">
+          <label for="nama">Nama Kantor</label>
+          <input type="text" class="form-control" id="nama" placeholder="Nama Kantor">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Kantor</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email Kantor">
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat Kantor</label>
+          <textarea class="form-control" id="alamat" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="kodepos">Kode Pos Kantor</label>
+          <input type="text" class="form-control" id="kodepos" placeholder="Kode Pos Kantor">
+        </div>
+        <div class="form-group">
+          <label for="namapimpinan">Nama Pimpinan</label>
+          <input type="text" class="form-control" id="namapimpinan" placeholder="Nama Pimpinan">
+        </div>
+      </form>
+    </div>
+    <!-- kode kantor -->
+    <div class="form-body" *ngIf="formname==='Kode Kantor'">
+      <form class="m-2">
+        <div class="form-group">
+          <label for="kodekantor">Kode Kantor</label>
+          <input type="text" class="form-control" id="kodekantor" placeholder="Kode Kantor">
+        </div>
+        <mat-radio-group>
+          <mat-radio-button value="1">Pusat</mat-radio-button>
+          <mat-radio-button value="2">Cabang</mat-radio-button>
+        </mat-radio-group>
+      </form>
+    </div>
+
+
+    <!--PPh21-->
+    <div class="form-body" *ngIf="formname==='PPh 21'">
+      <form class="m-2">
+        <div class="form-group row m-2">
+          <div class="col-md-8">
+            <div class="form-group">
+              <label>PTKP (Penghasilan Tidak Kena Pajak)</label>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" id="ptkp" placeholder="0">
+              <small class="form-text text-muted">PTKP dalam setahun</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Tarif Pph21</label>
+          </div>
+        </div>
+        <div id="tarifpph21">
+          <div class="form-group row m-2">
+            <div class="col-md-4">
+              <div class="form-group">
+                <textarea class="form-control" id="alamat" rows="3" placeholder="keterangan"></textarea>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <div class="form-group">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <small class="form-text text-muted">NPWP</small>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="col-md-2">
+              <div class="form-group">
+                <input type="text" class="form-control" id="minimum" placeholder="0">
+                <small class="form-text text-muted">penghasilan minimum dalam setahun</small>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <div class="form-group">
+                <label>s/d</label>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+
+                <input type="text" class="form-control" id="maximum" placeholder="0">
+                <small class="form-text text-muted">pengahasilan maximum dalam setahun</small>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+
+                <input type="text" class="form-control" id="maximum" placeholder="0.0">
+                <small class="form-text text-muted">tarif pph21 (%)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </form>
+
+    </div>
+
+    <!--BPJS-->
+    <div class="form-body" *ngIf="formname==='BPJS Kesehatan/Ketenagakerjaan/Pensiun'">
+      <form class="m-2" [formGroup]="formBPJS">
+
+        <div class="row col-md-12  m-2">
+          <table class="table">
+            <thead>
+              <tr>
+
+                <th scope="col"></th>
+                <th scope="col">Nama</th>
+                <th scope="col">Perusahan</th>
+                <th scope="col">Karyawan</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody *ngFor=" let bpjs of parameterBPJSs">
+              <tr>
+
+                <th scope="row"></th>
+                <td>{{bpjs.title}}</td>
+                <td>{{bpjs.perusahaan || '0%'}}</td>
+                <td>{{bpjs.karyawan || '0%'}}</td>
+                <td>{{bpjs.persen || '0%'}}</td>
+              </tr>
+
+
+            </tbody>
+
+            <tfoot class="bg-info" *ngIf="form_bpjs">
+
+              <th></th>
+              <th>
+
+
+                <select class="form-control form-control-lg" name="title" formControlName="title">
+                  <option value="">----</option>
+                  <option *ngFor=" let bpjs of parameterBPJSs" [value]="bpjs.title">{{bpjs.title}}</option>
+                </select>
+
+
+              </th>
+              <th>
+
+                <div class="form-group">
+                  <input type="text" class="form-control" id="perusahaan" placeholder="0.0 %" formControlName="perusahaan">
+
+
+
+                </div>
+              </th>
+              <th>
+
+                <div class="form-group">
+
+                  <input type="text" class="form-control" id="karyawan" placeholder="0.0 %" formControlName="karyawan">
+
+                </div>
+
+              </th>
+            </tfoot>
+          </table>
+
+        </div>
+
+      </form>
+    </div>
+
+    <!--list tunjangan-->
+    <div class="form-body" *ngIf="formname === 'Daftar Tunjangan Karyawan'">
+      <form class="m-2">
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let jenistunjangan of parameterjenis_tunjangans">
+            <mat-expansion-panel-header (click)="open_form(jenistunjangan)">
+              <mat-panel-title>
+                {{jenistunjangan.jenistunjangan }}
+              </mat-panel-title>
+              <mat-panel-description>
+
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div>
+
+              <div class="form-body" style="background-color: gray">
+                <!-- Tujangan Istri -->
+                <div *ngIf="parameterjenis_tunjangan.kode==='Tis'" [formGroup]="formTunjangan">
+                  <mat-nav-list>
+                    <mat-list-item (click)="detail(kolom_tunjangan)">
+                      <a matLine>Tunjangan Istri (% GP)</a>
+                      <a>{{kolom_tunjangan.persen ? kolom_tunjangan.persen :'0.0' }}%</a>
+                    </mat-list-item>
+                  </mat-nav-list>
+                  <hr *ngIf="kolom_tunjangan !== null">
+
+                  <div class="form-group row m-3" *ngIf="open_form_add">
+                    <label for="tht" class="col-sm-9 col-form-label">Tunjangan Istri (% GP)</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control form-control-lg" id="tht" formControlName="persen" placeholder="{{kolom_tunjangan.persen ? kolom_tunjangan.persen :'0.0' }} %">
+                    </div>
+                  </div>
+                </div>
+                <!-- Tujangan Anak -->
+                <div *ngIf="parameterjenis_tunjangan.kode === 'Tank'" [formGroup]="formTunjangan">
+                  <mat-nav-list>
+                    <mat-list-item (click)="detail(kolom_tunjangan)">
+                      <a matLine>Tunjangan Anak (% GP)</a>
+                      <a>{{kolom_tunjangan.persen ? kolom_tunjangan.persen :'0.0' }}%</a>
+                    </mat-list-item>
+                  </mat-nav-list>
+
+                  <hr *ngIf="kolom_tunjangan !== null">
+
+                  <div class="form-group row m-3" *ngIf="open_form_add">
+                    <label for="tht" class="col-sm-9 col-form-label">Tunjangan Anak (% GP)</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control form-control-lg" id="tht" formControlName="persen" placeholder="{{kolom_tunjangan.persen ? kolom_tunjangan.persen :'0.0' }} %">
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- THT -->
+                <div *ngIf="parameterjenis_tunjangan.kode ==='THT'" [formGroup]="formTunjangan">
+
+                  <mat-nav-list>
+                    <mat-list-item (click)="detail(kolom_tunjangan)">
+                      <a matLine>Tunjangan Hari Tua (% GP)</a>
+                      <a>{{kolom_tunjangan.persen ? kolom_tunjangan.persen :'0.0' }}%</a>
+                    </mat-list-item>
+                  </mat-nav-list>
+
+                  <hr *ngIf="kolom_tunjangan !== null">
+
+                  <div class="form-group row m-3" *ngIf="open_form_add">
+                    <label for="tht" class="col-sm-9 col-form-label">Tunjangan Hari Tua (% GP)</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control form-control-lg" id="tht" formControlName="persen" placeholder="{{kolom_tunjangan.persen ? kolom_tunjangan.persen :'0.0' }} %">
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <!-- Tujangan Kesehatan -->
+                <div *ngIf="parameterjenis_tunjangan.kode ==='Tks'" [formGroup]="formTunjangankesehatan">
+
+
+                  <mat-nav-list>
+                    <mat-list-item *ngFor="let kolomtj of kolom_tunjangans" (click)="detail(kolomtj)">
+                      <a matLine>{{kolomtj.status}}</a>
+                      <a>{{kolomtj.persen}}%</a>
+                    </mat-list-item>
+                  </mat-nav-list>
+
+
+
+                  <hr *ngIf="kolom_tunjangans !== null">
+                  <div *ngIf="open_form_add">
+                    <div class="form-group row m-1">
+                      <label class="col-sm-6 col-form-label">Status</label>
+                      <div class="col-sm-6">
+                        <div class="selectContainer">
+                          <select class="form-control form-control-lg" name="status" formControlName="status">
+                            <option value="">--Status--</option>
+                            <option value="TK">Tidak Menikah</option>
+                            <option value="K0">Menikah Anak / 0</option>
+                            <option value="K1">Menikah Anak / 1</option>
+                            <option value="K2">Menikah Anak / 2</option>
+                            <option value="K3">Menikah Anak / 3</option>
+                          </select>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="form-group row m-1">
+                      <label for="persentasi" class="col-sm-9 col-form-label">Persentase (%)</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-lg" id="persentasi" formControlName="persen" placeholder="0.0 %">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Tunjangan JAbatan -->
+                <div *ngIf="parameterjenis_tunjangan.kode ==='Tjab'" [formGroup]="formTunjanganjabatan">
+                  <mat-nav-list>
+                    <mat-list-item *ngFor="let kolomtj of kolom_tunjangans" (click)="detail(kolomtj)">
+
+                      <a matLine>{{kolomtj.jabatan}}</a>
+                      <a>{{kolomtj.nominal}}</a>
+                    </mat-list-item>
+                  </mat-nav-list>
+                  <hr *ngIf="kolom_tunjangans !== null">
+                  <div *ngIf="open_form_add">
+                    <div class="form-group row m-1 ">
+                      <label class="col-sm-5 col-form-label">Jabatan</label>
+                      <div class="col-sm-7">
+                        <div class="selectContainer">
+                          <select class="form-control form-control-lg" name="jabatan" formControlName="jabatan">
+                            <option value="">--Jabatan--</option>
+                            <option value="KS">Kasir</option>
+                            <option value="Kabag">Kepala Bagian</option>
+                            <option value="Kasubag">Kepala Sub Bagian</option>
+                            <option value="P">Pimpinan Cabang</option>
+                            <option value="D">Direktur</option>
+                            <option value="DU">Direktur Utama</option>
+                          </select>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="form-group row m-1">
+                      <label class="col-sm-7 col-form-label">Nominal</label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control form-control-lg" myCurrencyFormatter formControlName="nominal" placeholder="0">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                <!-- Tunjangan Pengabdian -->
+                <div *ngIf="parameterjenis_tunjangan.kode==='Tpengab'">
+                  <h2>Pengabdian</h2>
+                </div>
+
+                <!-- Tujangan Pangan, Khusus, Transport -->
+                <div [formGroup]="formTunjanganptk" *ngIf="parameterjenis_tunjangan.kode==='Tkhs' || parameterjenis_tunjangan.kode==='Ttrans' || parameterjenis_tunjangan.kode==='Tpang'">
+                  <mat-nav-list>
+                    <mat-list-item *ngFor="let kolomtj of kolom_tunjangans" (click)="detail(kolomtj)">
+                      <a matLine>Kolom {{kolomtj.kolom}}</a>
+                      <a>{{kolomtj.nominal}}</a>
+                    </mat-list-item>
+                  </mat-nav-list>
+
+
+                  <div *ngIf="open_form_add">
+                    <div>
+                      <div class="form-group row m-3">
+                        <input type="text" hidden="true" class="form-control form-control-lg" id="idtj" formControlName="id" placeholder="Id jenis tunjangan">
+                      </div>
+                      <hr *ngIf="kolom_tunjangans !== null">
+                      <div class="form-group row m-3">
+                        <label class="col-sm-3 col-form-label">Kolom</label>
+                        <div class="col-sm-9">
+
+                          <div class="selectContainer">
+                            <select class="form-control form-control-lg" name="status" formControlName="kolom">
+                              <option value="">--Kolom--</option>
+                              <option *ngFor="let parameterkolom of parameterkoloms" [value]=parameterkolom.kolom>{{parameterkolom.title}}</option>
+
+                            </select>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="form-group row m-3">
+                        <label for="nominal" class="col-sm-7 col-form-label">nominal</label>
+                        <div class="col-sm-5">
+                          <input mycurrencyPipe type="text" class="form-control form-control-lg" id="nominal" myCurrencyFormatter formControlName="nominal"
+                            placeholder="0">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <mat-toolbar color="accent" style="height: 45px">
+                  <span class="toolbar-spacer"></span>
+                  <button mat-button="" class="warn" (click)="batal()" *ngIf="open_form_add">Batal</button>
+                  <button mat-button="" class="offset ml-3" [disabled]=" 
+                    !formTunjangan.valid && button_title === 'Simpan' &&
+                    !formTunjangankesehatan.valid && button_title === 'Simpan' &&
+                    !formTunjanganjabatan.valid && button_title === 'Simpan' &&
+                    !formTunjanganptk.valid && button_title === 'Simpan' 
+                    " (click)="simpanTunjangan()">{{button_title}}</button>
+                </mat-toolbar>
+
+              </div>
+
+            </div>
+
+          </mat-expansion-panel>
+
+        </mat-accordion>
+
+        <!--<mat-nav-list>
+          <mat-list-item *ngFor="let jenistunjangan of jenis_tunjangans" (click)="open_form(jenistunjangan)">
+            <a matLine>{{jenistunjangan.jenistunjangan }}</a>
+          </mat-list-item>
+        </mat-nav-list> -->
+      </form>
+    </div>
+
+
+    <div class="form-group row m-1" *ngIf="formname !== 'Daftar Tunjangan Karyawan'">
+      <mat-toolbar style="height: 45px">
+        <button *ngIf="!form_bpjs" type="button" class="btn btn-danger" (click)="form_bpjs = !form_bpjs">
+          <fa [name]="'plus'" [size]=1></fa>
+        </button>
+
+        <span class="toolbar-spacer"></span>
+        <button type="button" class="btn btn-danger" (click)="batal('form_umum')">Close</button>
+        <button type="button" class="btn btn-primary offset ml-3" *ngIf="formBPJS.valid"  (click)="on_btn_ok()">OK</button>
+      </mat-toolbar>
+    </div>
+  </div>
+</app-modal>
+
+
+
+<!-- modal form tunjangan-->

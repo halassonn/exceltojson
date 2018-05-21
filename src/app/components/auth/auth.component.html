@@ -1,0 +1,30 @@
+<app-loader></app-loader>
+<app-modal [showModal]="true"[(mclass)]="pageclass">
+  <div class="login-pane">
+    <div class="mb-2">
+      <H2>Login Page</H2>
+    </div>
+   <div class="row-form">
+     <form [formGroup]="formLogin">
+        <div>
+            <label for="username">Uername</label>
+            <input type="text" class="form-control form-control-lg mb-1" id="username"
+                   placeholder="Username" formControlName="username"
+                   >
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" class="form-control form-control-lg mb-1" id="password"
+                   placeholder="Password" formControlName="password"
+                   >
+        </div>
+
+        <div class="mt-5">
+          <button class="form-control" (click)="doLogin(formLogin.value)">Login</button>
+        </div>
+     </form>
+ 
+   </div>
+      
+  </div>
+</app-modal>

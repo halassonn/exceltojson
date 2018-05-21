@@ -1,0 +1,123 @@
+<app-loader></app-loader>
+<app-modal [(showModal)]="page">
+  <div class="pane_page">
+    <div class="panel_content">
+      <mat-table [dataSource]="dataSource" matSort>
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> id </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="kodekantor">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Kode Kantor </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.kodekantor}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="namakantor">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Nama Kantor </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.namakantor}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="alamat">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Alamat Kantor </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.alamat}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="kodepos">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Kodepos </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.kodepos}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+          <mat-cell *matCellDef="let row">
+            <a mat-icon-button="" matTooltip="Detail" (click)="showDetail(row)">
+              <i class="fa fa-eye text-info"></i>
+            </a>
+            <a mat-icon-button="" matTooltip="Hapus" (click)="hapusDataKantor(row)">
+              <i class="fa fa-trash text-danger"></i>
+            </a>
+          </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns" class="bg-light custom-mat-header-row text-white"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row-hover custom-mat-row text-white"></mat-row>
+      </mat-table>
+
+    </div>
+    <div class="panel_foot">
+      <mat-paginator #paginator [length]="datakantorDB.data.length" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+        class="bg-transparent">
+      </mat-paginator>
+    </div>
+  </div>
+</app-modal>
+
+<app-modal [(showModal)]="showformadd" [(mclass)]="classmodal">
+
+  <div class="formadd" [formGroup]="formdatakantor" style="width: 350px;">
+    <mat-toolbar color="primary">
+      <div class="title">
+        <h6 class="small">Data Kantor</h6>
+      </div>
+
+      <span class="toolbar-spacer"></span>
+      <button mat-button (click)="showformadd = !showformadd">
+        <i class="fa fa-lg fa-close"></i>
+      </button>
+    </mat-toolbar>
+    <div class="form-body">
+      <mat-form-field>
+        <input matInput placeholder="Kode Kantor" formControlName="kodekantor">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Nama Kantor" formControlName="namakantor">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Alamat Kantor" formControlName="alamat"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Kodepos Kantor" formControlName="kodepos">
+      </mat-form-field>
+    </div>
+
+
+    <mat-toolbar style="height: 45px">
+      <button mat-raised-button class="mr-2" (click)="edit_data()" *ngIf="updateData">edit</button>
+      <span class="toolbar-spacer"></span>
+      <button mat-raised-button class="mr-2" (click)="addDatakantor(formdatakantor.value)" [disabled]="!formdatakantor.valid" *ngIf="!updateData">Simpan</button>
+      <button mat-raised-button (click)="batal()">batal</button>
+    </mat-toolbar>
+  </div>
+</app-modal>
+
+
+<app-modal [(showModal)]="showcari" [(mclass)]="classmodal">
+  <div class="formcari">
+      
+     
+      <input class="ml-2" placeholder="Cari data ......." [(ngModel)]="cari" (keyup)="applyFilter($event.target.value)">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear"  (click)="cari='';getAllDataKantor(null, null);"
+      matTooltip="clear" matTooltipPosition="above">
+      <i class="fa fa-lg fa-trash"></i>
+    </button>
+      <div class=" btn-close">
+          <button mat-icon-button>
+              <i class="fa fa-lg fa-close" (click)="showcari=!showcari"></i>
+          </button>
+      </div>
+      
+      
+  </div>
+</app-modal>
+
+
+
+<div class="pane-button">
+  <button mat-icon-button="">
+    <i class="fa fa-lg fa-search" (click)="opencari()" matTooltip="Cari" [matTooltipPosition]="position_tooltip"></i>
+  </button>
+  <button mat-icon-button="">
+    <i class="fa fa-lg fa-refresh" (click)="getAllDataKantor(null,null)" matTooltip="Refresh" [matTooltipPosition]="position_tooltip"></i>
+  </button>
+  <button mat-icon-button=""  (click)="form_baru()" matTooltip="Data Kantor" [matTooltipPosition]="position_tooltip">
+    <i class="fa fa-lg fa-plus"></i>
+  </button>
+</div>

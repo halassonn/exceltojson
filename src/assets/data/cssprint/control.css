@@ -1,0 +1,56 @@
+
+.form-control {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+  width: 100%;
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+    margin-top: 3px;
+  }
+  
+  .form-control select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  .form-control select:focus {
+    outline: none;
+  }
+
+  .form-group{
+      margin-top: 10px;
+  }
+
+  .btn-close-panel{
+    margin-bottom: 4px;
+    margin-top: -13px;
+    margin-left: -13px;
+  }
+  .btn-close-panel > button{
+   font-size: 20px !important;
+   background-color: transparent;
+   border: 1px transparent solid;
+   color: aqua;
+   
+  }
+  .btn-close-panel > button:hover{
+    border: 1px tomato solid;
+    color: tomato;
+    cursor: pointer;
+   }
+
+  hr{
+      margin-left: -25px;
+      padding-right: 38px;
+  }

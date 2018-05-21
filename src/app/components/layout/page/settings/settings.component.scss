@@ -1,0 +1,19 @@
+.form-body{
+    .mat-expansion-panel-header-title{
+        font-weight: bold !important;
+        font-size: 18px !important;
+        color:#0d5aa7 !important;
+      }
+}
+.mat-list-item{
+    font-size: small;
+}
+.mat-list-item:hover{
+    background:azure;
+}
+
+.form-group{
+    label {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,94 @@
+<mat-sidenav-container>
+    <mat-toolbar class="" color="primary">
+      <span>
+        <button mat-icon-button="" class="btnSidenav" (click)="open_sidemenu()">
+            <fa name="bars" size="2x"></fa>
+        </button>
+      </span>
+      <span>
+        <h2>&nbsp;{{title}}</h2>
+      </span>
+      <span class="toolbar-spacer"></span>
+
+      <span class="toolbar-spacer"></span>
+
+      <button mat-icon-button="" [matMenuTriggerFor]="userMenu" matTooltip="Admin">
+        <i class="fa fa-user-o fa-lg"></i>
+        <!-- <span matPrefix="">&nbsp;{{username}}</span> -->
+        <span matSuffix="">&nbsp;
+            <fa name="chevron-circle-down"></fa>
+        </span>
+      </button>
+
+
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item="" routerLink="/profil">
+          <i class="fa fa-lg fa-user"></i>
+          <span matPrefix="">&nbsp;{{username}}</span>
+        </button>
+        <button mat-menu-item="" (click)="logout()">
+          <i class="fa fa-lg  fa-power-off"></i> &nbsp;Logout</button>
+      </mat-menu>
+
+    </mat-toolbar>
+
+    <mat-sidenav mode="over" #sidenav class="bg-primary">
+      <mat-list>
+        <mat-list-item class="mt-3">
+          <button mat-icon-button="" (click)="open_route('home')">
+            <span>
+              <i class="fa fa-lg fa-inverse fa-home" matTooltip="DashBoard"></i>
+            </span>
+          </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-icon-button="" (click)="open_route('users')">
+            <span>
+              <i class="fa fa-lg fa-inverse fa-users" matTooltip="Users"></i>
+            </span>
+          </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-icon-button="" (click)="open_route('data_kantor')">
+            <span>
+              <i class="fa fa-lg fa-inverse fa-bank" matTooltip="Data Kantor"></i>
+            </span>
+          </button>
+        </mat-list-item>
+        <mat-list-item class="mt-3">
+          <button mat-icon-button="" (click)="open_route('data_karyawan')">
+            <span>
+              <i class="fa  fa-lg fa-inverse fa-user-o" matTooltip="Data Pegawai"></i>
+            </span>
+          </button>
+        </mat-list-item>
+        <mat-list-item class="mt-3">
+          <button mat-icon-button="" (click)="open_route('data_gaji')">
+            <span>
+              <i class="fa  fa-lg fa-inverse fa-money" matTooltip="Penggajian"></i>
+            </span>
+          </button>
+        </mat-list-item>
+        <mat-list-item class="mt-3">
+         <button mat-icon-button="" (click)="open_route('data_cetak')">
+          <span>
+            <i class="fa fa-lg fa-inverse fa-print" matTooltip="Cetak"></i>
+          </span>
+         </button>
+        </mat-list-item>
+        <mat-list-item class="mt-3">
+          <button mat-icon-button (click)="open_route('setting')">
+            <span>
+              <i class="fa fa-lg fa-inverse fa-cog" matTooltip="Setting"></i>
+            </span>
+          </button>
+        </mat-list-item>
+
+
+
+      </mat-list>
+    </mat-sidenav>
+    <div id="content-layout">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>

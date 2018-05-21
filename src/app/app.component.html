@@ -1,0 +1,302 @@
+<div class="main" style="align-items: center; align-content: center; margin: auto;   justify-content: center; 
+">
+    <div *ngIf="datakantor" class="pane-main">
+      <div style="width: 80%; display: flex;">
+          <input type="file" (change)="onFileChange($event)" multiple="false" class="form-control form-control-sm" 
+          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+          <button (click)="sendataPrint()" [disabled]="urlfile" class="btn btn-primary">Open</button>
+      </div>
+      
+      </div>
+  
+      <div style="display: none">
+        <button (click)="sendataPrint2()">Print-Direct</button>
+        <select name="" id="printlist" (change)="selectprint($event)">
+          <option *ngFor="let print of printerlist" value="{{print.name}}">{{print.name}}</option>
+        </select>
+        <select name="" id="directornot" (change)="directornot($event)">
+          <option value=true>direct print</option>
+          <option value=false>open window print</option>
+        </select>
+      </div>
+
+
+  <div class="main" style=" display: none; min-width: 20%;max-height:95% !important; top:75px; flex-direction: row !important;">
+  
+
+<div class="panel" style="background-color: antiquewhite; padding: 10px !important; ">
+    <h6>Group By</h6>
+  <div>
+      <select name="" id="groupoption" class="form-control form-control-sm">
+          <option value=true>direct print</option>
+          <option value=false>open window print</option>
+        </select>
+  </div>
+  <h6 class="mt-2">Sub Group By</h6>
+  <div>
+      <select name="" id="subgroupoption"  class="form-control form-control-sm">
+          <option value=true>direct print</option>
+          <option value=false>open window print</option>
+        </select>
+  </div>
+  <h6 class="mt-2">Choose Header</h6>
+  <div class="panel mt-2" style="overflow-y:auto !important; padding: 0 !important; max-height: 80%; margin-right: -10px;">
+     
+      <div *ngFor="let key of keys; let i = index"  >
+          <input  type="checkbox" name="{{key}}" value="{{key}}" checked (change)="fiterdataBy($event)">{{key}}
+     </div>
+  </div>
+ 
+</div>
+<div class="panel" style=" max-width: 100% !important; max-height: 95%; overflow: auto !important; background-color: whitesmoke;" #dataprint id="dataprint">
+ <!-- <table class="table">
+    <tr *ngFor="let row of dataAOA">
+        <td *ngFor="let val of row" id="">
+            {{val | myCurrency:'PLAFOND' }}
+        </td>
+    </tr>
+</table> -->
+ 
+  <table>
+    <tr>
+      <th *ngFor="let header of keys" >{{header}}</th>
+    </tr>
+  </table> 
+  <table class="table" id="tabledata">
+        <tr>
+          <th>NO</th>
+          <th>NOREK</th>
+          <th>NAMA</th>
+          <th>PRODUK</th>
+          <th>PLAFOND</th>
+          <th>BAKIDEBET</th>
+          <th>TGK PKK</th>
+          <th>TGK BNG</th>
+          <th>DENDA</th>
+          <th>TOTAL TGK</th>
+          <th>TANGGAL BUKA</th>
+          <th>TANGGAL JT</th>
+          <th style="text-align: center">Ag/Ke</th>
+        </tr>
+        <tbody *ngFor="let row of data">
+          <tr id="groupby" style="border: none !important" *ngIf="getFilter(row)">
+            <td></td>
+            <td style="border: none !important" class="">
+              Wilayah / AO :
+            </td>
+            <td style="border: none !important" class="">
+              {{getFilter(row)}}
+            </td>
+          </tr>
+          <tr id="subgroupby" style="border: none !important" *ngIf="getFilter(row)">
+            <td>
+            </td>
+            <td style="border: none !important" class="">
+              Kolektibilitas :
+            </td>
+            <td style="border: none !important" class="">
+              {{getFilterByKOLEK(row)}}
+            </td>
+          </tr>
+          <tr *ngFor="let val of row; let i =index">
+            <td style="text-align: center !important">{{numbering(i)}}</td>
+            <td style="text-align: center !important">
+              {{val.NO_REK}}
+            </td>
+            <td>
+              {{val.NAMA}}
+            </td>
+            <td>{{val.PRODUK}}</td>
+            <td id="cur" style="text-align: right !important">{{val.PLAFOND | myCurrency}}</td>
+            <td id="cur" style="text-align: right !important">{{val.BAKIDEBET | myCurrency}}</td>
+
+            <td style="text-align: right !important">
+              {{val.TGK_PKK | myCurrency}}
+            </td>
+            <td style="text-align: right !important">
+              {{val.TGK_BNG | myCurrency}}
+            </td>
+            <td style="text-align: right !important">
+              {{val.DENDA | myCurrency}}
+            </td>
+            <td style="text-align: right !important">{{(val.TGK_PKK + val.TGK_BNG)|myCurrency}}</td>
+            <td style="text-align: center !important">{{val.TGL_BUKA | date: 'dd-MM-yyyy'}}</td>
+            <td style="text-align: center !important">{{val.TGL_JT | date: 'dd-MM-yyyy'}}</td>
+            <td style="text-align: center !important">{{val.X_ANGSUR}}</td>
+          </tr>
+          <tr *ngIf="getFilter(row)"></tr>
+          <tr id="subtotal" *ngIf="getFilter(row)" style="font-weight: bolder">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>SUB TOTAL :</td>
+            <td id="stp" style="text-align: right !important">{{(row|filterBy:'MKTOFFR':'PLAFOND') | myCurrency}}</td>
+            <td id="stp" style="text-align: right !important">{{(row|filterBy:'MKTOFFR':'BAKIDEBET') | myCurrency}}</td>
+            <td style="text-align: right !important">{{(row|filterBy:'MKTOFFR':'TGK_PKK') | myCurrency}}</td>
+            <td style="text-align: right !important">{{(row|filterBy:'MKTOFFR':'TGK_BNG') | myCurrency}}</td>
+            <td style="text-align: right !important">{{(row|filterBy:'MKTOFFR':'DENDA') | myCurrency}}</td>
+            <td style="text-align: right !important">{{(row|filterBy:'MKTOFFR':'TGK_PKK') + (row|filterBy:'MKTOFFR':'TGK_BNG') | myCurrency }}</td>
+          </tr>
+
+        </tbody>
+        <tfoot style="margin-top: 15px !important;">
+          <tr style="font-weight: bolder">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="font-weight: bolder">TOTAL :</td>
+            <td style="text-align: right !important"> {{getTotal('PLAFOND') | myCurrency}}</td>
+            <td style="text-align: right !important"> {{getTotal('BAKIDEBET') | myCurrency}}</td>
+            <td style="text-align: right !important"> {{getTotal('TGK_PKK') | myCurrency}}</td>
+            <td style="text-align: right !important"> {{getTotal('TGK_BNG') | myCurrency}}</td>
+            <td style="text-align: right !important"> {{getTotal('DENDA') | myCurrency}}</td>
+            <td style="text-align: right !important"> {{(getTotal('TGK_PKK')+getTotal('TGK_BNG')) | myCurrency}}</td>
+          </tr>
+
+
+        </tfoot>
+
+      </table>
+</div>
+  
+
+
+
+    <div class="mt-5 ml-5 mb-5 mr-5" style="display: none;" >
+     
+
+    </div>
+
+
+    <div id="dataprint2" style="display: none;">
+      <div class="footer">Page:
+        <span class="pagenum"></span>
+      </div>
+      <table id="tcontoh">
+
+        <tr>
+          <td>Nnik</td>
+          <td>Nama</td>
+        </tr>
+        <tr>
+          <td>
+            121313213
+          </td>
+          <td>
+            Halasson
+          </td>
+        </tr>
+
+
+      </table>
+    </div>
+
+    <div class="incrementClass">
+
+    </div>
+
+
+
+
+
+    <!--<table class=" table-bordered" >
+        <thead *ngIf="wilayahAO[0]">
+          <tr>
+            <td></td>
+            <td>NAMA</td>
+            <td>KOLEK</td>
+          </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let d of data2 | filterBy : 'KOLEK' : searchString[0+1]; let i = index;">
+                <td >{{i}}</td>
+                <td class="text-left" >
+                  {{d.NAMA}}
+                </td>
+                <td class="text-left" >
+                  {{d.KOLEK}}
+                </td>
+              </tr>
+          
+        </tbody>
+      
+      
+      
+      
+      
+      </table> -->
+
+    <!--<table class="table table-bordered">
+          <tr *ngFor="let row of data">
+              <td *ngFor="let val of row | filterBy : 'PETUGAS' : searchString; let i = index">
+                  {{val }}
+              </td>
+          </tr>
+      </table> 
+      <button (click)="export()">Export!</button> 
+      <button (click)="onPrint()">Show export modal</button>
+      -->
+    <!--<table class="table table-bordered">
+       
+        <thead >
+          <th *ngFor="let val of keys ">
+            {{val}}
+          </td>
+        </thead>
+        <tr *ngFor="let row of data">
+              <td *ngFor="let val of row">
+                  {{val | filterBy:listfilter}}
+              </td>
+          </tr>
+      </table> -->
+  </div>
+  <div class="pane-setting" *ngIf="!datakantor">
+
+    <div class="form-group">
+      <label for="namabpr">Nama BPR:</label>
+      <input type="text" class="form-control" id="nama" placeholder="Nama BPR" name="namabpr" [(ngModel)]="datakantormodel.namabpr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Nama Pimpinan:</label>
+      <input type="text" class="form-control" id="namapimpinan" placeholder="Nama Pimpinan" name="namapimpinan" [(ngModel)]="datakantormodel.namapimpinan">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Nama KaSuBag Kredit:</label>
+      <input type="text" class="form-control" id="namakasubag" placeholder="Nama KaSuBag Kredit" name="namakasubag" [(ngModel)]="datakantormodel.namakasubag">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Nama Petugas:</label>
+      <input type="text" class="form-control" id="namapetugas" placeholder="Nama Petugas" name="namapetugas" [(ngModel)]="datakantormodel.namapetugas">
+    </div>
+
+    <button type="submit" class="btn btn-primary pull-right" (click)="saveDatakantor()">Simpan</button>
+    <button type="reset" class="btn btn-danger " (click)="batal()">Batal</button>
+
+  </div>
+
+  <div class="btnsetting" (click)="showsetting()">
+    <i class="fa fa-cog"></i>
+  </div>
+
+
+  <div id="loading" class="open-loading text-info" *ngIf="showloading">
+
+    <div id="mainloading" class="loadingpane">
+      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="open-loading" *ngIf="showMessage">
+    <div id="pesanpane" [(ngClass)]="messageclass">
+      <h6>Success</h6>
+      <p>Data Kantor Sudah Di Simpan</p>
+      <button class="btn btn-outline-success pull-right" (click)="outmessage()">ok</button>
+    </div>
+  </div>
+
+
+
+
+</div>
