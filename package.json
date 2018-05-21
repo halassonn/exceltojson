@@ -18,7 +18,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/halassonn/HRD-system.git"
+    "url": "git+https://github.com/halassonn/exceltojson.git"
   },
   "scripts": {
     "ng": "ng",

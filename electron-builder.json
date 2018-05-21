@@ -12,7 +12,7 @@
     "publish":[
       {
         "provider":"github",
-        "repo":"hrd-system-release",
+        "repo":"exceltojson",
         "owner":"halassonn",
         "token": "0f4bc706772a27ccd9041748039a05c63b24d968"
 
