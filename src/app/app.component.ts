@@ -154,6 +154,13 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.electronService.ipcRenderer.on('update_info', (e, message) => {
       document.getElementById('updatemessage').innerHTML = message.message + message.updateaction;
       document.getElementById('updateinfo').removeAttribute('style');
+      document.getElementById('updateinstallbtn').addEventListener('click', () => {
+        this.installUpdate();
+      });
+      document.getElementById('updatecancelinstall').addEventListener('click', () => {
+        this.laterupdate();
+      })
+      console.log(message.message);
     });
 
 
@@ -168,7 +175,10 @@ export class AppComponent implements AfterViewInit, OnInit {
     })
   }
 
+
+
   installUpdate() {
+    console.log('install update')
     this.electronService.ipcRenderer.send('install-update');
   }
   laterupdate() {

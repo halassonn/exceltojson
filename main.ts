@@ -57,7 +57,7 @@ function createWindow() {
   if (serve) {
     win.webContents.openDevTools();
   }
-  //  win.webContents.openDevTools();
+  win.webContents.openDevTools();
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -109,40 +109,54 @@ try {
 }
 log.info('App starting...');
 
-function sendStatusToWindow(text) {
+function sendStatusToWindow(text, action: boolean) {
   log.info(text);
   updatemessage = text;
-  win.webContents.send('message', updatemessage);
+  let data;
+  // tslint:disable-next-line:max-line-length
+  if (action === true) {
+    data = { message: updatemessage, updateaction: '<button id="updateinstallbtn" type="button" class="btn btn-success btn-sm" >Install</button > <button id="updatecancelinstall" class="btn btn-success btn-sm">Later</button>' }
+  } else {
+    data = { message: updatemessage }
+  }
+
+  win.webContents.send('update_info', data);
 }
 
 
 autoUpdater.on('checking-for-update', () => {
-  sendStatusToWindow('Checking for update...');
+  // sendStatusToWindow('Checking for update...');
 });
 autoUpdater.on('update-available', (ev, info) => {
-  sendStatusToWindow('update-available');
-  setTimeout(function () {
-    // tslint:disable-next-line:max-line-length
-    const data = { message: 'A new version is Available...', updateaction: '<button type="button" class="btn btn-success btn-sm" (click)="installUpdate()">Install</button > <button class="btn btn-success btn-sm" (click)="laterupdate()">Later</button>' }
-    win.webContents.send('update_info',
-      data);
-  }, 5000);
+  // sendStatusToWindow('A new version is Available...');
+  /* setTimeout(function () {
+     // tslint:disable-next-line:max-line-length
+  
+     const data = { message: 'A new version is Available...', updateaction: '<button type="button" class="btn btn-success btn-sm" (click)="installUpdate()">Install</button > <button class="btn btn-success btn-sm" (click)="laterupdate()">Later</button>' }
+     win.webContents.send('update_info',
+       data);
+   }, 5000);*/
+  // tslint:disable-next-line:max-line-length
+  // const data = { message: 'A new version is Available...', updateaction: '<button type="button" class="btn btn-success btn-sm" (click)="installUpdate()">Install</button > <button class="btn btn-success btn-sm" (click)="laterupdate()">Later</button>' }
+  //sendStatusToWindow('A new version is Available...');
 });
 
 autoUpdater.on('update-not-available', (ev, info) => {
-  sendStatusToWindow('Update not available.');
+  //sendStatusToWindow('Update not available.');
 });
 autoUpdater.on('error', (ev, err) => {
-  sendStatusToWindow(err);
+  sendStatusToWindow('err', false);
 });
 autoUpdater.on('download-progress', (progressObj) => {
   let log_message = 'Download speed: ' + progressObj.bytesPerSecond;
   log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
   log_message = log_message + ' (' + progressObj.transferred + '/' + progressObj.total + ')';
-  sendStatusToWindow(log_message);
+  // sendStatusToWindow(log_message);
 });
 
-
+autoUpdater.on('update-downloaded', (ev, info) => {
+  sendStatusToWindow('A new version is Available...', true);
+});
 
 ipcMain.on('check-update-app', function () {
   // tslint:disable-next-line:max-line-length
@@ -150,10 +164,7 @@ ipcMain.on('check-update-app', function () {
 });
 
 ipcMain.on('install-update', () => {
-  autoUpdater.on('update-downloaded', (ev, info) => {
-    sendStatusToWindow(info);
-    autoUpdater.quitAndInstall();
-  });
+  autoUpdater.quitAndInstall();
 })
 
 // get app current version
